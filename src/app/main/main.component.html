@@ -1,7 +1,7 @@
 <div class="container">
   <div fxLayout="row wrap" fxLayoutGap="30px">
     <div *ngFor="let image of images">
-      <img class="image" src="{{ image.path }}" />
+      <img class="image" src="{{ image.path }}" (click)="onClick(image)" />
     </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Image } from '../models/image';
 import { MainService } from './main.service';
 
@@ -8,7 +9,7 @@ import { MainService } from './main.service';
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit {
-  constructor(private mainService: MainService) {}
+  constructor(private mainService: MainService, private router: Router) {}
 
   images: Image[] = [];
 
@@ -16,5 +17,10 @@ export class MainComponent implements OnInit {
     this.mainService.images.subscribe((images) => {
       this.images = images;
     });
+  }
+
+  onClick(image: Image) {
+    console.log('image onClick', image);
+    this.router.navigate(['/board', image.number]);
   }
 }
