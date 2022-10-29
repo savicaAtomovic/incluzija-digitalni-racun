@@ -1,4 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Add application styles & imports to this file! */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --unit-1: 4px;
+  --elevation-1: 1;
+  --min-height-carousel: calc(var(--unit-1) * 50);
+  --color-brand-1: black;
+}
+
+body {
+  margin: 0;
+  position: fixed;
+  height: 90vh;
+  width: 100vw;
+  padding: var(--unit-1);
+}

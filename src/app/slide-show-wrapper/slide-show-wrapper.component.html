@@ -1,1 +1,39 @@
-<!-- <app-slide-show [slides]="images"></app-slide-show> -->
+<app-slide-show
+  [autoPlayDuration]="5000"
+  [animation]="AnimationEnum.Slide"
+  [isNavigationVisible]="true"
+  [isThumbnailsVisible]="true"
+  [slides]="slides"
+  [slideTemplateRef]="slide"
+  [thumbnailTemplateRef]="thumbnail"
+></app-slide-show>
+<ng-template #slide let-slide>
+  <div
+    [ngStyle]="{
+      width: '100%',
+      height: '100%'
+    }"
+  >
+    <img
+      [ngStyle]="{
+        'background-size': 'cover',
+        'background-repeat': 'no-repeat',
+        width: '100%',
+        height: '100%'
+      }"
+      src="{{ slide.path }}"
+    />
+  </div>
+</ng-template>
+<ng-template #thumbnail let-slide>
+  <div
+    [ngStyle]="{
+      'background-size': 'cover',
+      'background-image': 'url(' + slide.path + ')',
+      'background-repeat': 'no-repeat',
+      'background-position': 'center center',
+      width: '100%',
+      height: '100%'
+    }"
+  ></div>
+</ng-template>
