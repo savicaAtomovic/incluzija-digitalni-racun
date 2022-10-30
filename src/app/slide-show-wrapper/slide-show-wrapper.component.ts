@@ -36,14 +36,5 @@ export class SlideShowWrapperComponent implements OnInit {
       );
       this.titleService.topbarTitle.next(topbarTitle ? topbarTitle.name : '');
     });
-
-    this.slides = [
-      {
-        url: 'assets/Slika1Prica11.jpg',
-      },
-      {
-        url: 'assets/Slika1Prica10.jpg',
-      },
-    ];
   }
 }

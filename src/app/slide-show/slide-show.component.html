@@ -10,7 +10,7 @@
         *ngTemplateOutlet="slideTemplateRef; context: { $implicit: slide }"
       >
       </ng-container>
-      <audio #sound muted="muted" src="{{ slide.sound }}"></audio>
+      <audio id="{{ 'sound-' + i }}" src="{{ slide.sound }}"></audio>
     </li>
   </ul>
   <!-- navigations & thumbnails -->

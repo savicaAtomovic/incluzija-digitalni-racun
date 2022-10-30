@@ -6,6 +6,7 @@ import {
   trigger,
 } from '@angular/animations';
 import {
+  AfterViewInit,
   ChangeDetectorRef,
   Component,
   ElementRef,
@@ -50,7 +51,7 @@ import { ActiveSlides, Direction, Animation } from '../models/active-slides';
     ]),
   ],
 })
-export class SlideShowComponent implements OnInit {
+export class SlideShowComponent implements OnInit, AfterViewInit {
   @Input()
   slides: any;
   @Input()
@@ -94,7 +95,6 @@ export class SlideShowComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.slides) {
-      console.log('slides', this.slides);
       this.activeSlides = this.getPreviousCurrentNextIndexes(0);
       this.differ = this.differs.find(this.activeSlides).create();
       if (this.slides.length > 1 && this.autoPlayDuration > 0) {
@@ -103,18 +103,22 @@ export class SlideShowComponent implements OnInit {
     }
   }
 
+  ngAfterViewInit() {
+    this.startSound(0);
+  }
+
   ngOnDestroy(): void {
     this.resetTimer();
     this.cd.detach();
   }
 
   select(index: number): void {
-    console.log('select -> index', index);
     this.resetTimer();
     this.activeSlides = this.getPreviousCurrentNextIndexes(index);
     this.direction = this.getDirection(this.activeSlides.current, index);
     this.startTimer();
-    this.startSound(this.sound);
+    this.stopSound(this.activeSlides.previous);
+    this.startSound(index);
 
     if (this.differ.diff(this.activeSlides)) {
       this.cd.detectChanges();
@@ -170,18 +174,13 @@ export class SlideShowComponent implements OnInit {
     }
   }
 
-  stopSound(sound: ElementRef) {
-    sound.nativeElement.pause();
-    sound.nativeElement.currentTime = 0;
-    sound.nativeElement.loop = false;
+  startSound(index: number) {
+    const sound = document.getElementById('sound-' + index);
+    (sound as any).play();
   }
 
-  startSound(sound: ElementRef) {
-    console.log('sound -> ', sound);
-    sound.nativeElement.play().catch((error: any) => {
-      console.warn('Controls Component ➜ Start Sound: Exception on play.');
-      console.error(error);
-    });
-    sound.nativeElement.loop = true;
+  stopSound(index: number) {
+    const sound = document.getElementById('sound-' + index);
+    (sound as any).pause();
   }
 }
