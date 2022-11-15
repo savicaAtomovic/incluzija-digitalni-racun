@@ -1,5 +1,31 @@
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
 .container {
-  padding: 100px 10px 100px 10px;
+  // overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  // padding: 100px 10px 100px 10px;
+}
+
+// .topbar {
+//   flex: 2;
+//   overflow: auto;
+// }
+
+// .container::-webkit-scrollbar {
+//   display: none; /* Safari and Chrome */
+// }
+
+.events-wrapper {
+  display: grid; /* 1 */
+  grid-template-columns: repeat(auto-fill, 250px); /* 2 */
+  grid-gap: 1rem; /* 3 */
+  justify-content: center; /* 4 */
 }
 
 .image {

@@ -1,7 +1,15 @@
 <div class="container">
-  <div fxLayout="row wrap" fxLayoutGap="15px">
+  <div class="topbar">
+    <app-topbar [title]="'POČETNA'"></app-topbar>
+  </div>
+  <div class="events-wrapper" fxLayoutGap="15px">
     <div *ngFor="let image of images">
       <img class="image" src="{{ image.path }}" (click)="onClick(image)" />
     </div>
   </div>
 </div>
+
+<!-- <div class="container" fxLayoutGap="50px">
+  <div class="topbar"><app-topbar [title]="'POČETNA'"></app-topbar></div>
+  <div class="topbar"><app-topbar [title]="'POČETNA'"></app-topbar></div>
+</div> -->

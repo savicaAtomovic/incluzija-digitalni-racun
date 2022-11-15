@@ -20,6 +20,7 @@ export class SlideShowWrapperComponent implements OnInit {
   images: Image[] = [];
   AnimationEnum = Animation;
   slides: any;
+  topbarTitle: String;
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
@@ -34,6 +35,7 @@ export class SlideShowWrapperComponent implements OnInit {
       const topbarTitle = this.images.find(
         (image) => image.number === Number(id)
       );
+      this.topbarTitle = topbarTitle?.name ?? '';
       this.titleService.topbarTitle.next(topbarTitle ? topbarTitle.name : '');
     });
   }

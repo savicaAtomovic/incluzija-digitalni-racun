@@ -12,10 +12,16 @@
   --color-brand-1: black;
 }
 
-body {
-  margin: 0;
-  position: fixed;
-  height: 90vh;
-  width: 100vw;
-  padding: var(--unit-1);
-}
+// body {
+//   margin: 0;
+//   position: fixed;
+//   height: 90vh;
+//   width: 100vw;
+//   padding: var(--unit-1);
+// }
+
+// body::-webkit-scrollbar {
+//   display: none; /* Safari and Chrome */
+//   -ms-overflow-style: none; /* Internet Explorer 10+ */
+//   scrollbar-width: none; /* Firefox */
+// }
