@@ -3,8 +3,8 @@
     <app-topbar [title]="'POČETNA'"></app-topbar>
   </div>
   <div class="events-wrapper" fxLayoutGap="15px">
-    <div *ngFor="let image of images">
-      <img class="image" src="{{ image.path }}" (click)="onClick(image)" />
+    <div *ngFor="let event of events">
+      <img class="image" src="{{ event.image }}" (click)="onClick(event)" />
     </div>
   </div>
 </div>

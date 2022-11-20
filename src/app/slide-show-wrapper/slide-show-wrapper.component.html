@@ -2,7 +2,7 @@
   <app-topbar [title]="topbarTitle"></app-topbar>
   <app-slide-show
     *ngIf="slides"
-    [autoPlayDuration]="5000"
+    [autoPlayDuration]="3000"
     [animation]="AnimationEnum.Slide"
     [isNavigationVisible]="true"
     [isThumbnailsVisible]="true"
@@ -24,7 +24,7 @@
           width: '100%',
           height: '100%'
         }"
-        src="{{ slide.path }}"
+        src="{{ slide.image }}"
       />
     </div>
   </ng-template>
@@ -32,7 +32,7 @@
     <div
       [ngStyle]="{
         'background-size': 'cover',
-        'background-image': 'url(' + slide.path + ')',
+        'background-image': 'url(' + slide.image + ')',
         'background-repeat': 'no-repeat',
         'background-position': 'center center',
         width: '100%',

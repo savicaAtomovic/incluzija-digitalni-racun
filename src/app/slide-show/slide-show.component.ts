@@ -104,7 +104,7 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.startSound(0);
+    // this.startSound(0);
   }
 
   ngOnDestroy(): void {

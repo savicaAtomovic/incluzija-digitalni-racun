@@ -8,7 +8,7 @@ import { Observable } from 'rxjs/internal/Observable';
 export class MainService {
   constructor(private http: HttpClient) {}
 
-  get images(): Observable<any> {
-    return this.http.get('assets/main-page.json');
+  get events(): Observable<any> {
+    return this.http.get('assets/mock-data/events.json');
   }
 }

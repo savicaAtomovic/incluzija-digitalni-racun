@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Image } from '../models/image';
+import { MainEvent } from '../models/event';
 import { TitleService } from '../services/title.service';
 import { MainService } from './main.service';
 
@@ -16,19 +16,19 @@ export class MainComponent implements OnInit {
     private titleService: TitleService
   ) {}
 
-  images: Image[] = [];
+  events: MainEvent[] = [];
   MAIN_TITLE: string = 'POČETNA';
 
   ngOnInit(): void {
     this.titleService.topbarTitle.next(this.MAIN_TITLE);
-    this.mainService.images.subscribe((images) => {
-      this.images = images;
+    this.mainService.events.subscribe((events) => {
+      this.events = events;
     });
   }
 
-  onClick(image: Image) {
-    console.log('image onClick', image);
-    this.router.navigate(['/board', image.number]);
+  onClick(event: MainEvent) {
+    console.log('image onClick', event);
+    this.router.navigate(['/board', event.id]);
   }
 
   goBack() {

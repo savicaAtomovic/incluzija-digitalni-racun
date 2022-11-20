@@ -4,6 +4,7 @@ import { MainService } from '../main/main.service';
 import { Image } from '../models/image';
 import { TitleService } from '../services/title.service';
 import { Animation } from '../models/active-slides';
+import { MainEvent } from '../models/event';
 
 @Component({
   selector: 'app-slide-show-wrapper',
@@ -17,7 +18,7 @@ export class SlideShowWrapperComponent implements OnInit {
     private titleService: TitleService
   ) {}
 
-  images: Image[] = [];
+  events: MainEvent[] = [];
   AnimationEnum = Animation;
   slides: any;
   topbarTitle: String;
@@ -29,14 +30,12 @@ export class SlideShowWrapperComponent implements OnInit {
 
     // this.titleService.topbarTitle.next(id ? id.toString() : '');
 
-    this.mainService.images.subscribe((images) => {
-      this.images = images;
-      this.slides = images;
-      const topbarTitle = this.images.find(
-        (image) => image.number === Number(id)
-      );
-      this.topbarTitle = topbarTitle?.name ?? '';
-      this.titleService.topbarTitle.next(topbarTitle ? topbarTitle.name : '');
+    this.mainService.events.subscribe((events) => {
+      this.events = events;
+      const event = this.events.find((e) => e.id === Number(id));
+      this.topbarTitle = event?.name ?? '';
+      this.slides = event?.eventItems;
+      this.titleService.topbarTitle.next(event ? event.name : '');
     });
   }
 }

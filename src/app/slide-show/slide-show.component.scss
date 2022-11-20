@@ -1,5 +1,7 @@
 .carousel {
-  width: fit-content;
+  width: 50%;
+  // width: fit-content;
+  // min-width: 50%;
   height: 90vh;
   min-height: var(--min-height-carousel);
   display: flex;
@@ -80,4 +82,10 @@
 .thumbnails li.is-active {
   border-color: var(--color-brand-1);
   opacity: 1;
+}
+
+@media (max-width: 800px) {
+  .carousel {
+    width: fit-content;
+  }
 }
