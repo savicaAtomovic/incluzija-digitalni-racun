@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MainService } from '../main/main.service';
 import { Image } from '../models/image';
-import { TitleService } from '../services/title.service';
+import { TopbarTitleService } from '../services/title.service';
 import { Animation } from '../models/active-slides';
 import { MainEvent } from '../models/event';
 
@@ -15,7 +15,7 @@ export class SlideShowWrapperComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private mainService: MainService,
-    private titleService: TitleService
+    private titleService: TopbarTitleService
   ) {}
 
   events: MainEvent[] = [];

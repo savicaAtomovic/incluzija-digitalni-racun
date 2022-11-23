@@ -11,5 +11,5 @@ echo "Building" $PACKAGE_VERSION "..."
 
 component_version=$PACKAGE_VERSION
  
-docker build -f Dockerfile -t savicat/$component_name:$component_version ..
+docker build --platform="linux/amd64" -f Dockerfile -t savicat/$component_name:$component_version ..
 

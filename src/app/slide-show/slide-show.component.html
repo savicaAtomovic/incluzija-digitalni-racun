@@ -5,11 +5,14 @@
       class="slide"
       *ngFor="let slide of slides; let i = index"
       [@slideState]="getAnimationSlideState(i)"
+      (click)="pause()"
     >
+      <div *ngIf="paused" style="text-align: center">Pauzirano</div>
       <ng-container
         *ngTemplateOutlet="slideTemplateRef; context: { $implicit: slide }"
       >
       </ng-container>
+
       <!-- <audio id="{{ 'sound-' + i }}" src="{{ slide.sound }}"></audio> -->
     </li>
   </ul>

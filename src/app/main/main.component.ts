@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MainEvent } from '../models/event';
-import { TitleService } from '../services/title.service';
+import { TopbarTitleService } from '../services/title.service';
 import { MainService } from './main.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class MainComponent implements OnInit {
   constructor(
     private mainService: MainService,
     private router: Router,
-    private titleService: TitleService
+    private titleService: TopbarTitleService
   ) {}
 
   events: MainEvent[] = [];

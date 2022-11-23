@@ -13,7 +13,9 @@ import {
   Input,
   KeyValueDiffer,
   KeyValueDiffers,
+  OnChanges,
   OnInit,
+  SimpleChanges,
   TemplateRef,
   ViewChild,
 } from '@angular/core';
@@ -68,6 +70,8 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
   thumbnailTemplateRef: TemplateRef<any>;
   currentInterval: NodeJS.Timer;
   differ: KeyValueDiffer<ActiveSlides, any>;
+
+  paused: boolean = false;
 
   @ViewChild('sound', { static: true })
   sound: ElementRef;
@@ -161,11 +165,15 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
     this.resetTimer();
 
     if (this.autoPlayDuration > 0) {
-      this.currentInterval = setInterval(
-        () => this.select(this.activeSlides.next),
-        this.autoPlayDuration
-      );
+      this.currentInterval = setInterval(() => {
+        if (!this.paused) this.select(this.activeSlides.next);
+      }, this.autoPlayDuration);
     }
+  }
+
+  pause() {
+    this.paused = !this.paused;
+    console.log('this.paused', this.paused);
   }
 
   resetTimer(): void {

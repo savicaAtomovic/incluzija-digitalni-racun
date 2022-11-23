@@ -10,6 +10,7 @@ export class TopbarComponent implements OnInit {
   constructor(private router: Router) {}
 
   @Input() title: String = '';
+  @Input() showBackButton: boolean;
 
   ngOnInit(): void {}
 

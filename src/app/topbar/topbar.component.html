@@ -1,7 +1,17 @@
-<div class="header">
-  <div>
-    <img class="back-icon" src="assets/icons/back.png" (click)="goBack()" />
+<!-- <div class="header">
+  <div class="back-icon" (click)="goBack()" matTooltip="Vrati se nazad">
+    <mat-icon>arrow_back</mat-icon>
   </div>
   <div class="header-text">{{ title }}</div>
   <div></div>
-</div>
+</div> -->
+
+<mat-toolbar class="header">
+  <div class="back-icon" (click)="goBack()">
+    <mat-icon matTooltip="Vrati se nazad" *ngIf="showBackButton"
+      >arrow_back</mat-icon
+    >
+  </div>
+  <div class="header-text">{{ title }}</div>
+  <div></div>
+</mat-toolbar>

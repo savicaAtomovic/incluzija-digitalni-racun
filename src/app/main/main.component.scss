@@ -23,14 +23,31 @@
 
 .events-wrapper {
   display: grid; /* 1 */
-  grid-template-columns: repeat(auto-fill, 250px); /* 2 */
+  grid-template-columns: repeat(auto-fill, var(--events-width)); /* 2 */
   grid-gap: 1rem; /* 3 */
   justify-content: center; /* 4 */
 }
 
-.image {
-  width: 250px;
-  height: 250px;
-  cursor: pointer;
+.image-wrapper {
   border: 2px solid var(--color-brand-1);
+  width: var(--events-width);
+  height: var(--events-width);
+}
+
+.image {
+  width: var(--image-width);
+  height: var(--image-height);
+  cursor: pointer;
+}
+
+.description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--desc-font-size);
+  color: #2e75b6;
+  text-align: center;
+  line-height: 1;
+  height: calc(100% - var(--image-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

@@ -5,7 +5,7 @@ import { filter, Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class TitleService {
+export class TopbarTitleService {
   public topbarTitle = new Subject<String>();
   constructor() {}
 }

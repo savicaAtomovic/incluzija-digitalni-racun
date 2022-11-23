@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TitleService } from './services/title.service';
+import { TopbarTitleService } from './services/title.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,12 @@ export class AppComponent implements OnInit {
   currentRoute = '';
   topbarTitle: String = '';
 
-  constructor(private titleService: TitleService) {
-    this.titleService.topbarTitle.subscribe((title) => {
+  constructor(
+    private topbarTitleService: TopbarTitleService,
+    private titleService: Title
+  ) {
+    this.titleService.setTitle('Situacije i društvene priče');
+    this.topbarTitleService.topbarTitle.subscribe((title) => {
       this.topbarTitle = title;
       console.log('topbarTitle', title);
     });

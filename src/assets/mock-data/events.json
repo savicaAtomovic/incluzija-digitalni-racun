@@ -8,61 +8,61 @@
       {
         "id": 1,
         "orderNumber": 1,
-        "description": "",
+        "description": "Ja sam ponekad veoma uznemiren i ljut.",
         "image": "assets/multimedia/1/images/without-text/Picture1.jpg"
       },
       {
         "id": 2,
         "orderNumber": 2,
-        "description": "",
+        "description": "Tada bacam stvari,",
         "image": "assets/multimedia/1/images/without-text/Picture2.jpg"
       },
       {
         "id": 3,
         "orderNumber": 3,
-        "description": "",
+        "description": "udaram ljude,",
         "image": "assets/multimedia/1/images/without-text/Picture3.jpg"
       },
       {
         "id": 4,
         "orderNumber": 4,
-        "description": "",
+        "description": "vičem",
         "image": "assets/multimedia/1/images/without-text/Picture4.jpg"
       },
       {
         "id": 5,
         "orderNumber": 5,
-        "description": "",
+        "description": "i plačem.",
         "image": "assets/multimedia/1/images/without-text/Picture5.jpg"
       },
       {
         "id": 6,
         "orderNumber": 6,
-        "description": "",
+        "description": "Kada sam uznemiren mogu duboko da udahnem",
         "image": "assets/multimedia/1/images/without-text/Picture6.jpg"
       },
       {
         "id": 7,
         "orderNumber": 7,
-        "description": "",
+        "description": "da zatražim pauzu, prošetam",
         "image": "assets/multimedia/1/images/without-text/Picture7.jpg"
       },
       {
         "id": 8,
         "orderNumber": 8,
-        "description": "",
+        "description": "ili popijem vode.",
         "image": "assets/multimedia/1/images/without-text/Picture8.jpg"
       },
       {
         "id": 9,
         "orderNumber": 9,
-        "description": "",
+        "description": "Mogu reći ljudima oko mene 'Ja sam sada uznemiren'",
         "image": "assets/multimedia/1/images/without-text/Picture9.jpg"
       },
       {
         "id": 10,
         "orderNumber": 10,
-        "description": "",
+        "description": "Uskoro ću se osjećati bolje.",
         "image": "assets/multimedia/1/images/without-text/Picture10.jpg"
       }
     ]
@@ -460,7 +460,7 @@
       {
         "id": 1,
         "orderNumber": 1,
-        "description": "",
+        "description": "Volim da provodim vrijeme sa prijateljima",
         "image": "assets/multimedia/5/images/without-text/Picture1.jpg"
       },
       {
