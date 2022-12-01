@@ -3,7 +3,7 @@
   // width: fit-content;
   // min-width: 50%;
   height: 90vh;
-  min-height: vasr(--min-height-carousel);
+  min-height: var(--min-height-carousel);
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
