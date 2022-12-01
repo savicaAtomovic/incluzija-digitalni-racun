@@ -9,61 +9,71 @@
         "id": 1,
         "orderNumber": 1,
         "description": "Ja sam ponekad veoma uznemiren i ljut.",
-        "image": "assets/multimedia/1/images/without-text/Picture1.jpg"
+        "image": "assets/multimedia/1/images/without-text/Picture1.jpg",
+        "sound": "assets/multimedia/1/sound/female/1.mp3"
       },
       {
         "id": 2,
         "orderNumber": 2,
         "description": "Tada bacam stvari,",
-        "image": "assets/multimedia/1/images/without-text/Picture2.jpg"
+        "image": "assets/multimedia/1/images/without-text/Picture2.jpg",
+        "sound": "assets/multimedia/1/sound/female/2.mp3"
       },
       {
         "id": 3,
         "orderNumber": 3,
         "description": "udaram ljude,",
-        "image": "assets/multimedia/1/images/without-text/Picture3.jpg"
+        "image": "assets/multimedia/1/images/without-text/Picture3.jpg",
+        "sound": "assets/multimedia/1/sound/female/3.mp3"
       },
       {
         "id": 4,
         "orderNumber": 4,
         "description": "vičem",
-        "image": "assets/multimedia/1/images/without-text/Picture4.jpg"
+        "image": "assets/multimedia/1/images/without-text/Picture4.jpg",
+        "sound": "assets/multimedia/1/sound/female/4.mp3"
       },
       {
         "id": 5,
         "orderNumber": 5,
         "description": "i plačem.",
-        "image": "assets/multimedia/1/images/without-text/Picture5.jpg"
+        "image": "assets/multimedia/1/images/without-text/Picture5.jpg",
+        "sound": "assets/multimedia/1/sound/female/5.mp3"
       },
       {
         "id": 6,
         "orderNumber": 6,
         "description": "Kada sam uznemiren mogu duboko da udahnem",
-        "image": "assets/multimedia/1/images/without-text/Picture6.jpg"
+        "image": "assets/multimedia/1/images/without-text/Picture6.jpg",
+        "sound": "assets/multimedia/1/sound/female/6.mp3"
       },
       {
         "id": 7,
         "orderNumber": 7,
         "description": "da zatražim pauzu, prošetam",
-        "image": "assets/multimedia/1/images/without-text/Picture7.jpg"
+        "image": "assets/multimedia/1/images/without-text/Picture7.jpg",
+        "sound": "assets/multimedia/1/sound/female/7.mp3"
       },
       {
         "id": 8,
         "orderNumber": 8,
         "description": "ili popijem vode.",
-        "image": "assets/multimedia/1/images/without-text/Picture8.jpg"
+        "image": "assets/multimedia/1/images/without-text/Picture8.jpg",
+        "sound": "assets/multimedia/1/sound/female/8.mp3"
       },
       {
         "id": 9,
         "orderNumber": 9,
         "description": "Mogu reći ljudima oko mene 'Ja sam sada uznemiren'",
-        "image": "assets/multimedia/1/images/without-text/Picture9.jpg"
+        "image": "assets/multimedia/1/images/without-text/Picture9.jpg",
+        "sound": "assets/multimedia/1/sound/female/1.mp3"
       },
       {
         "id": 10,
         "orderNumber": 10,
         "description": "Uskoro ću se osjećati bolje.",
-        "image": "assets/multimedia/1/images/without-text/Picture10.jpg"
+        "image": "assets/multimedia/1/images/without-text/Picture10.jpg",
+        "sound": "assets/multimedia/1/sound/female/2.mp3"
       }
     ]
   },

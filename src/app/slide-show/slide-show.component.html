@@ -1,4 +1,4 @@
-<div class="carousel">
+<div *ngIf="slides" class="carousel">
   <!-- slides -->
   <ul class="slides">
     <li
@@ -13,7 +13,12 @@
       >
       </ng-container>
 
-      <!-- <audio id="{{ 'sound-' + i }}" src="{{ slide.sound }}"></audio> -->
+      <audio
+        hidden="hidden"
+        id="{{ 'sound-' + i }}"
+        src="{{ slide.sound }}"
+        controls
+      ></audio>
     </li>
   </ul>
   <!-- navigations & thumbnails -->

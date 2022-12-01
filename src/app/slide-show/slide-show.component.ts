@@ -13,13 +13,12 @@ import {
   Input,
   KeyValueDiffer,
   KeyValueDiffers,
-  OnChanges,
   OnInit,
-  SimpleChanges,
   TemplateRef,
   ViewChild,
 } from '@angular/core';
-import { ActiveSlides, Direction, Animation } from '../models/active-slides';
+
+import { ActiveSlides, Animation, Direction } from '../models/active-slides';
 
 @Component({
   selector: 'app-slide-show',
@@ -73,6 +72,10 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
 
   paused: boolean = false;
 
+  MILISECONDS: number = 1000;
+
+  currentSlideIndex = 0;
+
   @ViewChild('sound', { static: true })
   sound: ElementRef;
 
@@ -100,15 +103,27 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     if (this.slides) {
       this.activeSlides = this.getPreviousCurrentNextIndexes(0);
-      this.differ = this.differs.find(this.activeSlides).create();
-      if (this.slides.length > 1 && this.autoPlayDuration > 0) {
-        this.startTimer();
-      }
+      const audioObj = new Audio();
+      audioObj.src = this.slides[0].sound;
+      audioObj.addEventListener('loadeddata', () => {
+        let duration = audioObj.duration;
+        this.autoPlayDuration = duration * this.MILISECONDS;
+        this.differ = this.differs.find(this.activeSlides).create();
+        if (this.slides.length > 1 && this.autoPlayDuration > 0) {
+          this.startTimer();
+        }
+      });
     }
   }
 
+  getDurationOfSound(index: number) {
+    const sound = document.getElementById('sound-' + index) as HTMLMediaElement;
+    const duration = sound.duration;
+    return duration * this.MILISECONDS;
+  }
+
   ngAfterViewInit() {
-    // this.startSound(0);
+    this.startSound(0);
   }
 
   ngOnDestroy(): void {
@@ -118,10 +133,17 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
 
   select(index: number): void {
     this.resetTimer();
-    this.activeSlides = this.getPreviousCurrentNextIndexes(index);
     this.direction = this.getDirection(this.activeSlides.current, index);
+    this.activeSlides = this.getPreviousCurrentNextIndexes(index);
+    this.autoPlayDuration = this.getDurationOfSound(index);
     this.startTimer();
-    this.stopSound(this.activeSlides.previous);
+    // this.stopSound(
+    //   this.direction === Direction.Next
+    //     ? this.activeSlides.previous
+    //     : this.activeSlides.next
+    // );
+    this.stopSound(this.currentSlideIndex);
+    this.currentSlideIndex = index;
     this.startSound(index);
 
     if (this.differ.diff(this.activeSlides)) {
@@ -173,7 +195,11 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
 
   pause() {
     this.paused = !this.paused;
-    console.log('this.paused', this.paused);
+    if (this.paused) {
+      this.pauseSound(this.activeSlides.current);
+    } else {
+      this.startSound(this.activeSlides.current);
+    }
   }
 
   resetTimer(): void {
@@ -183,12 +209,18 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
   }
 
   startSound(index: number) {
-    const sound = document.getElementById('sound-' + index);
-    (sound as any).play();
+    const sound = document.getElementById('sound-' + index) as HTMLMediaElement;
+    sound.play();
   }
 
   stopSound(index: number) {
-    const sound = document.getElementById('sound-' + index);
-    (sound as any).pause();
+    const sound = document.getElementById('sound-' + index) as HTMLMediaElement;
+    sound.pause();
+    sound.currentTime = 0;
+  }
+
+  pauseSound(index: number) {
+    const sound = document.getElementById('sound-' + index) as HTMLMediaElement;
+    sound.pause();
   }
 }
