@@ -32,6 +32,7 @@ export class SlideShowWrapperComponent implements OnInit {
 
     this.mainService.events.subscribe((events) => {
       this.events = events;
+      this.mainService.addDefaultSounds(this.events);
       const event = this.events.find((e) => e.id === Number(id));
       this.topbarTitle = event?.name ?? '';
       this.slides = event?.eventItems;
