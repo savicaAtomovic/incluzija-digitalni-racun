@@ -17,17 +17,7 @@
         height: '100%'
       }"
     >
-      <img
-        [ngStyle]="{
-          cursor: 'pointer',
-          background: 'white',
-          'background-size': 'cover',
-          'background-repeat': 'no-repeat',
-          width: 'var(--image-width)',
-          height: 'var(--slide-image-height)'
-        }"
-        src="{{ slide.image }}"
-      />
+      <img class="image" src="{{ slide.image }}" />
       <div *ngIf="slide.description" class="description">
         <p>{{ slide.description }}</p>
       </div>
