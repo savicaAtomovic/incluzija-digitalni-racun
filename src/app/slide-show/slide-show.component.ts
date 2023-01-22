@@ -73,6 +73,7 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
   paused: boolean = false;
 
   MILISECONDS: number = 1000;
+  IMAGE_DELAY: number = 1000;
 
   currentSlideIndex = 0;
 
@@ -107,7 +108,7 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
       audioObj.src = this.slides[0].sound;
       audioObj.addEventListener('loadeddata', () => {
         let duration = audioObj.duration;
-        this.autoPlayDuration = duration * this.MILISECONDS;
+        this.autoPlayDuration = duration * this.MILISECONDS + this.IMAGE_DELAY;
         this.differ = this.differs.find(this.activeSlides).create();
         if (this.slides.length > 1 && this.autoPlayDuration > 0) {
           this.startTimer();
@@ -119,7 +120,7 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
   getDurationOfSound(index: number) {
     const sound = document.getElementById('sound-' + index) as HTMLMediaElement;
     const duration = sound.duration;
-    return duration * this.MILISECONDS;
+    return duration * this.MILISECONDS + this.IMAGE_DELAY;
   }
 
   ngAfterViewInit() {
