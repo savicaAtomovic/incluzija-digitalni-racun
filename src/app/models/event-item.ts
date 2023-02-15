@@ -4,4 +4,5 @@ export interface EventItem {
   description: string;
   image: string;
   sound: string;
+  soundMale: string;
 }

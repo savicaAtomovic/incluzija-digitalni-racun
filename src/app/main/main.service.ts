@@ -9,6 +9,8 @@ import { MainEvent } from '../models/event';
 export class MainService {
   constructor(private http: HttpClient) {}
 
+  DEFAULT_SOUND_PATH = 'assets/multimedia/default-sound.mp3';
+
   get events(): Observable<any> {
     return this.http.get('assets/mock-data/events.json');
   }
@@ -17,7 +19,17 @@ export class MainService {
     events.forEach((e) =>
       e.eventItems.forEach((ei) => {
         if (!ei.sound) {
-          ei.sound = 'assets/multimedia/default-sound.mp3';
+          ei.sound = this.DEFAULT_SOUND_PATH;
+        }
+      })
+    );
+  }
+
+  addDefaultMaleSounds(events: MainEvent[]) {
+    events.forEach((e) =>
+      e.eventItems.forEach((ei) => {
+        if (!ei.soundMale) {
+          ei.soundMale = ei.sound;
         }
       })
     );

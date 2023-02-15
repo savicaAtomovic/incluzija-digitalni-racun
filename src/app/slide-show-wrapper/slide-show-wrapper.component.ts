@@ -5,6 +5,8 @@ import { Image } from '../models/image';
 import { TopbarTitleService } from '../services/title.service';
 import { Animation } from '../models/active-slides';
 import { MainEvent } from '../models/event';
+import { SettingsService } from '../services/settings.service';
+import { VoiceType } from '../models/voice-type';
 
 @Component({
   selector: 'app-slide-show-wrapper',
@@ -15,7 +17,8 @@ export class SlideShowWrapperComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private mainService: MainService,
-    private titleService: TopbarTitleService
+    private titleService: TopbarTitleService,
+    private settingsService: SettingsService
   ) {}
 
   events: MainEvent[] = [];
@@ -33,6 +36,14 @@ export class SlideShowWrapperComponent implements OnInit {
     this.mainService.events.subscribe((events) => {
       this.events = events;
       this.mainService.addDefaultSounds(this.events);
+      this.mainService.addDefaultMaleSounds(this.events);
+      if (this.settingsService.voiceType.value == VoiceType.MALE) {
+        this.events.forEach((event) => {
+          event.eventItems.forEach(
+            (eventItem) => (eventItem.sound = eventItem.soundMale)
+          );
+        });
+      }
       const event = this.events.find((e) => e.id === Number(id));
       this.topbarTitle = event?.name ?? '';
       this.slides = event?.eventItems;

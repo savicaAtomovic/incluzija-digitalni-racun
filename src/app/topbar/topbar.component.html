@@ -5,5 +5,31 @@
     >
   </div>
   <div class="header-text">{{ title }}</div>
-  <div></div>
+  <div class="settings-icon">
+    <mat-icon
+      [matMenuTriggerFor]="menu"
+      matTooltip="Podešavanja"
+      *ngIf="!showBackButton"
+      >settings</mat-icon
+    >
+  </div>
 </mat-toolbar>
+
+<mat-menu #menu="matMenu">
+  <button
+    (click)="setFemaleVoice()"
+    mat-menu-item
+    [disabled]="(settingsService.voiceType | async) === VoiceType.FEMALE"
+  >
+    <mat-icon>female</mat-icon>
+    <span>Ženski glas</span>
+  </button>
+  <button
+    (click)="setMaleVoice()"
+    mat-menu-item
+    [disabled]="(settingsService.voiceType | async) === VoiceType.MALE"
+  >
+    <mat-icon>male</mat-icon>
+    <span>Muški glas</span>
+  </button>
+</mat-menu>
