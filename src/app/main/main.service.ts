@@ -48,8 +48,8 @@ export class MainService {
   addDefaultAlbaniaDescription(events: MainEvent[]) {
     events.forEach((e) =>
       e.eventItems.forEach((ei) => {
-        if (!ei.descriptionALB) {
-          ei.descriptionALB = ei.description;
+        if (!ei.descriptionAlb) {
+          ei.descriptionAlb = ei.description;
         }
       })
     );

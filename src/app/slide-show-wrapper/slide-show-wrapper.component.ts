@@ -52,7 +52,7 @@ export class SlideShowWrapperComponent implements OnInit {
         this.events.forEach((event) => {
           event.eventItems.forEach((eventItem) => {
             eventItem.sound = eventItem.soundAlb;
-            eventItem.description = eventItem.descriptionALB;
+            eventItem.description = eventItem.descriptionAlb;
           });
         });
       }
