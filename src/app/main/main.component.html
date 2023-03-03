@@ -6,7 +6,12 @@
     <div class="image-wrapper" *ngFor="let event of events">
       <img class="image" src="{{ event.image }}" (click)="onClick(event)" />
       <div class="description">
-        <p>{{ event.description }}</p>
+        <p *ngIf="(settingsService.language | async) === Language.MONTENEGRO">
+          {{ event.description }}
+        </p>
+        <p *ngIf="(settingsService.language | async) === Language.ALBANIA">
+          {{ event.descriptionAlb ? event.descriptionAlb : event.description }}
+        </p>
       </div>
       <div></div>
     </div>

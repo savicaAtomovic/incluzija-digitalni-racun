@@ -7,6 +7,7 @@ import { Animation } from '../models/active-slides';
 import { MainEvent } from '../models/event';
 import { SettingsService } from '../services/settings.service';
 import { VoiceType } from '../models/voice-type';
+import { Language } from '../models/language';
 
 @Component({
   selector: 'app-slide-show-wrapper',
@@ -37,11 +38,22 @@ export class SlideShowWrapperComponent implements OnInit {
       this.events = events;
       this.mainService.addDefaultSounds(this.events);
       this.mainService.addDefaultMaleSounds(this.events);
+      this.mainService.addDefaultAlbaniaFemaleSounds(this.events);
+      this.mainService.addDefaultAlbaniaDescription(this.events);
       if (this.settingsService.voiceType.value == VoiceType.MALE) {
         this.events.forEach((event) => {
           event.eventItems.forEach(
             (eventItem) => (eventItem.sound = eventItem.soundMale)
           );
+        });
+      }
+
+      if (this.settingsService.language.value == Language.ALBANIA) {
+        this.events.forEach((event) => {
+          event.eventItems.forEach((eventItem) => {
+            eventItem.sound = eventItem.soundAlb;
+            eventItem.description = eventItem.descriptionAlb;
+          });
         });
       }
       const event = this.events.find((e) => e.id === Number(id));

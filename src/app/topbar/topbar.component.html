@@ -7,7 +7,7 @@
   <div class="header-text">{{ title }}</div>
   <div class="settings-icon">
     <mat-icon
-      [matMenuTriggerFor]="menu"
+      [matMenuTriggerFor]="settings"
       matTooltip="Podešavanja"
       *ngIf="!showBackButton"
       >settings</mat-icon
@@ -15,7 +15,32 @@
   </div>
 </mat-toolbar>
 
-<mat-menu #menu="matMenu">
+<mat-menu #settings="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="gender">
+    <mat-icon *ngIf="(settingsService.voiceType | async) === VoiceType.FEMALE"
+      >female</mat-icon
+    >
+    <mat-icon *ngIf="(settingsService.voiceType | async) === VoiceType.MALE"
+      >male</mat-icon
+    >
+    <span>Pol</span>
+  </button>
+  <button mat-menu-item [matMenuTriggerFor]="language">
+    <img
+      *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      class="montenegro-language-icon"
+      src="assets/icons/montenegro-flag.png"
+    />
+    <img
+      *ngIf="(settingsService.language | async) === Language.ALBANIA"
+      class="albania-language-icon"
+      src="assets/icons/albania-flag.png"
+    />
+    <span>Jezik</span>
+  </button>
+</mat-menu>
+
+<mat-menu #gender="matMenu">
   <button
     (click)="setFemaleVoice()"
     mat-menu-item
@@ -31,5 +56,29 @@
   >
     <mat-icon>male</mat-icon>
     <span>Muški glas</span>
+  </button>
+</mat-menu>
+
+<mat-menu #language="matMenu">
+  <button
+    (click)="setMontenegroLanguage()"
+    mat-menu-item
+    [disabled]="(settingsService.language | async) === Language.MONTENEGRO"
+  >
+    <!-- <mat-icon>female</mat-icon> -->
+    <img
+      class="montenegro-language-icon"
+      src="assets/icons/montenegro-flag.png"
+    />
+    <span>Crnogorski</span>
+  </button>
+  <button
+    (click)="setAlbaniaLanguage()"
+    mat-menu-item
+    [disabled]="(settingsService.language | async) === Language.ALBANIA"
+  >
+    <!-- <mat-icon>male</mat-icon> -->
+    <img class="albania-language-icon" src="assets/icons/albania-flag.png" />
+    <span>Albanski</span>
   </button>
 </mat-menu>

@@ -34,4 +34,24 @@ export class MainService {
       })
     );
   }
+
+  addDefaultAlbaniaFemaleSounds(events: MainEvent[]) {
+    events.forEach((e) =>
+      e.eventItems.forEach((ei) => {
+        if (!ei.soundAlb) {
+          ei.soundAlb = ei.sound;
+        }
+      })
+    );
+  }
+
+  addDefaultAlbaniaDescription(events: MainEvent[]) {
+    events.forEach((e) =>
+      e.eventItems.forEach((ei) => {
+        if (!ei.descriptionAlb) {
+          ei.descriptionAlb = ei.description;
+        }
+      })
+    );
+  }
 }

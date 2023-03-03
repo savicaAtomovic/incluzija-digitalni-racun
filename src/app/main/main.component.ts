@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MainEvent } from '../models/event';
+import { Language } from '../models/language';
+import { SettingsService } from '../services/settings.service';
 import { TopbarTitleService } from '../services/title.service';
 import { MainService } from './main.service';
 
@@ -13,11 +15,13 @@ export class MainComponent implements OnInit {
   constructor(
     private mainService: MainService,
     private router: Router,
-    private titleService: TopbarTitleService
+    private titleService: TopbarTitleService,
+    public settingsService: SettingsService
   ) {}
 
   events: MainEvent[] = [];
   MAIN_TITLE: string = 'POČETNA';
+  Language = Language;
 
   ngOnInit(): void {
     this.titleService.topbarTitle.next(this.MAIN_TITLE);

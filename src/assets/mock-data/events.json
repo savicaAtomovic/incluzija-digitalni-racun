@@ -4,6 +4,7 @@
     "name": "Kada sam uznemiren",
     "description": "Kada sam uznemiren",
     "image": "assets/multimedia/1/Picture1.jpg",
+    "descriptionAlb": "Kur jam e mërzitur.",
     "eventItems": [
       {
         "id": 1,
@@ -11,7 +12,9 @@
         "description": "Ja sam ponekad veoma uznemiren i ljut.",
         "image": "assets/multimedia/1/images/without-text/Picture1.jpg",
         "sound": "assets/multimedia/1/sound/female/1.mp3",
-        "soundMale": "assets/multimedia/1/sound/female/2.mp3"
+        "soundMale": "assets/multimedia/1/sound/female/2.mp3",
+        "soundAlb": "assets/multimedia/1/sound/albfemale/1.mp3",
+        "descriptionAlb": "Kur jam e mërzitur."
       },
       {
         "id": 2,

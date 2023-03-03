@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { VoiceType } from '../models/voice-type';
+import { Language } from '../models/language';
 import { SettingsService } from '../services/settings.service';
 
 @Component({
@@ -18,6 +19,7 @@ export class TopbarComponent implements OnInit {
   @Input() showBackButton: boolean;
 
   VoiceType = VoiceType;
+  Language = Language;
 
   ngOnInit(): void {}
 
@@ -31,5 +33,13 @@ export class TopbarComponent implements OnInit {
 
   setMaleVoice() {
     this.settingsService.voiceType.next(VoiceType.MALE);
+  }
+
+  setMontenegroLanguage() {
+    this.settingsService.language.next(Language.MONTENEGRO);
+  }
+
+  setAlbaniaLanguage() {
+    this.settingsService.language.next(Language.ALBANIA);
   }
 }
