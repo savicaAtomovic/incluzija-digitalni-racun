@@ -6,5 +6,5 @@ export interface EventItem {
   sound: string;
   soundMale: string;
   soundAlb: string;
-  descriptionAlb: string;
+  descriptionALB: string;
 }
