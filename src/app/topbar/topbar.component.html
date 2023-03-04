@@ -23,7 +23,12 @@
     <mat-icon *ngIf="(settingsService.voiceType | async) === VoiceType.MALE"
       >male</mat-icon
     >
-    <span>Pol</span>
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >Pol</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.ALBANIA"
+      >Gjinia</span
+    >
   </button>
   <button mat-menu-item [matMenuTriggerFor]="language">
     <img
@@ -36,7 +41,12 @@
       class="albania-language-icon"
       src="assets/icons/albania-flag.png"
     />
-    <span>Jezik</span>
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >Jezik</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.ALBANIA"
+      >Gjuhe</span
+    >
   </button>
 </mat-menu>
 
@@ -47,7 +57,12 @@
     [disabled]="(settingsService.voiceType | async) === VoiceType.FEMALE"
   >
     <mat-icon>female</mat-icon>
-    <span>Ženski glas</span>
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >Ženski glas</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.ALBANIA"
+      >Zëri i një gruaje</span
+    >
   </button>
   <button
     (click)="setMaleVoice()"
@@ -55,7 +70,12 @@
     [disabled]="(settingsService.voiceType | async) === VoiceType.MALE"
   >
     <mat-icon>male</mat-icon>
-    <span>Muški glas</span>
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >Muški glas</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.ALBANIA"
+      >Zëri mashkullor</span
+    >
   </button>
 </mat-menu>
 
@@ -65,20 +85,28 @@
     mat-menu-item
     [disabled]="(settingsService.language | async) === Language.MONTENEGRO"
   >
-    <!-- <mat-icon>female</mat-icon> -->
     <img
       class="montenegro-language-icon"
       src="assets/icons/montenegro-flag.png"
     />
-    <span>Crnogorski</span>
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >Crnogorski</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.ALBANIA"
+      >Malazeze</span
+    >
   </button>
   <button
     (click)="setAlbaniaLanguage()"
     mat-menu-item
     [disabled]="(settingsService.language | async) === Language.ALBANIA"
   >
-    <!-- <mat-icon>male</mat-icon> -->
     <img class="albania-language-icon" src="assets/icons/albania-flag.png" />
-    <span>Albanski</span>
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >Albanski</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.ALBANIA"
+      >Shqiptare</span
+    >
   </button>
 </mat-menu>

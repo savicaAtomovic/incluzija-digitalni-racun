@@ -19,6 +19,8 @@ import {
 } from '@angular/core';
 
 import { ActiveSlides, Animation, Direction } from '../models/active-slides';
+import { Language } from '../models/language';
+import { SettingsService } from '../services/settings.service';
 
 @Component({
   selector: 'app-slide-show',
@@ -96,9 +98,12 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
     this._activeSlides = activeSlides;
   }
 
+  Language = Language;
+
   constructor(
     private cd: ChangeDetectorRef,
-    private differs: KeyValueDiffers
+    private differs: KeyValueDiffers,
+    public settingsService: SettingsService
   ) {}
 
   ngOnInit(): void {

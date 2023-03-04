@@ -28,7 +28,12 @@
       (click)="select(activeSlides.previous)"
       *ngIf="slides.length > 1 && isNavigationVisible"
     >
-      <span>nazad</span>
+      <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+        >nazad</span
+      >
+      <span *ngIf="(settingsService.language | async) === Language.ALBANIA"
+        >mbrapa</span
+      >
     </button>
     <div>
       <ol class="thumbnails" *ngIf="slides.length > 1 && isThumbnailsVisible">
@@ -51,7 +56,12 @@
       (click)="select(activeSlides.next)"
       *ngIf="slides.length > 1 && isNavigationVisible"
     >
-      <span>naprijed</span>
+      <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+        >naprijed</span
+      >
+      <span *ngIf="(settingsService.language | async) === Language.ALBANIA"
+        >përpara</span
+      >
     </button>
   </div>
 </div>

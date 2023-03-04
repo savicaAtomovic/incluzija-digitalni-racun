@@ -50,6 +50,7 @@ export class SlideShowWrapperComponent implements OnInit {
 
       if (this.settingsService.language.value == Language.ALBANIA) {
         this.events.forEach((event) => {
+          event.description = event.descriptionALB;
           event.eventItems.forEach((eventItem) => {
             eventItem.sound = eventItem.soundAlb;
             eventItem.description = eventItem.descriptionAlb;
@@ -57,9 +58,9 @@ export class SlideShowWrapperComponent implements OnInit {
         });
       }
       const event = this.events.find((e) => e.id === Number(id));
-      this.topbarTitle = event?.name ?? '';
+      this.topbarTitle = event?.description ?? '';
       this.slides = event?.eventItems;
-      this.titleService.topbarTitle.next(event ? event.name : '');
+      this.titleService.topbarTitle.next(event ? event.description : '');
     });
   }
 }
