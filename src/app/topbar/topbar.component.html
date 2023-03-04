@@ -1,6 +1,19 @@
 <mat-toolbar class="header">
   <div class="back-icon" (click)="goBack()">
-    <mat-icon matTooltip="Vrati se nazad" *ngIf="showBackButton"
+    <mat-icon
+      matTooltip="Vrati se nazad"
+      *ngIf="
+        showBackButton &&
+        (settingsService.language | async) === Language.MONTENEGRO
+      "
+      >arrow_back</mat-icon
+    >
+    <mat-icon
+      matTooltip="Mbrapa"
+      *ngIf="
+        showBackButton &&
+        (settingsService.language | async) === Language.ALBANIA
+      "
       >arrow_back</mat-icon
     >
   </div>
@@ -9,7 +22,19 @@
     <mat-icon
       [matMenuTriggerFor]="settings"
       matTooltip="Podešavanja"
-      *ngIf="!showBackButton"
+      *ngIf="
+        !showBackButton &&
+        (settingsService.language | async) === Language.MONTENEGRO
+      "
+      >settings</mat-icon
+    >
+    <mat-icon
+      [matMenuTriggerFor]="settings"
+      matTooltip="Cilësimet"
+      *ngIf="
+        !showBackButton &&
+        (settingsService.language | async) === Language.ALBANIA
+      "
       >settings</mat-icon
     >
   </div>

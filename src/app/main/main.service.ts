@@ -10,6 +10,7 @@ export class MainService {
   constructor(private http: HttpClient) {}
 
   DEFAULT_SOUND_PATH = 'assets/multimedia/default-sound.mp3';
+  DEFAULT_DESCRIPTION = 'N/A';
 
   get events(): Observable<any> {
     return this.http.get('assets/mock-data/events.json');
@@ -39,19 +40,20 @@ export class MainService {
     events.forEach((e) =>
       e.eventItems.forEach((ei) => {
         if (!ei.soundAlb) {
-          ei.soundAlb = ei.sound;
+          ei.soundAlb = this.DEFAULT_SOUND_PATH;
         }
       })
     );
   }
 
   addDefaultAlbaniaDescription(events: MainEvent[]) {
-    events.forEach((e) =>
+    events.forEach((e) => {
+      e.descriptionALB = e.descriptionALB ?? this.DEFAULT_DESCRIPTION;
       e.eventItems.forEach((ei) => {
         if (!ei.descriptionAlb) {
-          ei.descriptionAlb = ei.description;
+          ei.descriptionAlb = this.DEFAULT_DESCRIPTION;
         }
-      })
-    );
+      });
+    });
   }
 }

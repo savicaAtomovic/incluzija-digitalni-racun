@@ -17,7 +17,7 @@
           {{ event.description }}
         </p>
         <p *ngIf="(settingsService.language | async) === Language.ALBANIA">
-          {{ event.descriptionALB ? event.descriptionALB : event.description }}
+          {{ event.descriptionALB }}
         </p>
       </div>
       <div></div>

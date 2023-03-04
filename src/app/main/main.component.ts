@@ -27,6 +27,7 @@ export class MainComponent implements OnInit {
     this.titleService.topbarTitle.next(this.MAIN_TITLE);
     this.mainService.events.subscribe((events) => {
       this.events = events;
+      this.mainService.addDefaultAlbaniaDescription(this.events);
     });
   }
 
