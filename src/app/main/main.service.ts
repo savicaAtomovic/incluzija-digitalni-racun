@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { catchError, map, of } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
 import { MainEvent } from '../models/event';
 
@@ -14,6 +15,17 @@ export class MainService {
 
   get events(): Observable<any> {
     return this.http.get('assets/mock-data/events.json');
+  }
+
+  fileExists(url: string): Observable<boolean> {
+    return this.http.get(url).pipe(
+      map((response) => {
+        return true;
+      }),
+      catchError((error) => {
+        return of(false);
+      })
+    );
   }
 
   addDefaultSounds(events: MainEvent[]) {

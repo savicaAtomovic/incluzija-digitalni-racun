@@ -16,7 +16,11 @@
       <audio
         hidden="hidden"
         id="{{ 'sound-' + i }}"
-        src="{{ slide.sound }}"
+        src="{{
+          (mainService.fileExists(slide.sound) | async)
+            ? slide.sound
+            : mainService.DEFAULT_SOUND_PATH
+        }}"
         controls
       ></audio>
     </li>
