@@ -17,7 +17,6 @@ import {
   TemplateRef,
   ViewChild,
 } from '@angular/core';
-import { MainService } from '../main/main.service';
 
 import { ActiveSlides, Animation, Direction } from '../models/active-slides';
 import { Language } from '../models/language';
@@ -104,8 +103,7 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
   constructor(
     private cd: ChangeDetectorRef,
     private differs: KeyValueDiffers,
-    public settingsService: SettingsService,
-    public mainService: MainService
+    public settingsService: SettingsService
   ) {}
 
   ngOnInit(): void {

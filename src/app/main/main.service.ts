@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, map, of } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
+
 import { MainEvent } from '../models/event';
+import { EventItem } from '../models/event-item';
 
 @Injectable({
   providedIn: 'root',
@@ -17,55 +18,43 @@ export class MainService {
     return this.http.get('assets/mock-data/events.json');
   }
 
-  fileExists(url: string): Observable<boolean> {
-    return this.http.get(url).pipe(
-      map((response) => {
-        return true;
-      }),
-      catchError((error) => {
-        return of(false);
-      })
-    );
+  addDefaultSounds(eventItems: EventItem[]) {
+    eventItems.forEach((ei) => {
+      if (!ei.sound) {
+        ei.sound = this.DEFAULT_SOUND_PATH;
+      }
+    });
   }
 
-  addDefaultSounds(events: MainEvent[]) {
-    events.forEach((e) =>
-      e.eventItems.forEach((ei) => {
-        if (!ei.sound) {
-          ei.sound = this.DEFAULT_SOUND_PATH;
-        }
-      })
-    );
+  addDefaultMaleSounds(eventItems: EventItem[]) {
+    eventItems.forEach((ei) => {
+      if (!ei.soundMale) {
+        ei.soundMale = ei.sound;
+      }
+    });
   }
 
-  addDefaultMaleSounds(events: MainEvent[]) {
-    events.forEach((e) =>
-      e.eventItems.forEach((ei) => {
-        if (!ei.soundMale) {
-          ei.soundMale = ei.sound;
-        }
-      })
-    );
+  addDefaultAlbaniaFemaleSounds(eventItems: EventItem[]) {
+    eventItems.forEach((ei) => {
+      if (!ei.soundAlb) {
+        ei.soundAlb = this.DEFAULT_SOUND_PATH;
+      }
+    });
   }
 
-  addDefaultAlbaniaFemaleSounds(events: MainEvent[]) {
-    events.forEach((e) =>
-      e.eventItems.forEach((ei) => {
-        if (!ei.soundAlb) {
-          ei.soundAlb = this.DEFAULT_SOUND_PATH;
-        }
-      })
-    );
+  addDefaultAlbaniaDescriptionItems(eventItems: EventItem[]) {
+    eventItems.forEach((ei) => {
+      if (!ei.descriptionAlb) {
+        ei.descriptionAlb = this.DEFAULT_DESCRIPTION;
+      }
+    });
   }
 
-  addDefaultAlbaniaDescription(events: MainEvent[]) {
-    events.forEach((e) => {
-      e.descriptionALB = e.descriptionALB ?? this.DEFAULT_DESCRIPTION;
-      e.eventItems.forEach((ei) => {
-        if (!ei.descriptionAlb) {
-          ei.descriptionAlb = this.DEFAULT_DESCRIPTION;
-        }
-      });
+  addDefaultAlbaniaDescriptionMainEvents(events: MainEvent[]) {
+    events.forEach((ei) => {
+      if (!ei.descriptionALB) {
+        ei.descriptionALB = this.DEFAULT_DESCRIPTION;
+      }
     });
   }
 }
