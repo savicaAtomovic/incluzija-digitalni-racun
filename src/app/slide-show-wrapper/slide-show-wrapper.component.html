@@ -9,6 +9,7 @@
     [slides]="slides"
     [slideTemplateRef]="slide"
     [thumbnailTemplateRef]="thumbnail"
+    (pauseFunc)="pause($event)"
   ></app-slide-show>
   <ng-template #slide let-slide>
     <div
@@ -18,6 +19,10 @@
       }"
     >
       <img class="image" src="{{ slide.image }}" />
+      <div>
+        <img *ngIf="paused" src="assets/icons/play.jpg" />
+      </div>
+
       <div *ngIf="slide.description" class="description">
         <p>{{ slide.description }}</p>
       </div>

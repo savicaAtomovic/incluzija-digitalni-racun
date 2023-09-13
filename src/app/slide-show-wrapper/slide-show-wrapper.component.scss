@@ -23,6 +23,17 @@
   background-repeat: no-repeat;
   width: var(--image-width);
   height: var(--slide-image-height);
+  z-index: 1;
+}
+
+.pause {
+  width: var(--image-width);
+  height: var(--slide-image-height);
+  z-index: 3;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 900px) {

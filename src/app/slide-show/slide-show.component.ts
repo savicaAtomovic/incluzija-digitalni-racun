@@ -10,10 +10,12 @@ import {
   ChangeDetectorRef,
   Component,
   ElementRef,
+  EventEmitter,
   Input,
   KeyValueDiffer,
   KeyValueDiffers,
   OnInit,
+  Output,
   TemplateRef,
   ViewChild,
 } from '@angular/core';
@@ -73,6 +75,7 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
   differ: KeyValueDiffer<ActiveSlides, any>;
 
   paused: boolean = false;
+  @Output() pauseFunc: EventEmitter<any> = new EventEmitter();
 
   MILISECONDS: number = 1000;
   IMAGE_DELAY: number = 1000;
@@ -201,6 +204,7 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
 
   pause() {
     this.paused = !this.paused;
+    this.pauseFunc.emit(this.paused);
     if (this.paused) {
       this.pauseSound(this.activeSlides.current);
     } else {
