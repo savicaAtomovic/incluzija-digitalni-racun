@@ -36,6 +36,22 @@
   justify-content: center;
 }
 
+/** Play Button **/
+#play-button-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+.play-button {
+  position: absolute;
+  z-index: 1;
+  margin-top: -33%;
+}
+
+/** Media Queries **/
+
 @media (max-width: 900px) {
   .description {
     font-size: var(--slide-desc-font-size-mobile);

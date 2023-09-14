@@ -19,10 +19,10 @@
       }"
     >
       <img class="image" src="{{ slide.image }}" />
-      <div>
-        <img *ngIf="paused" src="assets/icons/play.jpg" />
+      <div id="play-button-container">
+        <img class="play-button" *ngIf="paused" src="assets/icons/play-button.png"/>
       </div>
-
+      
       <div *ngIf="slide.description" class="description">
         <p>{{ slide.description }}</p>
       </div>
@@ -40,4 +40,5 @@
       }"
     ></div>
   </ng-template>
+  
 </div>
