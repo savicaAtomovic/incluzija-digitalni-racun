@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 300px;
+}
+
+.images {
+  flex: 0 0 calc(50% - 10px); /* 10px accounts for spacing between images */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.image-wrapper {
+  width: 100%;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+}

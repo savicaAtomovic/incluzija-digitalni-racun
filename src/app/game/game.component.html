@@ -1,1 +1,13 @@
-<p>game works!</p>
+<div>
+  <app-topbar
+    [title]="topbarTitle"
+    [showBackButton]="true"
+    [backOnPage]="'/games'"
+  ></app-topbar>
+  <app-letter-game
+    *ngIf="game?.type === GameType.LETTERS"
+    [game]="game"
+  ></app-letter-game>
+
+  <p *ngIf="game?.type !== GameType.LETTERS">game-component-works</p>
+</div>

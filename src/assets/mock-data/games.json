@@ -3,7 +3,40 @@
     "id": 1,
     "name": "Igra sa slovima",
     "description": "Kroz ovu igru djeca ce nauciti da bla bala bla",
-    "image": "assets/multimedia/1/Picture1.jpg"
+    "image": "assets/multimedia/1/Picture1.jpg",
+    "type": "LETTERS",
+    "config": [
+      {
+        "id": 1,
+        "word": ["J", "A", "J", "E"],
+        "image": "assets/multimedia/1/Picture1.jpg"
+      },
+      {
+        "id": 2,
+        "word": ["K", "O", "Nj"],
+        "image": "assets/multimedia/1/Picture1.jpg"
+      },
+      {
+        "id": 3,
+        "word": ["J", "E", "Ž"],
+        "image": "assets/multimedia/1/Picture1.jpg"
+      },
+      {
+        "id": 4,
+        "word": ["L", "A", "V"],
+        "image": "assets/multimedia/1/Picture1.jpg"
+      },
+      {
+        "id": 5,
+        "word": ["Z", "E", "C"],
+        "image": "assets/multimedia/1/Picture1.jpg"
+      },
+      {
+        "id": 6,
+        "word": ["P", "U", "Ž"],
+        "image": "assets/multimedia/1/Picture1.jpg"
+      }
+    ]
   },
   {
     "id": 2,

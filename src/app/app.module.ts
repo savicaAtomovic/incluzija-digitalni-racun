@@ -18,6 +18,7 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { GamesListComponent } from './games-list/games-list.component';
 import { GameComponent } from './game/game.component';
+import { LetterGameComponent } from './game/letter-game/letter-game.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { GameComponent } from './game/game.component';
     HomePageComponent,
     GamesListComponent,
     GameComponent,
+    LetterGameComponent,
   ],
   imports: [
     BrowserModule,
