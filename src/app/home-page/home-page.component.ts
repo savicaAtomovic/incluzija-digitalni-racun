@@ -14,4 +14,8 @@ export class HomePageComponent implements OnInit {
   navigateToBoard() {
     this.router.navigate(['/board']);
   }
+
+  navigateToGames() {
+    this.router.navigate(['/games']);
+  }
 }

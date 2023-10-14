@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Igra sa slovima",
+    "description": "Kroz ovu igru djeca ce nauciti da bla bala bla",
+    "image": "assets/multimedia/1/Picture1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Igra sa slovima 2",
+    "description": "Kroz ovu igru djeca ce nauciti da bla bala bla",
+    "image": "assets/multimedia/2/Picture1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Igra sa slovima 3",
+    "description": "Kroz ovu igru djeca ce nauciti da bla bala bla",
+    "image": "assets/multimedia/3/Picture1.jpg"
+  }
+]

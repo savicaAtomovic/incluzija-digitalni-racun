@@ -16,6 +16,8 @@ import { SlideShowWrapperComponent } from './slide-show-wrapper/slide-show-wrapp
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { GamesListComponent } from './games-list/games-list.component';
+import { GameComponent } from './game/game.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     TopbarComponent,
     SlideShowWrapperComponent,
     HomePageComponent,
+    GamesListComponent,
+    GameComponent,
   ],
   imports: [
     BrowserModule,
