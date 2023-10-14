@@ -15,6 +15,7 @@ import { MainComponent } from './main/main.component';
 import { SlideShowWrapperComponent } from './slide-show-wrapper/slide-show-wrapper.component';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { TopbarComponent } from './topbar/topbar.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { TopbarComponent } from './topbar/topbar.component';
     SlideShowComponent,
     TopbarComponent,
     SlideShowWrapperComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,

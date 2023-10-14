@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { VoiceType } from '../models/voice-type';
+
 import { Language } from '../models/language';
+import { VoiceType } from '../models/voice-type';
 import { SettingsService } from '../services/settings.service';
 
 @Component({
@@ -17,6 +18,8 @@ export class TopbarComponent implements OnInit {
 
   @Input() title: String = '';
   @Input() showBackButton: boolean;
+  @Input() showSettings: boolean;
+  @Input() backOnPage: string;
 
   VoiceType = VoiceType;
   Language = Language;
@@ -24,7 +27,9 @@ export class TopbarComponent implements OnInit {
   ngOnInit(): void {}
 
   goBack() {
-    this.router.navigate(['/board']);
+    this.backOnPage
+      ? this.router.navigate([this.backOnPage])
+      : this.router.navigate(['/board']);
   }
 
   setFemaleVoice() {

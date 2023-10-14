@@ -11,6 +11,7 @@
 }
 
 .events-wrapper {
+  padding: 50px 300px;
   display: grid; /* 1 */
   grid-template-columns: repeat(auto-fill, var(--events-width)); /* 2 */
   grid-gap: 1rem; /* 3 */
@@ -40,4 +41,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .events-wrapper {
+    padding: 20px 20px;
+  }
 }

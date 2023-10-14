@@ -18,12 +18,13 @@
     >
   </div>
   <div class="header-text">{{ title }}</div>
-  <div class="settings-icon">
+  <div *ngIf="!showSettings"></div>
+  <div *ngIf="showSettings" class="settings-icon">
     <mat-icon
       [matMenuTriggerFor]="settings"
       matTooltip="Podešavanja"
       *ngIf="
-        !showBackButton &&
+        showSettings &&
         (settingsService.language | async) === Language.MONTENEGRO
       "
       >settings</mat-icon
@@ -32,8 +33,7 @@
       [matMenuTriggerFor]="settings"
       matTooltip="Cilësimet"
       *ngIf="
-        !showBackButton &&
-        (settingsService.language | async) === Language.ALBANIA
+        showSettings && (settingsService.language | async) === Language.ALBANIA
       "
       >settings</mat-icon
     >
