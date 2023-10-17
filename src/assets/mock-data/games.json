@@ -9,32 +9,38 @@
       {
         "id": 1,
         "word": ["J", "A", "J", "E"],
-        "image": "assets/multimedia/1/Picture1.jpg"
+        "image": "assets/multimedia/1/Picture1.jpg",
+        "missing": [1]
       },
       {
         "id": 2,
         "word": ["K", "O", "Nj"],
-        "image": "assets/multimedia/1/Picture1.jpg"
+        "image": "assets/multimedia/1/Picture1.jpg",
+        "missing": [2]
       },
       {
         "id": 3,
         "word": ["J", "E", "Ž"],
-        "image": "assets/multimedia/1/Picture1.jpg"
+        "image": "assets/multimedia/1/Picture1.jpg",
+        "missing": [1]
       },
       {
         "id": 4,
         "word": ["L", "A", "V"],
-        "image": "assets/multimedia/1/Picture1.jpg"
+        "image": "assets/multimedia/1/Picture1.jpg",
+        "missing": [2]
       },
       {
         "id": 5,
         "word": ["Z", "E", "C"],
-        "image": "assets/multimedia/1/Picture1.jpg"
+        "image": "assets/multimedia/1/Picture1.jpg",
+        "missing": [1]
       },
       {
         "id": 6,
         "word": ["P", "U", "Ž"],
-        "image": "assets/multimedia/1/Picture1.jpg"
+        "image": "assets/multimedia/1/Picture1.jpg",
+        "missing": [2]
       }
     ]
   },

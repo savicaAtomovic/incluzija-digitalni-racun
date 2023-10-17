@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Games } from 'src/app/models/games';
+import { GameConfig, Games } from 'src/app/models/games';
 
 @Component({
   selector: 'app-letter-game',
@@ -12,4 +12,8 @@ export class LetterGameComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  isMissing(index: number, config: GameConfig): boolean {
+    return !!config.missing && config.missing.indexOf(index) !== -1;
+  }
 }

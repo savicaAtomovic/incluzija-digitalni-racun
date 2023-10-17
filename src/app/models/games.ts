@@ -11,6 +11,7 @@ export interface GameConfig {
   id: number;
   word: string[];
   image: string;
+  missing?: number[];
 }
 
 export enum GameType {
