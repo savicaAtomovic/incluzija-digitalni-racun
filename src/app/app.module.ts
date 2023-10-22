@@ -20,6 +20,7 @@ import { GamesListComponent } from './games-list/games-list.component';
 import { GameComponent } from './game/game.component';
 import { LetterGameComponent } from './game/letter-game/letter-game.component';
 import { LetterValidatorDirective } from './directives/letter-validator.directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { LetterValidatorDirective } from './directives/letter-validator.directiv
     MatTooltipModule,
     MatToolbarModule,
     MatMenuModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

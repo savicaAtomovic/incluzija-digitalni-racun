@@ -26,6 +26,7 @@
 .image-wrapper img {
   width: 90%;
   height: 90%;
+  transition: opacity 0.3s;
 }
 
 .letter-grid {
@@ -61,4 +62,18 @@
   .container {
     padding: 20px 50px;
   }
+}
+
+#smiley-image-container {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+#smiley-image {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+  margin-top: 2%;
 }

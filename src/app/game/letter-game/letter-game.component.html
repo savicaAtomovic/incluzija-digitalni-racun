@@ -1,6 +1,21 @@
 <div class="container">
-  <div class="images" *ngFor="let config of game.config">
-    <div class="image-wrapper"><img src="{{ config.image }}" /></div>
+  <div
+    class="images"
+    *ngFor="let config of game.config; let configIndex = index"
+  >
+    <div id="smiley-image-container">
+      <img
+        id="smiley-image"
+        src="assets/icons/smiley.svg"
+        *ngIf="isCorrect(configIndex)"
+      />
+    </div>
+    <div class="image-wrapper">
+      <img
+        [src]="config.image"
+        [style.opacity]="isCorrect(configIndex) ? 0.5 : 1"
+      />
+    </div>
     <div class="letter-grid">
       <ng-container
         *ngFor="
@@ -20,6 +35,7 @@
           type="text"
           appLetterValidator
           [maxLength]="letter.length"
+          (input)="updateUserInput(configIndex, i, $event)"
         />
       </ng-container>
     </div>
