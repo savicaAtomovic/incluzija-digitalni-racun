@@ -1,4 +1,5 @@
 export enum Language {
-  MONTENEGRO = "MONTENEGRO",
-  ALBANIA = "ALBANIA",
+  MONTENEGRO = 'MONTENEGRO',
+  ALBANIA = 'ALBANIA',
+  SERBIAN = 'SERBIAN',
 }

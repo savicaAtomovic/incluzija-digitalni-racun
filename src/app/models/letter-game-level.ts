@@ -1,0 +1,6 @@
+export enum LetterGameLevel {
+  FIRST_LETTER = 'FIRST_LETTER',
+  ONE_LETTER = 'ONE_LETTER',
+  TWO_LETTERS = 'TWO_LETTERS',
+  THREE_LETTERS = 'THREE_LETTERS',
+}

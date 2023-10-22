@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Language } from '../models/language';
 import { VoiceType } from '../models/voice-type';
 import { SettingsService } from '../services/settings.service';
+import { LetterGameLevel } from '../models/letter-game-level';
 
 @Component({
   selector: 'app-topbar',
@@ -20,9 +21,11 @@ export class TopbarComponent implements OnInit {
   @Input() showBackButton: boolean;
   @Input() showSettings: boolean;
   @Input() backOnPage: string;
+  @Input() showLetterGameSettings: boolean;
 
   VoiceType = VoiceType;
   Language = Language;
+  LetterGameLevel = LetterGameLevel;
 
   ngOnInit(): void {}
 
@@ -32,19 +35,15 @@ export class TopbarComponent implements OnInit {
       : this.router.navigate(['/board']);
   }
 
-  setFemaleVoice() {
-    this.settingsService.voiceType.next(VoiceType.FEMALE);
+  setVoice(voiceType: VoiceType) {
+    this.settingsService.voiceType.next(voiceType);
   }
 
-  setMaleVoice() {
-    this.settingsService.voiceType.next(VoiceType.MALE);
+  setLanguage(language: Language) {
+    this.settingsService.language.next(language);
   }
 
-  setMontenegroLanguage() {
-    this.settingsService.language.next(Language.MONTENEGRO);
-  }
-
-  setAlbaniaLanguage() {
-    this.settingsService.language.next(Language.ALBANIA);
+  setLetterGameLevel(letterGameLevel: LetterGameLevel) {
+    this.settingsService.letterGameLevel.next(letterGameLevel);
   }
 }

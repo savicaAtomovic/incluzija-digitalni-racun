@@ -3,6 +3,8 @@
     [title]="topbarTitle"
     [showBackButton]="true"
     [backOnPage]="'/games'"
+    [showSettings]="false"
+    [showLetterGameSettings]="true"
   ></app-topbar>
   <app-letter-game
     *ngIf="game?.type === GameType.LETTERS"

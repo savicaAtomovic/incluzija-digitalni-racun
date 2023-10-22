@@ -16,9 +16,17 @@
       "
       >arrow_back</mat-icon
     >
+    <mat-icon
+      matTooltip="Врати се назад"
+      *ngIf="
+        showBackButton &&
+        (settingsService.language | async) === Language.SERBIAN
+      "
+      >arrow_back</mat-icon
+    >
   </div>
   <div class="header-text">{{ title }}</div>
-  <div *ngIf="!showSettings"></div>
+  <div *ngIf="!showSettings && !showLetterGameSettings"></div>
   <div *ngIf="showSettings" class="settings-icon">
     <mat-icon
       [matMenuTriggerFor]="settings"
@@ -34,6 +42,27 @@
       matTooltip="Cilësimet"
       *ngIf="
         showSettings && (settingsService.language | async) === Language.ALBANIA
+      "
+      >settings</mat-icon
+    >
+  </div>
+  <div *ngIf="showLetterGameSettings" class="settings-icon">
+    <mat-icon
+      [matMenuTriggerFor]="settingsLetterGame"
+      matTooltip="Podešavanja"
+      *ngIf="
+        showLetterGameSettings &&
+        (settingsService.language | async) === Language.MONTENEGRO
+      "
+    >
+      settings
+    </mat-icon>
+    <mat-icon
+      [matMenuTriggerFor]="settingsLetterGame"
+      matTooltip="Подешавања"
+      *ngIf="
+        showLetterGameSettings &&
+        (settingsService.language | async) === Language.SERBIAN
       "
       >settings</mat-icon
     >
@@ -77,7 +106,7 @@
 
 <mat-menu #gender="matMenu">
   <button
-    (click)="setFemaleVoice()"
+    (click)="setVoice(VoiceType.FEMALE)"
     mat-menu-item
     [disabled]="(settingsService.voiceType | async) === VoiceType.FEMALE"
   >
@@ -90,7 +119,7 @@
     >
   </button>
   <button
-    (click)="setMaleVoice()"
+    (click)="setVoice(VoiceType.MALE)"
     mat-menu-item
     [disabled]="(settingsService.voiceType | async) === VoiceType.MALE"
   >
@@ -106,7 +135,7 @@
 
 <mat-menu #language="matMenu">
   <button
-    (click)="setMontenegroLanguage()"
+    (click)="setLanguage(Language.MONTENEGRO)"
     mat-menu-item
     [disabled]="(settingsService.language | async) === Language.MONTENEGRO"
   >
@@ -122,7 +151,7 @@
     >
   </button>
   <button
-    (click)="setAlbaniaLanguage()"
+    (click)="setLanguage(Language.ALBANIA)"
     mat-menu-item
     [disabled]="(settingsService.language | async) === Language.ALBANIA"
   >
@@ -132,6 +161,112 @@
     >
     <span *ngIf="(settingsService.language | async) === Language.ALBANIA"
       >Shqiptare</span
+    >
+  </button>
+</mat-menu>
+
+<mat-menu #settingsLetterGame="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="level">
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >Nivo</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.SERBIAN"
+      >Ниво</span
+    >
+  </button>
+  <button mat-menu-item [matMenuTriggerFor]="alphabet">
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >Pismo</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.SERBIAN"
+      >Писмо</span
+    >
+  </button>
+</mat-menu>
+
+<mat-menu #level="matMenu">
+  <button
+    mat-menu-item
+    (click)="setLetterGameLevel(LetterGameLevel.FIRST_LETTER)"
+    [disabled]="
+      (settingsService.letterGameLevel | async) === LetterGameLevel.FIRST_LETTER
+    "
+  >
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >Prvo slovo</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.SERBIAN"
+      >Прво слово</span
+    >
+  </button>
+  <button
+    mat-menu-item
+    (click)="setLetterGameLevel(LetterGameLevel.ONE_LETTER)"
+    [disabled]="
+      (settingsService.letterGameLevel | async) === LetterGameLevel.ONE_LETTER
+    "
+  >
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >1 slovo</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.SERBIAN"
+      >1 слово</span
+    >
+  </button>
+  <button
+    mat-menu-item
+    (click)="setLetterGameLevel(LetterGameLevel.TWO_LETTERS)"
+    [disabled]="
+      (settingsService.letterGameLevel | async) === LetterGameLevel.TWO_LETTERS
+    "
+  >
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >2 slova</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.SERBIAN"
+      >2 слова</span
+    >
+  </button>
+  <button
+    mat-menu-item
+    (click)="setLetterGameLevel(LetterGameLevel.THREE_LETTERS)"
+    [disabled]="
+      (settingsService.letterGameLevel | async) ===
+      LetterGameLevel.THREE_LETTERS
+    "
+  >
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >3 slova</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.SERBIAN"
+      >3 слова</span
+    >
+  </button>
+</mat-menu>
+
+<mat-menu #alphabet="matMenu">
+  <button
+    mat-menu-item
+    (click)="setLanguage(Language.MONTENEGRO)"
+    [disabled]="(settingsService.language | async) === Language.MONTENEGRO"
+  >
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >Latinica</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.SERBIAN"
+      >Латиница</span
+    >
+  </button>
+  <button
+    mat-menu-item
+    (click)="setLanguage(Language.SERBIAN)"
+    [disabled]="(settingsService.language | async) === Language.SERBIAN"
+  >
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >Ćirilica</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.SERBIAN"
+      >Ћирилица</span
     >
   </button>
 </mat-menu>
