@@ -8,37 +8,43 @@
     "config": [
       {
         "id": 1,
-        "word": ["J", "A", "J", "E"],
+        "wordLat": ["J", "A", "J", "E"],
+        "wordCyr": ["Ј", "А", "Ј", "Е"],
         "image": "assets/multimedia/1/Picture1.jpg",
         "missing": [1]
       },
       {
         "id": 2,
-        "word": ["K", "O", "Nj"],
+        "wordLat": ["K", "O", "Nj"],
+        "wordCyr": ["К", "О", "Њ"],
         "image": "assets/multimedia/1/Picture1.jpg",
         "missing": [2]
       },
       {
         "id": 3,
-        "word": ["J", "E", "Ž"],
+        "wordLat": ["J", "E", "Ž"],
+        "wordCyr": ["Ј", "Е", "Ж"],
         "image": "assets/multimedia/1/Picture1.jpg",
         "missing": [1]
       },
       {
         "id": 4,
-        "word": ["L", "A", "V"],
+        "wordLat": ["L", "A", "V"],
+        "wordCyr": ["Л", "А", "В"],
         "image": "assets/multimedia/1/Picture1.jpg",
         "missing": [2]
       },
       {
         "id": 5,
-        "word": ["Z", "E", "C"],
+        "wordLat": ["Z", "E", "C"],
+        "wordCyr": ["З", "Е", "Ц"],
         "image": "assets/multimedia/1/Picture1.jpg",
         "missing": [1]
       },
       {
         "id": 6,
-        "word": ["P", "U", "Ž"],
+        "wordLat": ["P", "U", "Ž"],
+        "wordCyr": ["П", "У", "Ж"],
         "image": "assets/multimedia/1/Picture1.jpg",
         "missing": [2]
       }

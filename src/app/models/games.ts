@@ -9,7 +9,8 @@ export interface Games {
 
 export interface GameConfig {
   id: number;
-  word: string[];
+  wordLat: string[];
+  wordCyr: string[];
   image: string;
   missing?: number[];
 }

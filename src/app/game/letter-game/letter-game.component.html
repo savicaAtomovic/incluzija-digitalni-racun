@@ -2,7 +2,17 @@
   <div class="images" *ngFor="let config of game.config">
     <div class="image-wrapper"><img src="{{ config.image }}" /></div>
     <div class="letter-grid">
-      <ng-container *ngFor="let letter of config.word; let i = index">
+      <ng-container
+        *ngFor="
+          let letter of (settingsService.language | async) ===
+          Language.MONTENEGRO
+            ? config.wordLat
+            : (settingsService.language | async) === Language.SERBIAN
+            ? config.wordCyr
+            : config.wordLat;
+          let i = index
+        "
+      >
         <div class="letter" *ngIf="!isMissing(i, config)">{{ letter }}</div>
         <input
           *ngIf="isMissing(i, config)"

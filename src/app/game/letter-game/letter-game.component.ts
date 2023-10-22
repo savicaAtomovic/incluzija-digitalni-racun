@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { GameConfig, Games } from 'src/app/models/games';
+import { Language } from 'src/app/models/language';
+import { SettingsService } from 'src/app/services/settings.service';
 
 @Component({
   selector: 'app-letter-game',
@@ -9,7 +11,9 @@ import { GameConfig, Games } from 'src/app/models/games';
 export class LetterGameComponent implements OnInit {
   @Input() game: Games;
 
-  constructor() {}
+  Language = Language;
+
+  constructor(public settingsService: SettingsService) {}
 
   ngOnInit(): void {}
 
