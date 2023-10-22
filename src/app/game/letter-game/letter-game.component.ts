@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { GameConfig, Games } from 'src/app/models/games';
 import { Language } from 'src/app/models/language';
+import { LetterGameCorrect } from 'src/app/models/letter-game-corrrect';
 import { SettingsService } from 'src/app/services/settings.service';
 
 @Component({
@@ -12,8 +13,10 @@ export class LetterGameComponent implements OnInit {
   @Input() game: Games;
 
   Language = Language;
+  LetterGameCorrect = LetterGameCorrect;
+
   userInputMap: Map<number, string[]> = new Map(); // Map to store user input for each configuration
-  correctInput: Map<number, boolean> = new Map();
+  correctInput: Map<number, LetterGameCorrect> = new Map();
 
   constructor(public settingsService: SettingsService) {}
 
@@ -34,7 +37,7 @@ export class LetterGameComponent implements OnInit {
         );
       }
       this.userInputMap.set(index, userInputArray);
-      this.correctInput.set(index, false);
+      this.correctInput.set(index, LetterGameCorrect.NONE);
     });
   }
 
@@ -68,13 +71,13 @@ export class LetterGameComponent implements OnInit {
       if (isCorrect) {
         console.log(`Configuration ${configIndex}: Word is correct!`);
         // You can add further logic here.
-        this.correctInput.set(configIndex, true);
+        this.correctInput.set(configIndex, LetterGameCorrect.CORRECT);
       } else {
         console.log(
           `Configuration ${configIndex}: Word is incorrect. Try again.`
         );
         // Handle incorrect word input.
-        this.correctInput.set(configIndex, false);
+        this.correctInput.set(configIndex, LetterGameCorrect.WRONG);
       }
     }
   }

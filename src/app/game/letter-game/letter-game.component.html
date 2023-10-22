@@ -6,14 +6,21 @@
     <div id="smiley-image-container">
       <img
         id="smiley-image"
-        src="assets/icons/smiley.svg"
-        *ngIf="isCorrect(configIndex)"
+        src="assets/icons/check-mark.svg"
+        *ngIf="isCorrect(configIndex) === LetterGameCorrect.CORRECT"
+      />
+      <img
+        id="smiley-image"
+        src="assets/icons/error.svg"
+        *ngIf="isCorrect(configIndex) === LetterGameCorrect.WRONG"
       />
     </div>
     <div class="image-wrapper">
       <img
         [src]="config.image"
-        [style.opacity]="isCorrect(configIndex) ? 0.5 : 1"
+        [style.opacity]="
+          isCorrect(configIndex) === LetterGameCorrect.NONE ? 1 : 0.5
+        "
       />
     </div>
     <div class="letter-grid">
