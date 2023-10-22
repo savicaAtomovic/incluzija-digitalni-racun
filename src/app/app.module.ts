@@ -19,6 +19,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { GamesListComponent } from './games-list/games-list.component';
 import { GameComponent } from './game/game.component';
 import { LetterGameComponent } from './game/letter-game/letter-game.component';
+import { LetterValidatorDirective } from './directives/letter-validator.directive';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { LetterGameComponent } from './game/letter-game/letter-game.component';
     GamesListComponent,
     GameComponent,
     LetterGameComponent,
+    LetterValidatorDirective,
   ],
   imports: [
     BrowserModule,
