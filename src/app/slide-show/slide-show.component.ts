@@ -141,6 +141,9 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
   }
 
   select(index: number): void {
+    if (this.paused) {
+      this.pause();
+    }
     this.resetTimer();
     this.direction = this.getDirection(this.activeSlides.current, index);
     this.activeSlides = this.getPreviousCurrentNextIndexes(index);
