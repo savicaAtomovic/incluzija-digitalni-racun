@@ -1,4 +1,4 @@
-<div>
+<div class="container">
   <app-topbar [title]="topbarTitle" [showBackButton]="true"></app-topbar>
   <app-slide-show
     *ngIf="slides"
@@ -10,6 +10,7 @@
     [slideTemplateRef]="slide"
     [thumbnailTemplateRef]="thumbnail"
     (pauseFunc)="pause($event)"
+    class="slide-show-wrapper"
   ></app-slide-show>
   <ng-template #slide let-slide>
     <div

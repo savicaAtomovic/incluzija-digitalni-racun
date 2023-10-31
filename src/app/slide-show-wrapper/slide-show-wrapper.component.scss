@@ -1,5 +1,12 @@
 .container {
-  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+.slide-show-wrapper {
+  overflow: auto;
 }
 
 .description {
