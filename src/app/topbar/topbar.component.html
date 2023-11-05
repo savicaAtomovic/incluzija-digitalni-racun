@@ -166,6 +166,14 @@
 </mat-menu>
 
 <mat-menu #settingsLetterGame="matMenu">
+  <button mat-menu-item (click)="newLetterGame()">
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >Nova igra</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.SERBIAN"
+      >Нова игра</span
+    >
+  </button>
   <button mat-menu-item [matMenuTriggerFor]="level">
     <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
       >Nivo</span

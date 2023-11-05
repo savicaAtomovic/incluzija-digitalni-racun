@@ -46,4 +46,8 @@ export class TopbarComponent implements OnInit {
   setLetterGameLevel(letterGameLevel: LetterGameLevel) {
     this.settingsService.letterGameLevel.next(letterGameLevel);
   }
+
+  newLetterGame() {
+    this.settingsService.newLetterGame.next(true);
+  }
 }
