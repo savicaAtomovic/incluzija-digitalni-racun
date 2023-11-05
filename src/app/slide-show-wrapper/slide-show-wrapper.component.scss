@@ -1,5 +1,12 @@
 .container {
-  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+.slide-show-wrapper {
+  overflow: auto;
 }
 
 .description {
@@ -23,7 +30,34 @@
   background-repeat: no-repeat;
   width: var(--image-width);
   height: var(--slide-image-height);
+  z-index: 1;
 }
+
+.pause {
+  width: var(--image-width);
+  height: var(--slide-image-height);
+  z-index: 3;
+  position: absolute;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+/** Play Button **/
+#play-button-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+.play-button {
+  position: absolute;
+  z-index: 1;
+  margin-top: -33%;
+}
+
+/** Media Queries **/
 
 @media (max-width: 900px) {
   .description {

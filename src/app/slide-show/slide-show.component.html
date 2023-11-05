@@ -7,7 +7,6 @@
       [@slideState]="getAnimationSlideState(i)"
       (click)="pause()"
     >
-      <!-- <div *ngIf="paused" style="text-align: center">Pauzirano</div> -->
       <ng-container
         *ngTemplateOutlet="slideTemplateRef; context: { $implicit: slide }"
       >

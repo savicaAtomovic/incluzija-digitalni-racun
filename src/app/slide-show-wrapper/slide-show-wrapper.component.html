@@ -1,4 +1,4 @@
-<div>
+<div class="container">
   <app-topbar [title]="topbarTitle" [showBackButton]="true"></app-topbar>
   <app-slide-show
     *ngIf="slides"
@@ -9,6 +9,8 @@
     [slides]="slides"
     [slideTemplateRef]="slide"
     [thumbnailTemplateRef]="thumbnail"
+    (pauseFunc)="pause($event)"
+    class="slide-show-wrapper"
   ></app-slide-show>
   <ng-template #slide let-slide>
     <div
@@ -18,6 +20,10 @@
       }"
     >
       <img class="image" src="{{ slide.image }}" />
+      <div id="play-button-container">
+        <img class="play-button" *ngIf="paused" src="assets/icons/play-button.png"/>
+      </div>
+      
       <div *ngIf="slide.description" class="description">
         <p>{{ slide.description }}</p>
       </div>
@@ -35,4 +41,5 @@
       }"
     ></div>
   </ng-template>
+  
 </div>

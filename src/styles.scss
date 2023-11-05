@@ -7,6 +7,16 @@
   box-sizing: border-box;
 }
 
+html {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
 :root {
   --unit-1: 4px;
   --elevation-1: 1;

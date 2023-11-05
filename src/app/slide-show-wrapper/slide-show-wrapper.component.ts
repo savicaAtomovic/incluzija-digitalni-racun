@@ -26,6 +26,7 @@ export class SlideShowWrapperComponent implements OnInit {
   AnimationEnum = Animation;
   slides: any;
   topbarTitle: String;
+  paused = false;
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
@@ -54,9 +55,16 @@ export class SlideShowWrapperComponent implements OnInit {
           eventItem.description = eventItem.descriptionAlb;
         });
       }
+
+      console.log('event', event);
       this.topbarTitle = event?.description ?? '';
       this.slides = event?.eventItems;
       this.titleService.topbarTitle.next(event ? event.description : '');
     });
+  }
+
+  pause(event: boolean) {
+    console.log('eventpuse', event);
+    this.paused = event;
   }
 }
