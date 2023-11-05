@@ -1,7 +1,7 @@
 <div class="container">
   <div
     class="images"
-    *ngFor="let config of game.config; let configIndex = index"
+    *ngFor="let config of configArray; let configIndex = index"
   >
     <div id="smiley-image-container">
       <img
@@ -37,6 +37,7 @@
       >
         <div class="letter" *ngIf="!isMissing(i, config)">{{ letter }}</div>
         <input
+          [value]="userInputMap.get(configIndex)?.[i] || ''"
           *ngIf="isMissing(i, config)"
           class="letter-input"
           type="text"

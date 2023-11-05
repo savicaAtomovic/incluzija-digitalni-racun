@@ -1,7 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Subject, switchMap, takeUntil } from 'rxjs';
+import { GamesService } from 'src/app/games-list/games.service';
 import { GameConfig, Games } from 'src/app/models/games';
 import { Language } from 'src/app/models/language';
 import { LetterGameCorrect } from 'src/app/models/letter-game-corrrect';
+import { LetterGameLevel } from 'src/app/models/letter-game-level';
 import { SettingsService } from 'src/app/services/settings.service';
 
 @Component({
@@ -9,20 +12,57 @@ import { SettingsService } from 'src/app/services/settings.service';
   templateUrl: './letter-game.component.html',
   styleUrls: ['./letter-game.component.scss'],
 })
-export class LetterGameComponent implements OnInit {
+export class LetterGameComponent implements OnInit, OnDestroy {
   @Input() game: Games;
+
+  private destroyed$ = new Subject();
 
   Language = Language;
   LetterGameCorrect = LetterGameCorrect;
+  configArray: GameConfig[];
 
   userInputMap: Map<number, string[]> = new Map(); // Map to store user input for each configuration
   correctInput: Map<number, LetterGameCorrect> = new Map();
 
-  constructor(public settingsService: SettingsService) {}
+  constructor(
+    public settingsService: SettingsService,
+    private gamesService: GamesService
+  ) {}
 
   ngOnInit(): void {
-    // Initialize the userInputMap with empty arrays for each configuration
-    this.game.config.forEach((config, index) => {
+    this.gamesService
+      .getGameConfigByLocation(this.game.configLocation)
+      .pipe(
+        takeUntil(this.destroyed$),
+        switchMap((configs) => {
+          this.configArray = configs;
+          return this.settingsService.letterGameLevel;
+        }),
+        switchMap((gameLevel) => {
+          switch (gameLevel) {
+            case LetterGameLevel.FIRST_LETTER:
+              this.missingFirstLetter();
+              break;
+            case LetterGameLevel.ONE_LETTER:
+              this.missingRandomLetters(1);
+              break;
+            case LetterGameLevel.TWO_LETTERS:
+              this.missingRandomLetters(2);
+              break;
+            case LetterGameLevel.THREE_LETTERS:
+              this.missingRandomLetters(3);
+              break;
+          }
+          return this.settingsService.language;
+        })
+      )
+      .subscribe((_) => {
+        this.updateConfigArrayValues();
+      });
+  }
+
+  updateConfigArrayValues() {
+    this.configArray.forEach((config, index) => {
       const userInputArray = [];
       const isSerbian =
         this.settingsService.language.value === Language.SERBIAN;
@@ -36,6 +76,7 @@ export class LetterGameComponent implements OnInit {
           this.isMissing(i, config) ? '' : this.getCurrentWord(config)[i]
         );
       }
+
       this.userInputMap.set(index, userInputArray);
       this.correctInput.set(index, LetterGameCorrect.NONE);
     });
@@ -63,6 +104,14 @@ export class LetterGameComponent implements OnInit {
       // Convert userWord to an array of strings
       const userWordArray = userWord.split('');
 
+      if (
+        this.numberOfLettersInStringArray(userWordArray) !=
+        this.numberOfLettersInStringArray(wordToCheck)
+      ) {
+        this.correctInput.set(configIndex, LetterGameCorrect.NONE);
+        return;
+      }
+
       // Check if userWordArray and wordToCheck are equal
       const isCorrect =
         userWordArray.join('').toUpperCase() ===
@@ -84,7 +133,7 @@ export class LetterGameComponent implements OnInit {
 
   getWordToCheck(configIndex: number): string[] {
     // Get the configuration for the specified index
-    const config = this.game.config[configIndex];
+    const config = this.configArray[configIndex];
 
     // Determine the language
     const selectedLanguage = this.settingsService.language.value;
@@ -110,5 +159,35 @@ export class LetterGameComponent implements OnInit {
       userInput[i] = event.target.value;
       this.checkWord(configIndex);
     }
+  }
+
+  missingFirstLetter() {
+    this.configArray.forEach((config) => {
+      config.missing = [0];
+    });
+  }
+
+  missingRandomLetters(n: number) {
+    const isSerbian = this.settingsService.language.value === Language.SERBIAN;
+    this.configArray.forEach((config) => {
+      config.missing = this.gamesService.generateRandomArray(
+        n,
+        isSerbian ? config.wordCyr.length : config.wordLat.length
+      );
+    });
+  }
+
+  numberOfLettersInStringArray(stringArray: string[]): number {
+    let totalLetters = 0;
+
+    for (const element of stringArray) {
+      totalLetters += element.length;
+    }
+    return totalLetters;
+  }
+
+  ngOnDestroy(): void {
+    this.destroyed$.next(null);
+    this.destroyed$.complete();
   }
 }

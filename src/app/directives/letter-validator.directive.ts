@@ -12,7 +12,7 @@ export class LetterValidatorDirective {
 
     // Allow uppercase and lowercase Latin and Serbian Cyrillic letters and transform to uppercase
     const sanitizedValue = inputValue
-      .replace(/[^A-Za-zА-Яа-яŽžŠšČčĐđĆćЋћЂђЉљЊњ]/g, '')
+      .replace(/[^A-Za-zА-Яа-яŽžŠšČčĐđĆćЋћЂђЉљЊњЈј]/g, '')
       .toUpperCase();
 
     // Update the input field

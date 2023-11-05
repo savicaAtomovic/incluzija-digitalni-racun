@@ -4,7 +4,7 @@ export interface Games {
   description: string;
   image: string;
   type: GameType;
-  config: GameConfig[];
+  configLocation: string;
 }
 
 export interface GameConfig {
