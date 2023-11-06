@@ -1,8 +1,9 @@
-.container {
+.images-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 50px 300px;
+  justify-content: space-around;
+  padding: 50px 25%;
+  max-width: 1300px;
 }
 
 .images {
@@ -59,8 +60,8 @@
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 20px 50px;
+  .images-container {
+    padding: 20px 11%;
   }
 }
 
