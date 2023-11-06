@@ -9,8 +9,9 @@
 .letter-game-content-wrapper {
     display: flex;
     justify-content: center;
-    overflow: auto;
     width: 100%;
+    position: relative;
+    overflow: scroll;
 }
 
 .app-game-topbar {
