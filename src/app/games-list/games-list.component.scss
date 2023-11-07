@@ -1,3 +1,7 @@
+/*********************
+  Igre
+**********************/
+
 .games-container {
   height: 100%;
   display: flex;
@@ -6,15 +10,19 @@
 }
 
 .games-wrapper {
-  //padding: 50px 500px;
-  display: flex; /* 1 */
-  //grid-template-columns: repeat(auto-fill, var(--games-width)); /* 2 */
-  //grid-gap: 1rem; /* 3 */
-  justify-content: center; /* 4 */
-  align-items: center;
+  display: flex; 
+  justify-content: center;
   overflow: auto;
   width: 100%;
   padding: 50px 20px 0 20px;
+}
+
+.games-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 770px;
+  gap: 1rem;
 }
 
 .image-wrapper {
@@ -41,8 +49,18 @@
   justify-content: center;
 }
 
+/******************
+  Media Queries
+*******************/
+
 @media (max-width: 768px) {
   .games-wrapper {
     padding: 20px 20px;
+  }
+}
+
+@media (max-width: 639px) {
+  .games-images-container {
+    justify-content: space-evenly;
   }
 }

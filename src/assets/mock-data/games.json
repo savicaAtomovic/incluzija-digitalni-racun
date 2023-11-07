@@ -6,5 +6,53 @@
     "image": "assets/games/1/Picture1.jpg",
     "type": "LETTERS",
     "configLocation": "assets/games/1/game1.json"
+  },
+  {
+    "id": 2,
+    "name": "Spajanje slova/glasova u riječ",
+    "description": "Cilj igre spajanja slova u riječ je da dijete pogodi koja slova nedostaju na osnovu slike.",
+    "image": "assets/games/1/Picture1.jpg",
+    "type": "LETTERS",
+    "configLocation": "assets/games/1/game1.json"
+  },
+  {
+    "id": 3,
+    "name": "Spajanje slova/glasova u riječ",
+    "description": "Cilj igre spajanja slova u riječ je da dijete pogodi koja slova nedostaju na osnovu slike.",
+    "image": "assets/games/1/Picture1.jpg",
+    "type": "LETTERS",
+    "configLocation": "assets/games/1/game1.json"
+  },
+  {
+    "id": 4,
+    "name": "Spajanje slova/glasova u riječ",
+    "description": "Cilj igre spajanja slova u riječ je da dijete pogodi koja slova nedostaju na osnovu slike.",
+    "image": "assets/games/1/Picture1.jpg",
+    "type": "LETTERS",
+    "configLocation": "assets/games/1/game1.json"
+  },
+  {
+    "id": 5,
+    "name": "Spajanje slova/glasova u riječ",
+    "description": "Cilj igre spajanja slova u riječ je da dijete pogodi koja slova nedostaju na osnovu slike.",
+    "image": "assets/games/1/Picture1.jpg",
+    "type": "LETTERS",
+    "configLocation": "assets/games/1/game1.json"
+  },
+  {
+    "id": 6,
+    "name": "Spajanje slova/glasova u riječ",
+    "description": "Cilj igre spajanja slova u riječ je da dijete pogodi koja slova nedostaju na osnovu slike.",
+    "image": "assets/games/1/Picture1.jpg",
+    "type": "LETTERS",
+    "configLocation": "assets/games/1/game1.json"
+  },
+  {
+    "id": 7,
+    "name": "Spajanje slova/glasova u riječ",
+    "description": "Cilj igre spajanja slova u riječ je da dijete pogodi koja slova nedostaju na osnovu slike.",
+    "image": "assets/games/1/Picture1.jpg",
+    "type": "LETTERS",
+    "configLocation": "assets/games/1/game1.json"
   }
 ]

@@ -1,3 +1,7 @@
+/*******************************
+  Spajanje Slova-Glasova u riječ
+********************************/
+
 .images-container {
   display: flex;
   flex-wrap: wrap;
@@ -59,12 +63,6 @@
   border: 1px solid #000; /* Add a border for better visual separation */
 }
 
-@media (max-width: 768px) {
-  .images-container {
-    padding: 20px 11%;
-  }
-}
-
 #smiley-image-container {
   display: flex;
   align-items: center;
@@ -78,3 +76,15 @@
   z-index: 1;
   margin-top: 2%;
 }
+
+/******************
+  Media Queries
+*******************/
+
+@media (max-width: 768px) {
+  .images-container {
+    padding: 20px 11%;
+  }
+}
+
+

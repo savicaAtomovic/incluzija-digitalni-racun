@@ -1,3 +1,7 @@
+/*********************
+  Početna
+**********************/
+
 .home-container {
   display: flex;
   flex-direction: column;
@@ -60,7 +64,10 @@ h1 {
   color: #2e75b6;
 }
 
-/* Media query for smaller screens */
+/******************
+  Media Queries
+*******************/
+
 @media (max-width: 768px) {
   .home-page-content-wrapper {
     padding: 20px 11%;
