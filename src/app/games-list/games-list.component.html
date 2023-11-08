@@ -1,21 +1,18 @@
-<div class="container">
-  <div class="topbar">
-    <app-topbar
-      [title]="'IGRE'"
-      [showSettings]="false"
-      [showBackButton]="true"
-      [backOnPage]="'/home'"
-    ></app-topbar>
-  </div>
+<div class="games-container">
+
+  <app-topbar [title]="'IGRE'" [showSettings]="false" [showBackButton]="true" [backOnPage]="'/home'"></app-topbar>
+
   <div class="games-wrapper" fxLayoutGap="15px">
-    <div class="image-wrapper" *ngFor="let game of games">
-      <img class="image" src="{{ game.image }}" (click)="onClick(game)" />
-      <div class="description">
-        <p>
-          {{ game.name }}
-        </p>
+    <div class="games-images-container">
+      <div class="image-wrapper" *ngFor="let game of games">
+        <img class="image" src="{{ game.image }}" (click)="onClick(game)" />
+        <div class="description">
+          <p>
+            {{ game.name }}
+          </p>
+        </div>
+        <div class="break"></div>
       </div>
-      <div></div>
     </div>
   </div>
 </div>

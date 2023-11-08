@@ -1,23 +1,27 @@
 <div class="home-container">
   <app-topbar [title]="'POČETNA'"></app-topbar>
-  <div class="container">
+  <div class="home-page-content-wrapper">
     <div class="description">
-      <h1>Dobrodošli!</h1>
-      <p>
-        Ova aplikacija je posebno osmišljena za djecu sa posebnim potrebama,
-        pružajući im interaktivno iskustvo koje će ih podržati i inspirisati.
-        Naša aplikacija kombinuje edukaciju i zabavu kako bi olakšala
-        razumijevanje društvenih situacija i razvijala vještine pismenosti.
-      </p>
-      <p>Šta ćete pronaći ovdje?</p>
+      <div class="home-heading-1">
+        <h1>Dobrodošli!</h1>
+      </div>
+      <div class="home-about">
+        <p>
+          Ova aplikacija je posebno osmišljena za djecu sa posebnim potrebama,
+          pružajući im interaktivno iskustvo koje će ih podržati i inspirisati.
+          Naša aplikacija kombinuje edukaciju i zabavu kako bi olakšala
+          razumijevanje društvenih situacija i razvijala vještine pismenosti.
+        </p>
+      </div>
+      <div class="home-what">
+        <p>Šta ćete pronaći ovdje?</p>
+      </div>
     </div>
+    <div class="break"></div>
     <div class="options">
       <div class="option">
         <div class="image-wrapper" (click)="navigateToBoard()">
-          <img
-            class="image"
-            src="assets/multimedia/1/images/without-text/Picture1.jpg"
-          />
+          <img class="image" src="assets/multimedia/1/images/without-text/Picture1.jpg" />
         </div>
         <div class="image-description">
           <p>
@@ -36,13 +40,16 @@
         </div>
       </div>
     </div>
+    <div class="break"></div>
     <div class="description">
-      <p>
-        Nastojimo stvoriti siguran i podržavajući prostor za svako dijete,
-        pružajući im resurse i alate za uspešan razvoj. Ovo je mjesto gdje
-        učenje postaje avantura, a svako dijete ima priliku da zabavno i
-        efikasno razvija svoje vještine.
-      </p>
+      <div class="home-about">
+        <p>
+          Nastojimo stvoriti siguran i podržavajući prostor za svako dijete,
+          pružajući im resurse i alate za uspešan razvoj. Ovo je mjesto gdje
+          učenje postaje avantura, a svako dijete ima priliku da zabavno i
+          efikasno razvija svoje vještine.
+        </p>
+      </div>
     </div>
   </div>
 </div>

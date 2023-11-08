@@ -1,8 +1,13 @@
-.container {
+/*******************************
+  Spajanje Slova-Glasova u riječ
+********************************/
+
+.images-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 50px 300px;
+  justify-content: space-around;
+  padding: 50px 25%;
+  max-width: 1300px;
 }
 
 .images {
@@ -58,12 +63,6 @@
   border: 1px solid #000; /* Add a border for better visual separation */
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 20px 50px;
-  }
-}
-
 #smiley-image-container {
   display: flex;
   align-items: center;
@@ -77,3 +76,15 @@
   z-index: 1;
   margin-top: 2%;
 }
+
+/******************
+  Media Queries
+*******************/
+
+@media (max-width: 768px) {
+  .images-container {
+    padding: 20px 11%;
+  }
+}
+
+
