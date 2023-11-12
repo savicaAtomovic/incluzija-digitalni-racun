@@ -1,0 +1,19 @@
+.game-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    height: 100%;
+}
+
+.letter-game-content-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    overflow: scroll;
+}
+
+.app-game-topbar {
+    width: 100%;
+}

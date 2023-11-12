@@ -1,34 +1,34 @@
 /*********************
-  Društvene situacije
+  Igre
 **********************/
 
-.social-container {
+.games-container {
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  height: 100%;
 }
 
-.social-events-wrapper {
+.games-wrapper {
   display: flex; 
   justify-content: center;
   overflow: auto;
   width: 100%;
-  padding: 50px 20px 50px 20px;
+  padding: 50px 20px 0 20px;
 }
 
-.social-events-container {
+.games-images-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1024px;
+  justify-content: space-between;
+  max-width: 770px;
   gap: 1rem;
 }
 
 .image-wrapper {
   border: 2px solid var(--color-brand-1);
-  width: var(--events-width);
-  height: var(--events-width);
+  width: var(--games-width);
+  height: var(--games-height);
 }
 
 .image {
@@ -39,7 +39,7 @@
 
 .description {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: var(--desc-font-size);
+  font-size: var(--games-desc-font-size);
   color: #2e75b6;
   text-align: center;
   line-height: 1;
@@ -49,13 +49,18 @@
   justify-content: center;
 }
 
-
 /******************
   Media Queries
 *******************/
 
 @media (max-width: 768px) {
-  .social-events-wrapper {
+  .games-wrapper {
     padding: 20px 20px;
+  }
+}
+
+@media (max-width: 639px) {
+  .games-images-container {
+    justify-content: space-evenly;
   }
 }

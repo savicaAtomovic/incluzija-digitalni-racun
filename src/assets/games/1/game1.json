@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "wordLat": ["J", "A", "J", "E"],
+    "wordCyr": ["Ј", "А", "Ј", "Е"],
+    "image": "assets/games/1/Picture1.jpg"
+  },
+  {
+    "id": 2,
+    "wordLat": ["K", "O", "Nj"],
+    "wordCyr": ["К", "О", "Њ"],
+    "image": "assets/games/1/Picture2.jpg"
+  },
+  {
+    "id": 3,
+    "wordLat": ["J", "E", "Ž"],
+    "wordCyr": ["Ј", "Е", "Ж"],
+    "image": "assets/games/1/Picture3.jpg"
+  },
+  {
+    "id": 4,
+    "wordLat": ["L", "A", "V"],
+    "wordCyr": ["Л", "А", "В"],
+    "image": "assets/games/1/Picture4.jpg"
+  },
+  {
+    "id": 5,
+    "wordLat": ["Z", "E", "C"],
+    "wordCyr": ["З", "Е", "Ц"],
+    "image": "assets/games/1/Picture5.jpg"
+  },
+  {
+    "id": 6,
+    "wordLat": ["P", "U", "Ž"],
+    "wordCyr": ["П", "У", "Ж"],
+    "image": "assets/games/1/Picture6.jpg"
+  }
+]

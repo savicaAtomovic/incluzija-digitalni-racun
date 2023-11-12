@@ -1,26 +1,23 @@
-<div class="container">
+<div class="social-container">
   <div class="topbar">
-    <app-topbar
-      *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
-      [title]="'POČETNA'"
-    ></app-topbar>
-    <app-topbar
-      *ngIf="(settingsService.language | async) === Language.ALBANIA"
-      [title]="'Faqja kryesore'"
-    ></app-topbar>
+    <app-topbar *ngIf="(settingsService.language | async) === Language.MONTENEGRO" [title]="'DRUŠTVENE SITUACIJE'"
+      [showSettings]="true" [showBackButton]="true" [backOnPage]="'/home'"></app-topbar>
+    <app-topbar *ngIf="(settingsService.language | async) === Language.ALBANIA" [title]="'Situatat sociale'"
+      [showSettings]="true" [showBackButton]="true" [backOnPage]="'/home'"></app-topbar>
   </div>
-  <div class="events-wrapper" fxLayoutGap="15px">
-    <div class="image-wrapper" *ngFor="let event of events">
-      <img class="image" src="{{ event.image }}" (click)="onClick(event)" />
-      <div class="description">
-        <p *ngIf="(settingsService.language | async) === Language.MONTENEGRO">
-          {{ event.description }}
-        </p>
-        <p *ngIf="(settingsService.language | async) === Language.ALBANIA">
-          {{ event.descriptionALB }}
-        </p>
+  <div class="social-events-wrapper" fxLayoutGap="15px">
+    <div class="social-events-container">
+      <div class="image-wrapper" *ngFor="let event of events">
+        <img class="image" src="{{ event.image }}" (click)="onClick(event)" />
+        <div class="description">
+          <p *ngIf="(settingsService.language | async) === Language.MONTENEGRO">
+            {{ event.description }}
+          </p>
+          <p *ngIf="(settingsService.language | async) === Language.ALBANIA">
+            {{ event.descriptionALB }}
+          </p>
+        </div>
       </div>
-      <div></div>
     </div>
   </div>
 </div>

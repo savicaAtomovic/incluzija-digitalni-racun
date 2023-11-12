@@ -1,8 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { VoiceType } from '../models/voice-type';
+
 import { Language } from '../models/language';
+import { VoiceType } from '../models/voice-type';
 import { SettingsService } from '../services/settings.service';
+import { LetterGameLevel } from '../models/letter-game-level';
 
 @Component({
   selector: 'app-topbar',
@@ -17,29 +19,35 @@ export class TopbarComponent implements OnInit {
 
   @Input() title: String = '';
   @Input() showBackButton: boolean;
+  @Input() showSettings: boolean;
+  @Input() backOnPage: string;
+  @Input() showLetterGameSettings: boolean;
 
   VoiceType = VoiceType;
   Language = Language;
+  LetterGameLevel = LetterGameLevel;
 
   ngOnInit(): void {}
 
   goBack() {
-    this.router.navigate(['/board']);
+    this.backOnPage
+      ? this.router.navigate([this.backOnPage])
+      : this.router.navigate(['/board']);
   }
 
-  setFemaleVoice() {
-    this.settingsService.voiceType.next(VoiceType.FEMALE);
+  setVoice(voiceType: VoiceType) {
+    this.settingsService.voiceType.next(voiceType);
   }
 
-  setMaleVoice() {
-    this.settingsService.voiceType.next(VoiceType.MALE);
+  setLanguage(language: Language) {
+    this.settingsService.language.next(language);
   }
 
-  setMontenegroLanguage() {
-    this.settingsService.language.next(Language.MONTENEGRO);
+  setLetterGameLevel(letterGameLevel: LetterGameLevel) {
+    this.settingsService.letterGameLevel.next(letterGameLevel);
   }
 
-  setAlbaniaLanguage() {
-    this.settingsService.language.next(Language.ALBANIA);
+  newLetterGame() {
+    this.settingsService.newLetterGame.next(true);
   }
 }

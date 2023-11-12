@@ -1,0 +1,9 @@
+<div class="game-container">
+  <app-topbar class="app-game-topbar" [title]="topbarTitle" [showBackButton]="true" [backOnPage]="'/games'" [showSettings]="false"
+    [showLetterGameSettings]="true"></app-topbar>
+  <div class="letter-game-content-wrapper">
+    <app-letter-game class="app-letter-game-content-wrapper"  *ngIf="game?.type === GameType.LETTERS"
+      [game]="game"></app-letter-game>
+  </div>
+  <p *ngIf="game?.type !== GameType.LETTERS">game-component-works</p>
+</div>
