@@ -21,6 +21,7 @@ import { GameComponent } from './game/game.component';
 import { LetterGameComponent } from './game/letter-game/letter-game.component';
 import { LetterValidatorDirective } from './directives/letter-validator.directive';
 import { FormsModule } from '@angular/forms';
+import { LetterPermutationsGameComponent } from './game/letter-permutations-game/letter-permutations-game.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { FormsModule } from '@angular/forms';
     GameComponent,
     LetterGameComponent,
     LetterValidatorDirective,
+    LetterPermutationsGameComponent,
   ],
   imports: [
     BrowserModule,
