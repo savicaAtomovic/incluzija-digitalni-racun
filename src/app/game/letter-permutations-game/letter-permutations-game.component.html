@@ -1,1 +1,57 @@
-<p>letter-permutations-game works!</p>
+<div class="images-container">
+  <div
+    class="images"
+    *ngFor="let config of configArray; let configIndex = index"
+  >
+    <div id="smiley-image-container">
+      <img
+        id="smiley-image"
+        src="assets/icons/check-mark.svg"
+        *ngIf="isCorrect(configIndex) === LetterGameCorrect.CORRECT"
+      />
+      <img
+        id="smiley-image"
+        src="assets/icons/error.svg"
+        *ngIf="isCorrect(configIndex) === LetterGameCorrect.WRONG"
+      />
+    </div>
+    <div class="image-wrapper">
+      <img
+        [src]="config.image"
+        [style.opacity]="
+          isCorrect(configIndex) === LetterGameCorrect.NONE ? 1 : 0.5
+        "
+      />
+    </div>
+    <div class="letter-grid">
+      <ng-container
+        *ngFor="
+          let letter of (settingsService.language | async) ===
+          Language.MONTENEGRO
+            ? config.wordLat
+            : (settingsService.language | async) === Language.SERBIAN
+            ? config.wordCyr
+            : config.wordLat;
+          let i = index
+        "
+      >
+        <div class="letter"></div>
+      </ng-container>
+    </div>
+    <div class="letter-grid">
+      <ng-container
+        *ngFor="
+          let letter of (settingsService.language | async) ===
+          Language.MONTENEGRO
+            ? config.wordLat
+            : (settingsService.language | async) === Language.SERBIAN
+            ? config.wordCyr
+            : config.wordLat;
+          let i = index
+        "
+      >
+        <div class="letter">{{ letter }}</div>
+      </ng-container>
+    </div>
+  </div>
+</div>
