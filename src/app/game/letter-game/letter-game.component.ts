@@ -22,7 +22,9 @@ export class LetterGameComponent implements OnInit, OnDestroy {
   Language = Language;
   LetterGameCorrect = LetterGameCorrect;
   configArray: GameConfig[];
+  originalConfigArray: GameConfig[];
   generatedNumbers: number[] = [];
+  gameLevel: LetterGameLevel;
 
   userInputMap: Map<number, string[]> = new Map(); // Map to store user input for each configuration
   correctInput: Map<number, LetterGameCorrect> = new Map();
@@ -38,24 +40,14 @@ export class LetterGameComponent implements OnInit, OnDestroy {
       .pipe(
         takeUntil(this.destroyed$),
         switchMap((configs) => {
-          this.newGame(configs);
+          this.originalConfigArray = configs;
+          this.newGame(this.originalConfigArray);
           return this.settingsService.letterGameLevel;
         }),
         switchMap((gameLevel) => {
-          switch (gameLevel) {
-            case LetterGameLevel.FIRST_LETTER:
-              this.missingFirstLetter();
-              break;
-            case LetterGameLevel.ONE_LETTER:
-              this.missingRandomLetters(1);
-              break;
-            case LetterGameLevel.TWO_LETTERS:
-              this.missingRandomLetters(2);
-              break;
-            case LetterGameLevel.THREE_LETTERS:
-              this.missingRandomLetters(3);
-              break;
-          }
+          this.gameLevel = gameLevel;
+
+          this.setGameLevel(this.gameLevel);
           return this.settingsService.language;
         }),
         switchMap((_) => {
@@ -64,10 +56,29 @@ export class LetterGameComponent implements OnInit, OnDestroy {
       )
       .subscribe((newLetterGame) => {
         if (newLetterGame) {
-          this.newGame(this.configArray);
+          this.newGame(this.originalConfigArray);
+          this.setGameLevel(this.gameLevel);
         }
+
         this.updateConfigArrayValues();
       });
+  }
+
+  setGameLevel(gameLevel: LetterGameLevel) {
+    switch (gameLevel) {
+      case LetterGameLevel.FIRST_LETTER:
+        this.missingFirstLetter();
+        break;
+      case LetterGameLevel.ONE_LETTER:
+        this.missingRandomLetters(1);
+        break;
+      case LetterGameLevel.TWO_LETTERS:
+        this.missingRandomLetters(2);
+        break;
+      case LetterGameLevel.THREE_LETTERS:
+        this.missingRandomLetters(3);
+        break;
+    }
   }
 
   newGame(configs: GameConfig[]) {
@@ -84,6 +95,7 @@ export class LetterGameComponent implements OnInit, OnDestroy {
     this.generatedNumbers = randomIndexes;
 
     const selectedConfigs = randomIndexes.map((index) => configs[index]);
+
     this.configArray = selectedConfigs;
   }
 
