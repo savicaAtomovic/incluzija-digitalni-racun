@@ -22,6 +22,7 @@ export class LetterGameComponent implements OnInit, OnDestroy {
   Language = Language;
   LetterGameCorrect = LetterGameCorrect;
   configArray: GameConfig[];
+  generatedNumbers: number[] = [];
 
   userInputMap: Map<number, string[]> = new Map(); // Map to store user input for each configuration
   correctInput: Map<number, LetterGameCorrect> = new Map();
@@ -70,10 +71,18 @@ export class LetterGameComponent implements OnInit, OnDestroy {
   }
 
   newGame(configs: GameConfig[]) {
-    const randomIndexes = this.gamesService.generateRandomArray(
+    if (this.generatedNumbers.length + this.wordsPerGame > configs.length) {
+      this.generatedNumbers = [];
+    }
+
+    const randomIndexes = this.gamesService.newGame(
       this.wordsPerGame,
-      configs.length
+      configs.length,
+      this.generatedNumbers
     );
+
+    this.generatedNumbers = randomIndexes;
+
     const selectedConfigs = randomIndexes.map((index) => configs[index]);
     this.configArray = selectedConfigs;
   }
