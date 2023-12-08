@@ -23,7 +23,13 @@
         "
       />
     </div>
-    <div class="letter-grid">
+    <!-- Droppable container -->
+    <div
+      class="letter-grid"
+      cdkDropList
+      [cdkDropListData]="userInputMap.get(configIndex) ?? []"
+      (cdkDropListDropped)="drop($event, configIndex)"
+    >
       <ng-container
         *ngFor="
           let letter of (settingsService.language | async) ===
@@ -32,13 +38,28 @@
             : (settingsService.language | async) === Language.SERBIAN
             ? config.wordCyr
             : config.wordLat;
+          trackBy: trackByFn;
           let i = index
         "
       >
-        <div class="letter"></div>
+        <div class="letter" cdkDrag>
+          {{ userInputMap.get(configIndex)?.[i] }}
+        </div>
       </ng-container>
     </div>
-    <div class="letter-grid">
+    <!-- Draggable container -->
+    <div
+      class="letter-grid"
+      cdkDropList
+      (cdkDropListDropped)="drop($event, configIndex)"
+      [cdkDropListData]="
+        (settingsService.language | async) === Language.MONTENEGRO
+          ? config.wordLat
+          : (settingsService.language | async) === Language.SERBIAN
+          ? config.wordCyr
+          : config.wordLat
+      "
+    >
       <ng-container
         *ngFor="
           let letter of (settingsService.language | async) ===
@@ -47,10 +68,11 @@
             : (settingsService.language | async) === Language.SERBIAN
             ? config.wordCyr
             : config.wordLat;
+          trackBy: trackByFn;
           let i = index
         "
       >
-        <div class="letter">{{ letter }}</div>
+        <div class="letter" cdkDrag>{{ letter }}</div>
       </ng-container>
     </div>
   </div>
