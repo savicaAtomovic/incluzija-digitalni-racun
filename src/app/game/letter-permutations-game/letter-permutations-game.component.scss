@@ -57,6 +57,18 @@
   cursor: pointer;
 }
 
+.user-letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 50px; /* Adjust the width as needed to match the other letters */
+  height: 50px; /* Adjust the height as needed to match the other letters */
+  font-size: 24px; /* Customize the font size */
+  text-align: center;
+  border: 1px solid #000; /* Add a border for better visual separation */
+}
+
 .letter-input {
   width: 50px; /* Adjust the width as needed to match the other letters */
   height: 50px; /* Adjust the height as needed to match the other letters */
