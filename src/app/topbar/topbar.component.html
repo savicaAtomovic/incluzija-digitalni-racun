@@ -26,7 +26,13 @@
     >
   </div>
   <div class="header-text">{{ title }}</div>
-  <div *ngIf="!showSettings && !showLetterGameSettings"></div>
+  <div
+    *ngIf="
+      !showSettings &&
+      !showLetterGameSettings &&
+      !showLetterPermutationsGameSettings
+    "
+  ></div>
   <div *ngIf="showSettings" class="settings-icon">
     <mat-icon
       [matMenuTriggerFor]="settings"
