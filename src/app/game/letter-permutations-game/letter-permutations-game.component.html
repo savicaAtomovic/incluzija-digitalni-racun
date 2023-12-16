@@ -23,13 +23,9 @@
         "
       />
     </div>
+
     <!-- Droppable container -->
-    <div
-      class="letter-grid"
-      cdkDropList
-      [cdkDropListData]="userInputMap.get(configIndex) ?? []"
-      (cdkDropListDropped)="drop($event, configIndex)"
-    >
+    <div class="letter-grid">
       <ng-container
         *ngFor="
           let letter of (settingsService.language | async) ===
@@ -38,28 +34,29 @@
             : (settingsService.language | async) === Language.SERBIAN
             ? config.wordCyr
             : config.wordLat;
-          trackBy: trackByFn;
           let i = index
         "
       >
-        <div class="letter" cdkDrag>
-          {{ userInputMap.get(configIndex)?.[i] }}
+        <div
+          class="letter"
+          [ngStyle]="{
+            'background-color': isInArray(
+              i,
+              userInput[configIndex].correctLetters
+            )
+              ? '#38AB32'
+              : isInArray(i, userInput[configIndex].wrongLetters)
+              ? '#D66651'
+              : ''
+          }"
+          (click)="onUserLetterClick(configIndex, config, i)"
+        >
+          {{ userInput[configIndex].userInput[i] }}
         </div>
       </ng-container>
     </div>
     <!-- Draggable container -->
-    <div
-      class="letter-grid"
-      cdkDropList
-      (cdkDropListDropped)="drop($event, configIndex)"
-      [cdkDropListData]="
-        (settingsService.language | async) === Language.MONTENEGRO
-          ? config.wordLat
-          : (settingsService.language | async) === Language.SERBIAN
-          ? config.wordCyr
-          : config.wordLat
-      "
-    >
+    <div class="letter-grid">
       <ng-container
         *ngFor="
           let letter of (settingsService.language | async) ===
@@ -68,11 +65,22 @@
             : (settingsService.language | async) === Language.SERBIAN
             ? config.wordCyr
             : config.wordLat;
-          trackBy: trackByFn;
           let i = index
         "
       >
-        <div class="letter" cdkDrag>{{ letter }}</div>
+        <div
+          class="letter"
+          [ngStyle]="{
+            'background-color': isSelected(i, config.selected)
+              ? '#FFA833'
+              : isInArray(i, config.used)
+              ? '#AFC4C6'
+              : ''
+          }"
+          (click)="onLetterClick(letter, config, i)"
+        >
+          {{ letter }}
+        </div>
       </ng-container>
     </div>
   </div>

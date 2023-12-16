@@ -5,7 +5,8 @@
     [showBackButton]="true"
     [backOnPage]="'/games'"
     [showSettings]="false"
-    [showLetterGameSettings]="true"
+    [showLetterGameSettings]="showLetterGameSettings"
+    [showLetterPermutationsGameSettings]="showLetterPermutationsGameSettings"
   ></app-topbar>
   <div class="letter-game-content-wrapper">
     <app-letter-game
@@ -15,13 +16,6 @@
     ></app-letter-game>
   </div>
 
-  <div class="letter-game-content-wrapper">
-    <app-letter-game
-      class="app-letter-game-content-wrapper"
-      *ngIf="game?.type === GameType.LETTERS"
-      [game]="game"
-    ></app-letter-game>
-  </div>
   <div class="letter-game-content-wrapper">
     <app-letter-permutations-game
       class="app-letter-game-content-wrapper"

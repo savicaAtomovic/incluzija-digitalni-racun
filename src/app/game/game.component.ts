@@ -12,6 +12,8 @@ export class GameComponent implements OnInit {
   game: Games;
   GameType = GameType;
   topbarTitle: string;
+  showLetterGameSettings: boolean = false;
+  showLetterPermutationsGameSettings: boolean = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -23,6 +25,13 @@ export class GameComponent implements OnInit {
     this.gamesService.games.subscribe((games) => {
       this.game = games.find((g: Games) => g.id === Number(id));
       this.topbarTitle = this.game.name;
+      if (this.game.type === GameType.LETTERS) {
+        this.showLetterGameSettings = true;
+        this.showLetterPermutationsGameSettings = false;
+      } else if (this.game.type === GameType.LETTERS_PERMUTATIONS) {
+        this.showLetterGameSettings = false;
+        this.showLetterPermutationsGameSettings = true;
+      }
     });
   }
 }

@@ -1,12 +1,7 @@
-import {
-  CdkDragDrop,
-  moveItemInArray,
-  transferArrayItem,
-} from '@angular/cdk/drag-drop';
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { Subject, takeUntil } from 'rxjs';
+import { Subject, switchMap, takeUntil } from 'rxjs';
 import { GamesService } from 'src/app/games-list/games.service';
-import { GameConfig, Games } from 'src/app/models/games';
+import { GameConfig, Games, UserInput } from 'src/app/models/games';
 import { Language } from 'src/app/models/language';
 import { LetterGameCorrect } from 'src/app/models/letter-game-corrrect';
 import { SettingsService } from 'src/app/services/settings.service';
@@ -21,11 +16,14 @@ export class LetterPermutationsGameComponent implements OnInit, OnDestroy {
 
   wordsPerGame = 6;
   configArray: GameConfig[];
+  originalConfigArray: GameConfig[];
+
   Language = Language;
   LetterGameCorrect = LetterGameCorrect;
 
-  userInputMap: Map<number, string[]> = new Map(); // Map to store user input for each configuration
   correctInput: Map<number, LetterGameCorrect> = new Map();
+
+  userInput: UserInput[] = [];
 
   private destroyed$ = new Subject();
 
@@ -37,10 +35,166 @@ export class LetterPermutationsGameComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.gamesService
       .getGameConfigByLocation(this.game.configLocation)
-      .pipe(takeUntil(this.destroyed$))
-      .subscribe((config) => {
-        this.newGame(config);
+      .pipe(
+        takeUntil(this.destroyed$),
+        switchMap((config) => {
+          this.originalConfigArray = config;
+          this.newGame(config);
+          return this.settingsService.newLetterPermutationsGame;
+        })
+      )
+      .subscribe((newGame) => {
+        if (newGame) {
+          this.newGame(this.originalConfigArray);
+        }
       });
+  }
+
+  onLetterClick(letter: string, config: GameConfig, i: number) {
+    this.updateSelected(config.id, i);
+  }
+
+  isSelected(i: number, selected: number | undefined) {
+    return selected == i;
+  }
+
+  isInArray(i: number, array: number[] | undefined) {
+    return !!array?.includes(i);
+  }
+
+  updateSelected(configId: number, i: number) {
+    const index = this.configArray.findIndex(
+      (config) => config.id === configId
+    );
+    if (index != -1) {
+      this.configArray[index].selected = i;
+    }
+  }
+
+  updateUsed(configId: number, i: number) {
+    const index = this.configArray.findIndex(
+      (config) => config.id === configId
+    );
+    if (index != -1) {
+      if (this.configArray[index].used !== undefined) {
+        if (!this.configArray[index].used?.includes(i)) {
+          this.configArray[index].used!.push(i);
+        }
+      } else {
+        this.configArray[index].used = [i];
+      }
+    }
+  }
+
+  removeSelected(configId: number, i: number) {
+    const index = this.configArray.findIndex(
+      (config) => config.id === configId
+    );
+    if (index != -1) {
+      this.configArray[index].selected = undefined;
+    }
+  }
+
+  onUserLetterClick(configIndex: number, config: GameConfig, i: number) {
+    const isSerbian = this.settingsService.language.value === Language.SERBIAN;
+    const arrayOfLetters = isSerbian ? config.wordCyr : config.wordLat;
+    const originalArrayOfLetters = isSerbian
+      ? config.originalWordCyr
+      : config.originalWordLat;
+
+    const userInput = this.userInput[configIndex];
+    if (config.selected !== undefined && userInput) {
+      this.userInput[configIndex].userInput[i] =
+        arrayOfLetters[config.selected];
+    } else {
+      return;
+    }
+
+    if (originalArrayOfLetters) {
+      if (
+        this.userInput[configIndex].userInput[i] === originalArrayOfLetters[i]
+      ) {
+        this.userInput[configIndex].correctLetters.push(i);
+      } else {
+        this.userInput[configIndex].wrongLetters.push(i);
+      }
+      this.updateUsed(config.id, config.selected ?? 0);
+      if (
+        this.userInput[configIndex].userInput[i] !== originalArrayOfLetters[i]
+      ) {
+        this.configArray[configIndex].used = this.configArray[
+          configIndex
+        ].used?.filter((u) => u !== config.selected);
+      }
+      this.removeSelected(config.id, i);
+      this.checkWord(configIndex);
+    }
+  }
+
+  checkWord(configIndex: number): void {
+    const userInputArray = this.userInput[configIndex].userInput;
+    if (userInputArray) {
+      const userWord = userInputArray.join(''); // Join user input array to form the word
+      const wordToCheck = this.getWordToCheck(configIndex);
+
+      // Convert userWord to an array of strings
+      const userWordArray = userWord.split('');
+
+      if (
+        this.numberOfLettersInStringArray(userWordArray) !=
+        this.numberOfLettersInStringArray(wordToCheck)
+      ) {
+        this.userInput[configIndex].gameCorrect = LetterGameCorrect.NONE;
+        return;
+      }
+
+      // Check if userWordArray and wordToCheck are equal
+      const isCorrect =
+        userWordArray.join('').toUpperCase() ===
+        wordToCheck.join('').toUpperCase();
+
+      if (isCorrect) {
+        console.log(`Configuration ${configIndex}: Word is correct!`);
+        // You can add further logic here.
+        this.userInput[configIndex].gameCorrect = LetterGameCorrect.CORRECT;
+      } else {
+        console.log(
+          `Configuration ${configIndex}: Word is incorrect. Try again.`
+        );
+        // Handle incorrect word input.
+        this.userInput[configIndex].gameCorrect = LetterGameCorrect.WRONG;
+      }
+    }
+  }
+
+  numberOfLettersInStringArray(stringArray: string[]): number {
+    let totalLetters = 0;
+
+    for (const element of stringArray) {
+      totalLetters += element.length;
+    }
+    return totalLetters;
+  }
+
+  getWordToCheck(configIndex: number): string[] {
+    // Get the configuration for the specified index
+    const config = this.configArray[configIndex];
+
+    // Determine the language
+    const selectedLanguage = this.settingsService.language.value;
+
+    // Determine the word to check based on the language
+    let wordToCheck: string[] = [];
+
+    if (selectedLanguage === Language.MONTENEGRO) {
+      wordToCheck = config.originalWordLat ?? ['']; // Use the Latin word
+    } else if (selectedLanguage === Language.SERBIAN) {
+      wordToCheck = config.originalWordCyr ?? ['']; // Use the Cyrillic word
+    } else {
+      wordToCheck = config.originalWordLat ?? ['']; // Default to Latin word
+    }
+
+    return wordToCheck;
   }
 
   newGame(configs: GameConfig[]) {
@@ -51,6 +205,8 @@ export class LetterPermutationsGameComponent implements OnInit, OnDestroy {
     const selectedConfigs = randomIndexes.map((index) => configs[index]);
 
     for (const config of selectedConfigs) {
+      config.originalWordCyr = config.wordCyr;
+      config.originalWordLat = config.wordLat;
       config.wordLat = this.gamesService.generateRandomPermutation(
         config.wordLat
       ) as string[];
@@ -58,7 +214,6 @@ export class LetterPermutationsGameComponent implements OnInit, OnDestroy {
         config.wordCyr
       ) as string[];
     }
-    console.log('this.userInputMap', this.userInputMap);
 
     this.configArray = selectedConfigs;
 
@@ -66,6 +221,7 @@ export class LetterPermutationsGameComponent implements OnInit, OnDestroy {
   }
 
   updateConfigArrayValues() {
+    this.userInput = [];
     this.configArray.forEach((config, index) => {
       const userInputArray = [];
       const isSerbian =
@@ -79,77 +235,18 @@ export class LetterPermutationsGameComponent implements OnInit, OnDestroy {
         userInputArray.push('');
       }
 
-      this.userInputMap.set(index, userInputArray);
-      this.correctInput.set(index, LetterGameCorrect.NONE);
+      this.userInput.push({
+        id: config.id,
+        correctLetters: [],
+        wrongLetters: [],
+        userInput: userInputArray,
+        gameCorrect: LetterGameCorrect.NONE,
+      });
     });
   }
 
   isCorrect(index: number) {
-    return this.correctInput.get(index);
-  }
-
-  drop(event: CdkDragDrop<string[]>, configIndex: number) {
-    console.log('event.container', event.container);
-    console.log('event.previousContainer', event.previousContainer);
-    if (!event.container.data || !event.previousContainer.data) {
-      console.error('Invalid array data');
-      return;
-    }
-    // if (event.previousContainer === event.container) {
-    if (false) {
-      console.log('11111');
-      // Reorder letters within the same container
-      moveItemInArray(
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex
-      );
-    } else {
-      console.log('22222');
-      // Transfer letters between containers
-      transferArrayItem(
-        event.previousContainer.data,
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex
-      );
-
-      // Find the corresponding configuration based on configIndex
-      const config = this.configArray[configIndex];
-
-      // Update userInputMap based on the dropped letter
-      const isSerbian =
-        this.settingsService.language.value === Language.SERBIAN;
-      const userInputArray = this.userInputMap.get(configIndex) || [];
-
-      if (isSerbian) {
-        // Assuming config.wordCyr is the correct order
-        userInputArray[event.currentIndex] = event.item.data;
-      } else {
-        // Assuming config.wordLat is the correct order
-        userInputArray[event.currentIndex] = event.item.data;
-      }
-
-      this.userInputMap.set(configIndex, userInputArray);
-
-      // Check if the word is correct
-      const userWord = userInputArray.join('');
-      const correctWord = isSerbian
-        ? config.wordCyr.join('')
-        : config.wordLat.join('');
-      const isCorrect = userWord === correctWord;
-
-      // Update the correctInput map
-      this.correctInput.set(
-        configIndex,
-        isCorrect ? LetterGameCorrect.CORRECT : LetterGameCorrect.WRONG
-      );
-      console.log('this.consoleInpuy', this.userInputMap);
-    }
-  }
-
-  trackByFn(index: number, item: string): string {
-    return item;
+    return this.userInput[index].gameCorrect;
   }
 
   ngOnDestroy(): void {

@@ -67,6 +67,27 @@
       >settings</mat-icon
     >
   </div>
+  <div *ngIf="showLetterPermutationsGameSettings" class="settings-icon">
+    <mat-icon
+      [matMenuTriggerFor]="settingsLetterPermutationsGame"
+      matTooltip="Podešavanja"
+      *ngIf="
+        showLetterPermutationsGameSettings &&
+        (settingsService.language | async) === Language.MONTENEGRO
+      "
+    >
+      settings
+    </mat-icon>
+    <mat-icon
+      [matMenuTriggerFor]="settingsLetterPermutationsGame"
+      matTooltip="Подешавања"
+      *ngIf="
+        showLetterPermutationsGameSettings &&
+        (settingsService.language | async) === Language.SERBIAN
+      "
+      >settings</mat-icon
+    >
+  </div>
 </mat-toolbar>
 
 <mat-menu #settings="matMenu">
@@ -252,6 +273,16 @@
   </button>
 </mat-menu>
 
+<mat-menu #settingsLetterPermutationsGame="matMenu">
+  <button mat-menu-item (click)="newLetterPermutationsGame()">
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >Nova igra</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.SERBIAN"
+      >Нова игра</span
+    >
+  </button>
+</mat-menu>
 <mat-menu #alphabet="matMenu">
   <button
     mat-menu-item
