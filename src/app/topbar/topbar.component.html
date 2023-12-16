@@ -282,6 +282,14 @@
       >Нова игра</span
     >
   </button>
+  <button mat-menu-item [matMenuTriggerFor]="alphabet">
+    <span *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
+      >Pismo</span
+    >
+    <span *ngIf="(settingsService.language | async) === Language.SERBIAN"
+      >Писмо</span
+    >
+  </button>
 </mat-menu>
 <mat-menu #alphabet="matMenu">
   <button
