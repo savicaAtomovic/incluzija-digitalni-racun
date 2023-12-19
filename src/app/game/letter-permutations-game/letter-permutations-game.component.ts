@@ -71,6 +71,7 @@ export class LetterPermutationsGameComponent implements OnInit, OnDestroy {
     }
   }
 
+  // used should be only correct letters
   updateUsed(configId: number, i: number) {
     const index = this.configArray.findIndex(
       (config) => config.id === configId
@@ -117,6 +118,12 @@ export class LetterPermutationsGameComponent implements OnInit, OnDestroy {
         this.userInput[configIndex].correctLetters.push(i);
       } else {
         this.userInput[configIndex].wrongLetters.push(i);
+        // remove from correctLetters array if exists there
+        if (this.userInput[configIndex].correctLetters.includes(i)) {
+          this.userInput[configIndex].correctLetters = this.userInput[
+            configIndex
+          ].correctLetters.filter((cl) => cl !== i);
+        }
       }
       this.updateUsed(config.id, config.selected ?? 0);
       if (
