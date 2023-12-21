@@ -1,0 +1,87 @@
+<div class="images-container">
+  <div
+    class="images"
+    *ngFor="let config of configArray; let configIndex = index"
+  >
+    <div id="smiley-image-container">
+      <img
+        id="smiley-image"
+        src="assets/icons/check-mark.svg"
+        *ngIf="isCorrect(configIndex) === LetterGameCorrect.CORRECT"
+      />
+      <img
+        id="smiley-image"
+        src="assets/icons/error.svg"
+        *ngIf="isCorrect(configIndex) === LetterGameCorrect.WRONG"
+      />
+    </div>
+    <div class="image-wrapper">
+      <img
+        [src]="config.image"
+        [style.opacity]="
+          isCorrect(configIndex) === LetterGameCorrect.NONE ? 1 : 0.5
+        "
+      />
+    </div>
+
+    <!-- Droppable container -->
+    <div class="letter-grid">
+      <ng-container
+        *ngFor="
+          let letter of (settingsService.language | async) ===
+          Language.MONTENEGRO
+            ? config.wordLat
+            : (settingsService.language | async) === Language.SERBIAN
+            ? config.wordCyr
+            : config.wordLat;
+          let i = index
+        "
+      >
+        <div
+          class="user-letter"
+          [ngStyle]="{
+            'background-color': isInArray(
+              i,
+              userInput[configIndex].correctLetters
+            )
+              ? '#38AB32'
+              : isInArray(i, userInput[configIndex].wrongLetters)
+              ? '#D66651'
+              : ''
+          }"
+          (click)="onUserLetterClick(configIndex, config, i)"
+        >
+          {{ userInput[configIndex].userInput[i] }}
+        </div>
+      </ng-container>
+    </div>
+    <!-- Draggable container -->
+    <div class="letter-grid">
+      <ng-container
+        *ngFor="
+          let letter of (settingsService.language | async) ===
+          Language.MONTENEGRO
+            ? config.wordLat
+            : (settingsService.language | async) === Language.SERBIAN
+            ? config.wordCyr
+            : config.wordLat;
+          let i = index
+        "
+      >
+        <div
+          class="letter"
+          [ngStyle]="{
+            'background-color': isSelected(i, config.selected)
+              ? '#FFA833'
+              : isInArray(i, config.used)
+              ? '#AFC4C6'
+              : ''
+          }"
+          (click)="onLetterClick(letter, config, i)"
+        >
+          {{ letter }}
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

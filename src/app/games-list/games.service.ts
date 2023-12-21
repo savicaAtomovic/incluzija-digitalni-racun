@@ -53,4 +53,20 @@ export class GamesService {
     }
     return result;
   }
+  generateRandomPermutation(arr: string[]): string[] {
+    const shuffledArray = [...arr];
+
+    // Fisher-Yates shuffle algorithm with a random seed
+    const getRandomInt = (max: number) => Math.floor(Math.random() * (max + 1));
+
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = getRandomInt(i);
+      [shuffledArray[i], shuffledArray[j]] = [
+        shuffledArray[j],
+        shuffledArray[i],
+      ];
+    }
+
+    return shuffledArray;
+  }
 }

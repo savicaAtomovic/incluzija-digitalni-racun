@@ -14,5 +14,7 @@ export class SettingsService {
     LetterGameLevel.FIRST_LETTER
   );
   public newLetterGame = new BehaviorSubject<boolean>(false);
+
+  public newLetterPermutationsGame = new BehaviorSubject<boolean>(false);
   constructor() {}
 }

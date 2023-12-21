@@ -1,17 +1,31 @@
 <div class="images-container">
-  <div class="images" *ngFor="let config of configArray; let configIndex = index">
+  <div
+    class="images"
+    *ngFor="let config of configArray; let configIndex = index"
+  >
     <div id="smiley-image-container">
-      <img id="smiley-image" src="assets/icons/check-mark.svg"
-        *ngIf="isCorrect(configIndex) === LetterGameCorrect.CORRECT" />
-      <img id="smiley-image" src="assets/icons/error.svg" *ngIf="isCorrect(configIndex) === LetterGameCorrect.WRONG" />
+      <img
+        id="smiley-image"
+        src="assets/icons/check-mark.svg"
+        *ngIf="isCorrect(configIndex) === LetterGameCorrect.CORRECT"
+      />
+      <img
+        id="smiley-image"
+        src="assets/icons/error.svg"
+        *ngIf="isCorrect(configIndex) === LetterGameCorrect.WRONG"
+      />
     </div>
     <div class="image-wrapper">
-      <img [src]="config.image" [style.opacity]="
+      <img
+        [src]="config.image"
+        [style.opacity]="
           isCorrect(configIndex) === LetterGameCorrect.NONE ? 1 : 0.5
-        " />
+        "
+      />
     </div>
     <div class="letter-grid">
-      <ng-container *ngFor="
+      <ng-container
+        *ngFor="
           let letter of (settingsService.language | async) ===
           Language.MONTENEGRO
             ? config.wordLat
@@ -19,11 +33,18 @@
             ? config.wordCyr
             : config.wordLat;
           let i = index
-        ">
+        "
+      >
         <div class="letter" *ngIf="!isMissing(i, config)">{{ letter }}</div>
-        <input [value]="userInputMap.get(configIndex)?.[i] || ''" *ngIf="isMissing(i, config)" class="letter-input"
-          type="text" appLetterValidator [maxLength]="letter.length"
-          (input)="updateUserInput(configIndex, i, $event)" />
+        <input
+          [value]="userInputMap.get(configIndex)?.[i] || ''"
+          *ngIf="isMissing(i, config)"
+          class="letter-input"
+          type="text"
+          appLetterValidator
+          [maxLength]="letter.length"
+          (input)="updateUserInput(configIndex, i, $event)"
+        />
       </ng-container>
     </div>
   </div>
