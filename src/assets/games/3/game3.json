@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "sentenceLat": "Napolju pada ____ .",
+    "sentenceCyr": "Напољу пада ____ .",
+    "image": "assets/games/3/Picture1.jpeg"
+  },
+  {
+    "id": 2,
+    "sentenceLat": "Mačka ____ .",
+    "sentenceCyr": "Мачка ____ .",
+    "image": "assets/games/3/Picture2.jpeg"
+  },
+  {
+    "id": 3,
+    "sentenceLat": "____ plivaju.",
+    "sentenceCyr": "____  пливају.",
+    "image": "assets/games/3/Picture3.jpeg"
+  },
+  {
+    "id": 4,
+    "sentenceLat": "____ skače.",
+    "sentenceCyr": "____  скаче.",
+    "image": "assets/games/3/Picture4.png"
+  },
+  {
+    "id": 5,
+    "sentenceLat": "Mačka lovi ____ .",
+    "sentenceCyr": "Мачка лови ____ .",
+    "image": "assets/games/3/Picture5.jpeg"
+  },
+  {
+    "id": 6,
+    "sentenceLat": "Ptica je na ____ .",
+    "sentenceCyr": "Птица је на ____ .",
+    "image": "assets/games/3/Picture6.jpeg"
+  },
+  {
+    "id": 7,
+    "sentenceLat": "Riba ____ u vodi.",
+    "sentenceCyr": "Риба ____ у води.",
+    "image": "assets/games/3/Picture7.jpeg"
+  },
+  {
+    "id": 8,
+    "sentenceLat": "Pas leži u  ____ .",
+    "sentenceCyr": "Пас лежи у ____ .",
+    "image": "assets/games/3/Picture8.jpeg"
+  }
+]

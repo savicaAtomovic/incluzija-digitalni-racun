@@ -24,6 +24,7 @@ export interface GameConfig {
 export enum GameType {
   LETTERS = 'LETTERS',
   LETTERS_PERMUTATIONS = 'LETTERS_PERMUTATIONS',
+  MISSING_WORD = 'MISSING_WORD',
 }
 
 export interface UserInput {

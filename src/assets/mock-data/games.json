@@ -14,5 +14,13 @@
     "image": "assets/games/1/Picture1.jpg",
     "type": "LETTERS_PERMUTATIONS",
     "configLocation": "assets/games/1/game1.json"
+  },
+  {
+    "id": 3,
+    "name": "Spoji rijec sa slikom",
+    "description": "Cilj igre spajanja slova u riječ je da dijete pogodi koja slova nedostaju na osnovu slike.",
+    "image": "assets/games/1/Picture1.jpg",
+    "type": "MISSING_WORD",
+    "configLocation": "assets/games/3/game3.json"
   }
 ]
