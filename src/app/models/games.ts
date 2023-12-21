@@ -21,6 +21,13 @@ export interface GameConfig {
   originalWordCyr?: string[];
 }
 
+export interface MissingGameConfig {
+  id: number;
+  sentenceLat: string;
+  sentenceCyr: string;
+  image: string;
+}
+
 export enum GameType {
   LETTERS = 'LETTERS',
   LETTERS_PERMUTATIONS = 'LETTERS_PERMUTATIONS',

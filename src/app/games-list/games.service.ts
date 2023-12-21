@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { GameConfig } from '../models/games';
+import { GameConfig, MissingGameConfig } from '../models/games';
 
 @Injectable({
   providedIn: 'root',
@@ -13,8 +13,12 @@ export class GamesService {
     return this.http.get('assets/mock-data/games.json');
   }
 
-  getGameConfigByLocation(file: string): Observable<GameConfig[]> {
-    return this.http.get(file) as Observable<GameConfig[]>;
+  getGameConfigByLocation(
+    file: string
+  ): Observable<GameConfig[] | MissingGameConfig[]> {
+    return this.http.get(file) as Observable<
+      GameConfig[] | MissingGameConfig[]
+    >;
   }
   generateRandomArray(k: number, n: number): number[] {
     if (k > n) {

@@ -40,7 +40,7 @@ export class LetterGameComponent implements OnInit, OnDestroy {
       .pipe(
         takeUntil(this.destroyed$),
         switchMap((configs) => {
-          this.originalConfigArray = configs;
+          this.originalConfigArray = configs as GameConfig[];
           this.newGame(this.originalConfigArray);
           return this.settingsService.letterGameLevel;
         }),

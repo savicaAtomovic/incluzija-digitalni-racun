@@ -1,1 +1,17 @@
-<p>missing-word works!</p>
+<div class="container">
+  <div class="sentence-container">
+    <div
+      class="for-sentence"
+      *ngFor="let sentence of configArray; let i = index"
+    >
+      <div class="sentence">{{ i + 1 }}. {{ sentence.sentenceLat }}</div>
+    </div>
+  </div>
+  <div class="images">
+    <div *ngFor="let sentence of configArray">
+      <div class="image-wrapper">
+        <img [src]="sentence.image" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -38,8 +38,8 @@ export class LetterPermutationsGameComponent implements OnInit, OnDestroy {
       .pipe(
         takeUntil(this.destroyed$),
         switchMap((config) => {
-          this.originalConfigArray = config;
-          this.newGame(config);
+          this.originalConfigArray = config as GameConfig[];
+          this.newGame(config as GameConfig[]);
           return this.settingsService.newLetterPermutationsGame;
         })
       )
