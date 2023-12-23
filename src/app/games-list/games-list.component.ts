@@ -12,14 +12,23 @@ export class GamesListComponent implements OnInit {
   constructor(private gamesService: GamesService, private router: Router) {}
 
   games: Games[];
+  blanko: boolean = false;
+
 
   ngOnInit(): void {
     this.gamesService.games.subscribe((games) => {
       this.games = games;
+      this.addBlankoGameIfNeeded();
     });
   }
 
   onClick(game: Games) {
     this.router.navigate(['/games', game.id]);
+  }
+
+  addBlankoGameIfNeeded() {
+    if (this.games.length % 2 !== 0) {
+      this.blanko = true; 
+    }
   }
 }
