@@ -21,7 +21,14 @@
               : 'pointer'
         }"
       >
-        {{ i + 1 }}. {{ sentence.sentenceLat }}
+        {{ i + 1 }}.
+        {{
+          (settingsService.language | async) === Language.MONTENEGRO
+            ? sentence.sentenceLat
+            : (settingsService.language | async) === Language.SERBIAN
+            ? sentence.sentenceCyr
+            : sentence.sentenceLat
+        }}
       </div>
     </div>
   </div>

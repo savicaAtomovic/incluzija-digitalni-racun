@@ -1,8 +1,10 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { Subject, takeUntil } from 'rxjs';
+import { Subject, switchMap, takeUntil } from 'rxjs';
 import { GamesService } from 'src/app/games-list/games.service';
 import { Games, MissingGameConfig } from 'src/app/models/games';
+import { Language } from 'src/app/models/language';
 import { LetterGameCorrect } from 'src/app/models/letter-game-corrrect';
+import { SettingsService } from 'src/app/services/settings.service';
 
 @Component({
   selector: 'app-missing-word',
@@ -18,19 +20,31 @@ export class MissingWordComponent implements OnInit, OnDestroy {
   generatedNumbers: number[] = [];
   sentencesPerGame = 6;
   LetterGameCorrect = LetterGameCorrect;
+  Language = Language;
 
   shuffledImages: MissingGameConfig[];
   selectedSentence = 0;
 
-  constructor(private gamesService: GamesService) {}
+  constructor(
+    private gamesService: GamesService,
+    public settingsService: SettingsService
+  ) {}
 
   ngOnInit(): void {
     this.gamesService
       .getGameConfigByLocation(this.game.configLocation)
-      .pipe(takeUntil(this.destroyed$))
-      .subscribe((config) => {
-        this.originalConfigArray = config as MissingGameConfig[];
-        this.newGame(this.originalConfigArray);
+      .pipe(
+        takeUntil(this.destroyed$),
+        switchMap((config) => {
+          this.originalConfigArray = config as MissingGameConfig[];
+          this.newGame(this.originalConfigArray);
+          return this.settingsService.newMissingWordGame;
+        })
+      )
+      .subscribe((newGame) => {
+        if (newGame) {
+          this.newGame(this.originalConfigArray);
+        }
       });
   }
 
