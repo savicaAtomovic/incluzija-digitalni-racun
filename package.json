@@ -1,6 +1,6 @@
 {
   "name": "aac-za-djecu-web",
-  "version": "1.0.2-BUILD-10",
+  "version": "1.0.2-BUILD-11",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -224,6 +224,7 @@ export class MissingWordComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    this.stopFirework();
     this.destroyed$.next(null);
     this.destroyed$.complete();
   }
