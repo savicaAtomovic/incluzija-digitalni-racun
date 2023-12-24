@@ -26,6 +26,9 @@ export interface MissingGameConfig {
   sentenceLat: string;
   sentenceCyr: string;
   image: string;
+  selected?: boolean;
+  correct?: LetterGameCorrect;
+  orderNumber?: number;
 }
 
 export enum GameType {

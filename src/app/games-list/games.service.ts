@@ -57,7 +57,7 @@ export class GamesService {
     }
     return result;
   }
-  generateRandomPermutation(arr: string[]): string[] {
+  generateRandomPermutation<T>(arr: T[]): T[] {
     const shuffledArray = [...arr];
 
     // Fisher-Yates shuffle algorithm with a random seed
