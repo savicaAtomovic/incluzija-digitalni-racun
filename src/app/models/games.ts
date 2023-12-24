@@ -7,6 +7,7 @@ export interface Games {
   image: string;
   type: GameType;
   configLocation: string;
+  perPage: number;
 }
 
 export interface GameConfig {

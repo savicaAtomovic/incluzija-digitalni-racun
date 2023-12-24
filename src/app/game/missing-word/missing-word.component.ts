@@ -18,7 +18,6 @@ export class MissingWordComponent implements OnInit, OnDestroy {
   configArray: MissingGameConfig[];
   originalConfigArray: MissingGameConfig[];
   generatedNumbers: number[] = [];
-  sentencesPerGame = 6;
   LetterGameCorrect = LetterGameCorrect;
   Language = Language;
 
@@ -49,12 +48,12 @@ export class MissingWordComponent implements OnInit, OnDestroy {
   }
 
   newGame(configs: MissingGameConfig[]) {
-    if (this.generatedNumbers.length + this.sentencesPerGame > configs.length) {
+    if (this.generatedNumbers.length + this.game.perPage > configs.length) {
       this.generatedNumbers = [];
     }
 
     const randomIndexes = this.gamesService.newGame(
-      this.sentencesPerGame,
+      this.game.perPage,
       configs.length,
       this.generatedNumbers
     );

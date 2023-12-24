@@ -14,7 +14,6 @@ import { SettingsService } from 'src/app/services/settings.service';
 export class LetterPermutationsGameComponent implements OnInit, OnDestroy {
   @Input() game: Games;
 
-  wordsPerGame = 6;
   configArray: GameConfig[];
   originalConfigArray: GameConfig[];
 
@@ -206,7 +205,7 @@ export class LetterPermutationsGameComponent implements OnInit, OnDestroy {
 
   newGame(configs: GameConfig[]) {
     const randomIndexes = this.gamesService.generateRandomArray(
-      this.wordsPerGame,
+      this.game.perPage,
       configs.length
     );
     const selectedConfigs = randomIndexes.map((index) => configs[index]);
