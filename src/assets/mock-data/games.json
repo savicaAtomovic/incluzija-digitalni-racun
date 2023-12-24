@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "name": "Spoji rijec sa slikom",
+    "name": "Spoji riječ sa slikom",
     "description": "Cilj igre spajanja slova u riječ je da dijete pogodi koja slova nedostaju na osnovu slike.",
     "image": "assets/games/1/Picture1.jpg",
     "type": "MISSING_WORD",
