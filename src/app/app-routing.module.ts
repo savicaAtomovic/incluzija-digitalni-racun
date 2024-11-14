@@ -6,6 +6,7 @@ import { SlideShowWrapperComponent } from './slide-show-wrapper/slide-show-wrapp
 import { HomePageComponent } from './home-page/home-page.component';
 import { GamesListComponent } from './games-list/games-list.component';
 import { GameComponent } from './game/game.component';
+import { PracticalLessonsListComponent } from './practical-lessons-list/practical-lessons-list.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent, pathMatch: 'full' },
@@ -19,6 +20,11 @@ const routes: Routes = [
   {
     path: 'games/:id',
     component: GameComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'practical-lessons',
+    component: PracticalLessonsListComponent,
     pathMatch: 'full',
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },

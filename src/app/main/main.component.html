@@ -1,15 +1,11 @@
 <div class="social-container">
-  <div class="topbar">
+  <div>
     <app-topbar
-      *ngIf="(settingsService.language | async) === Language.MONTENEGRO"
-      [title]="'DRUŠTVENE SITUACIJE'"
-      [showSettings]="true"
-      [showBackButton]="true"
-      [backOnPage]="'/home'"
-    ></app-topbar>
-    <app-topbar
-      *ngIf="(settingsService.language | async) === Language.ALBANIA"
-      [title]="'Situatat sociale'"
+      [title]="
+        (settingsService.language | async) === Language.MONTENEGRO
+          ? 'DRUŠTVENE SITUACIJE'
+          : 'Situatat sociale'
+      "
       [showSettings]="true"
       [showBackButton]="true"
       [backOnPage]="'/home'"

@@ -1,0 +1,36 @@
+<div class="practical-lessons-container">
+  <div>
+    <app-topbar
+      [title]="
+        (settingsService.language | async) === Language.MONTENEGRO
+          ? 'PRAKTIČNA NASTAVA'
+          : 'MËSIMDHËNIE PRAKTIKE'
+      "
+      [showSettings]="true"
+      [showBackButton]="true"
+      [backOnPage]="'/home'"
+    ></app-topbar>
+  </div>
+  <div class="practical-lessons-wrapper">
+    <div class="practical-lessons-list-container">
+      <div
+        class="image-wrapper"
+        *ngFor="let practicalLesson of practicalLessons"
+      >
+        <img
+          class="image"
+          src="{{ practicalLesson.image }}"
+          (click)="onClick(practicalLesson)"
+        />
+        <div class="description">
+          <p *ngIf="(settingsService.language | async) === Language.MONTENEGRO">
+            {{ practicalLesson.description }}
+          </p>
+          <p *ngIf="(settingsService.language | async) === Language.ALBANIA">
+            {{ practicalLesson.descriptionALB }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
