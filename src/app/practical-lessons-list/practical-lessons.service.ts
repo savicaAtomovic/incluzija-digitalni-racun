@@ -1,21 +1,20 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/internal/Observable';
-
-import { MainEvent } from '../models/event';
+import { Observable } from 'rxjs';
 import { EventItem } from '../models/event-item';
+import { MainEvent } from '../models/event';
 
 @Injectable({
   providedIn: 'root',
 })
-export class MainService {
+export class PracticalLessonsService {
   constructor(private http: HttpClient) {}
 
   DEFAULT_SOUND_PATH = 'assets/multimedia/default-sound.mp3';
   DEFAULT_DESCRIPTION = 'N/A';
 
-  get events(): Observable<any> {
-    return this.http.get('assets/mock-data/events.json');
+  get practicalLessons(): Observable<any> {
+    return this.http.get('assets/mock-data/practical-lessons.json');
   }
 
   addDefaultSounds(eventItems: EventItem[]) {

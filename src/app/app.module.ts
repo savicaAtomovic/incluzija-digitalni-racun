@@ -1,6 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSliderModule } from '@angular/material/slider';
@@ -11,8 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
-import { SlideShowWrapperComponent } from './slide-show-wrapper/slide-show-wrapper.component';
+import { SocialSituationsListComponent } from './social-situation-list/social-situation-list.component';
+import { SocialSituationComponent } from './social-situation/social-situation.component';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -24,14 +23,16 @@ import { FormsModule } from '@angular/forms';
 import { LetterPermutationsGameComponent } from './game/letter-permutations-game/letter-permutations-game.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MissingWordComponent } from './game/missing-word/missing-word.component';
+import { PracticalLessonsListComponent } from './practical-lessons-list/practical-lessons-list.component';
+import { PracticalLessonComponent } from './practical-lesson/practical-lesson.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
+    SocialSituationsListComponent,
     SlideShowComponent,
     TopbarComponent,
-    SlideShowWrapperComponent,
+    SocialSituationComponent,
     HomePageComponent,
     GamesListComponent,
     GameComponent,
@@ -39,12 +40,13 @@ import { MissingWordComponent } from './game/missing-word/missing-word.component
     LetterValidatorDirective,
     LetterPermutationsGameComponent,
     MissingWordComponent,
+    PracticalLessonsListComponent,
+    PracticalLessonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FlexLayoutModule,
     BrowserAnimationsModule,
     MatSliderModule,
     MatIconModule,

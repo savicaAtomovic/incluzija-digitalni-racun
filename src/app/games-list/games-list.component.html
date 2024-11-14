@@ -1,8 +1,12 @@
 <div class="games-container">
+  <app-topbar
+    [title]="'IGRE'"
+    [showSettings]="false"
+    [showBackButton]="true"
+    [backOnPage]="'/home'"
+  ></app-topbar>
 
-  <app-topbar [title]="'IGRE'" [showSettings]="false" [showBackButton]="true" [backOnPage]="'/home'"></app-topbar>
-
-  <div class="games-wrapper" fxLayoutGap="15px">
+  <div class="games-wrapper">
     <div class="games-images-container">
       <div class="image-wrapper" *ngFor="let game of games">
         <img class="image" src="{{ game.image }}" (click)="onClick(game)" />
@@ -13,8 +17,7 @@
         </div>
         <div class="break"></div>
       </div>
-      <div *ngIf="blanko==true" class="image-wrapper-blanko">
-      </div>
+      <div *ngIf="blanko == true" class="image-wrapper-blanko"></div>
     </div>
   </div>
 </div>

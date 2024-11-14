@@ -1,35 +1,35 @@
 /*********************
-  Igre
+  Društvene situacije
 **********************/
 
-.games-container {
-  height: 100%;
+.social-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 100%;
 }
 
-.games-wrapper {
+.social-events-wrapper {
   display: flex;
+  gap: 15px;
   justify-content: center;
   overflow: auto;
   width: 100%;
-  padding: 50px 20px 0 20px;
-  gap: 15px;
+  padding: 50px 20px 50px 20px;
 }
 
-.games-images-container {
+.social-events-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 770px;
+  max-width: 1024px;
   gap: 1rem;
 }
 
 .image-wrapper {
   border: 2px solid var(--color-brand-1);
-  width: var(--games-width);
-  height: var(--games-height);
+  width: var(--events-width);
+  height: var(--events-width);
 }
 
 .image {
@@ -40,7 +40,7 @@
 
 .description {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: var(--games-desc-font-size);
+  font-size: var(--desc-font-size);
   color: #2e75b6;
   text-align: center;
   line-height: 1;
@@ -50,23 +50,12 @@
   justify-content: center;
 }
 
-.image-wrapper-blanko {
-  border: none;
-  width: var(--games-width);
-  height: var(--games-height);
-}
 /******************
   Media Queries
 *******************/
 
 @media (max-width: 768px) {
-  .games-wrapper {
+  .social-events-wrapper {
     padding: 20px 20px;
-  }
-}
-
-@media (max-width: 695px) {
-  .games-images-container {
-    justify-content: space-evenly;
   }
 }

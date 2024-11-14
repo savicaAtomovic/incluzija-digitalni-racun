@@ -1,0 +1,52 @@
+<div class="container">
+  <app-topbar
+    [title]="topbarTitle"
+    [showBackButton]="true"
+    [backOnPage]="'/practical-lessons'"
+  ></app-topbar>
+  <app-slide-show
+    *ngIf="slides.length > 0"
+    [autoPlayDuration]="3000"
+    [animation]="AnimationEnum.Slide"
+    [isNavigationVisible]="true"
+    [isThumbnailsVisible]="true"
+    [slides]="slides"
+    [slideTemplateRef]="slide"
+    [thumbnailTemplateRef]="thumbnail"
+    (pauseFunc)="pause($event)"
+    class="slide-show-wrapper"
+  ></app-slide-show>
+  <ng-template #slide let-slide>
+    <div
+      [ngStyle]="{
+        width: '100%',
+        height: '100%'
+      }"
+    >
+      <img class="image" src="{{ slide.image }}" />
+      <div id="play-button-container">
+        <img
+          class="play-button"
+          *ngIf="paused"
+          src="assets/icons/play-button.png"
+        />
+      </div>
+
+      <div *ngIf="slide.description" class="description">
+        <p>{{ slide.description }}</p>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #thumbnail let-slide>
+    <div
+      [ngStyle]="{
+        'background-size': 'cover',
+        'background-image': 'url(' + slide.image + ')',
+        'background-repeat': 'no-repeat',
+        'background-position': 'center center',
+        width: '100%',
+        height: '100%'
+      }"
+    ></div>
+  </ng-template>
+</div>

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Brijanje i oblikovanje brade",
+    "description": "Brijanje i oblikovanje brade",
+    "image": "assets/multimedia-practical-lessons/1/Picture1.jpg",
+    "descriptionALB": "Rruajtja dhe formimi i mjekrës",
+    "eventItems": [
+      {
+        "id": 1,
+        "orderNumber": 1,
+        "description": "Što je potrebno da bi nekog obrijali?",
+        "image": "assets/multimedia-practical-lessons/1/images/Picture1.jpg",
+        "descriptionAlb": "Çfarë duhet për të rruar dikë?"
+      },
+      {
+        "id": 2,
+        "orderNumber": 2,
+        "description": "Peskir, zdjelica, četka za brijanje, losion poslije brijanja, ulje za kozu i pjena za brijanje",
+        "image": "assets/multimedia-practical-lessons/1/images/Picture2.jpg",
+        "descriptionAlb": "Peshqir, tas, furçë rroje, locion pas rruajtjes, vaj dhie dhe shkumë rroje"
+      },
+      {
+        "id": 3,
+        "orderNumber": 3,
+        "description": "Na samom početku učenica utrljava ulje na kožu lica",
+        "image": "assets/multimedia-practical-lessons/1/images/Picture3.jpg",
+        "descriptionAlb": "Që në fillim nxënësja lyen me vaj në lëkurën e fytyrës"
+      },
+      {
+        "id": 4,
+        "orderNumber": 4,
+        "description": "Ulje se koristi da bi se lakše sproveo postupak brijanja i sprječava urastanje dlačica",
+        "image": "assets/multimedia-practical-lessons/1/images/Picture4.jpg",
+        "descriptionAlb": "Vaji përdoret për të bërë më të lehtë rruajtjen dhe për parandalimin e qimeve të rritura"
+      },
+      {
+        "id": 5,
+        "orderNumber": 5,
+        "description": "Učenica uzima tople peskire i stavlja ih na lice korisnika",
+        "image": "assets/multimedia-practical-lessons/1/images/Picture5.jpg",
+        "descriptionAlb": "Studenti merr peshqirë të ngrohtë dhe i vendos në fytyrën e përdoruesit"
+      },
+      {
+        "id": 6,
+        "orderNumber": 6,
+        "description": "Topli peskir omekšava kožu lica I dlake, otvara pore I podiže dlačice, što olakšava brijanje",
+        "image": "assets/multimedia-practical-lessons/1/images/Picture6.jpg",
+        "descriptionAlb": "Një peshqir i ngrohtë zbut lëkurën e fytyrës dhe flokëve, hap poret dhe ngre qimet, gjë që e bën më të lehtë rruajtjen"
+      },
+      {
+        "id": 7,
+        "orderNumber": 7,
+        "description": "U sledećoj fazi učenica koristi svježe pripremljenu pjenu",
+        "image": "assets/multimedia-practical-lessons/1/images/Picture7.jpg",
+        "descriptionAlb": "Në fazën tjetër nxënësi përdor shkumë të sapopërgatitur"
+      },
+      {
+        "id": 8,
+        "orderNumber": 8,
+        "description": "Koristi se specijalna posuda i četka od zivotinjske dlake, od pravog krzna",
+        "image": "assets/multimedia-practical-lessons/1/images/Picture8.jpg",
+        "descriptionAlb": "Për të krijuar shkumë dhe për ta aplikuar atë në fytyrë, përdoret një enë speciale dhe një furçë e bërë me qime kafshësh, e bërë me lesh të vërtetë"
+      },
+      {
+        "id": 9,
+        "orderNumber": 9,
+        "description": "Mjesta, koja treba obrijati berberin pokriva toplom pjenom",
+        "image": "assets/multimedia-practical-lessons/1/images/Picture9.jpg",
+        "descriptionAlb": "Berberi i mbulon me shkumë të ngrohtë vendet që duhet të rruhen"
+      }
+    ]
+  }
+]

@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MainService } from '../main/main.service';
-import { Image } from '../models/image';
-import { TopbarTitleService } from '../services/title.service';
+
 import { Animation } from '../models/active-slides';
 import { MainEvent } from '../models/event';
-import { SettingsService } from '../services/settings.service';
-import { VoiceType } from '../models/voice-type';
-import { Language } from '../models/language';
 import { EventItem } from '../models/event-item';
+import { Language } from '../models/language';
+import { VoiceType } from '../models/voice-type';
+import { SettingsService } from '../services/settings.service';
+import { TopbarTitleService } from '../services/title.service';
+import { SocialSituationService } from '../social-situation-list/social-situation.service';
 
 @Component({
-  selector: 'app-slide-show-wrapper',
-  templateUrl: './slide-show-wrapper.component.html',
-  styleUrls: ['./slide-show-wrapper.component.scss'],
+  selector: 'app-social-situation',
+  templateUrl: './social-situation.component.html',
+  styleUrls: ['./social-situation.component.scss'],
 })
-export class SlideShowWrapperComponent implements OnInit {
+export class SocialSituationComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
-    private mainService: MainService,
+    private socialSituationService: SocialSituationService,
     private titleService: TopbarTitleService,
     private settingsService: SettingsService
   ) {}
@@ -33,15 +33,19 @@ export class SlideShowWrapperComponent implements OnInit {
     console.log('id from route', id);
     // TODO get all content related to content with id {id}
 
-    this.mainService.events.subscribe((events) => {
+    this.socialSituationService.events.subscribe((events) => {
       const event: MainEvent = events.find(
         (e: MainEvent) => e.id === Number(id)
       );
 
-      this.mainService.addDefaultSounds(event.eventItems);
-      this.mainService.addDefaultMaleSounds(event.eventItems);
-      this.mainService.addDefaultAlbaniaFemaleSounds(event.eventItems);
-      this.mainService.addDefaultAlbaniaDescriptionItems(event.eventItems);
+      this.socialSituationService.addDefaultSounds(event.eventItems);
+      this.socialSituationService.addDefaultMaleSounds(event.eventItems);
+      this.socialSituationService.addDefaultAlbaniaFemaleSounds(
+        event.eventItems
+      );
+      this.socialSituationService.addDefaultAlbaniaDescriptionItems(
+        event.eventItems
+      );
 
       if (this.settingsService.voiceType.value == VoiceType.MALE) {
         event.eventItems.forEach(

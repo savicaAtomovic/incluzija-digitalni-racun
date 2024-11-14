@@ -71,7 +71,7 @@ export class SlideShowComponent implements OnInit, AfterViewInit {
   slideTemplateRef: TemplateRef<any>;
   @Input()
   thumbnailTemplateRef: TemplateRef<any>;
-  currentInterval: NodeJS.Timer;
+  currentInterval: ReturnType<typeof setInterval>;
   differ: KeyValueDiffer<ActiveSlides, any>;
 
   paused: boolean = false;

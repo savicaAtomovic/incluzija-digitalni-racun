@@ -11,11 +11,15 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  navigateToBoard() {
-    this.router.navigate(['/board']);
+  navigateToSocialSituations() {
+    this.router.navigate(['/social-situations']);
   }
 
   navigateToGames() {
     this.router.navigate(['/games']);
+  }
+
+  navigateToPracticalLessons() {
+    this.router.navigate(['/practical-lessons']);
   }
 }
