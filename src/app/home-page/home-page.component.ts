@@ -11,8 +11,8 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  navigateToBoard() {
-    this.router.navigate(['/board']);
+  navigateToSocialSituations() {
+    this.router.navigate(['/social-situations']);
   }
 
   navigateToGames() {

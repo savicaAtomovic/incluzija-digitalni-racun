@@ -4,16 +4,16 @@ import { MainEvent } from '../models/event';
 import { Language } from '../models/language';
 import { SettingsService } from '../services/settings.service';
 import { TopbarTitleService } from '../services/title.service';
-import { MainService } from './main.service';
+import { SocialSituationService } from './social-situation.service';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss'],
+  selector: 'app-social-situation-list',
+  templateUrl: './social-situation-list.component.html',
+  styleUrls: ['./social-situation-list.component.scss'],
 })
-export class MainComponent implements OnInit {
+export class SocialSituationsListComponent implements OnInit {
   constructor(
-    private mainService: MainService,
+    private socialSituationService: SocialSituationService,
     private router: Router,
     private titleService: TopbarTitleService,
     public settingsService: SettingsService
@@ -25,18 +25,20 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
     this.titleService.topbarTitle.next(this.MAIN_TITLE);
-    this.mainService.events.subscribe((events) => {
+    this.socialSituationService.events.subscribe((events) => {
       this.events = events;
-      this.mainService.addDefaultAlbaniaDescriptionMainEvents(this.events);
+      this.socialSituationService.addDefaultAlbaniaDescriptionMainEvents(
+        this.events
+      );
     });
   }
 
   onClick(event: MainEvent) {
     console.log('image onClick', event);
-    this.router.navigate(['/board', event.id]);
+    this.router.navigate(['/social-situations', event.id]);
   }
 
   goBack() {
-    this.router.navigate(['/board']);
+    this.router.navigate(['/social-situations']);
   }
 }

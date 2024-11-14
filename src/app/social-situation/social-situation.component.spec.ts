@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SlideShowWrapperComponent } from './slide-show-wrapper.component';
+import { SlideShowWrapperComponent } from './social-situation.component';
 
 describe('SlideShowWrapperComponent', () => {
   let component: SlideShowWrapperComponent;
@@ -8,9 +8,8 @@ describe('SlideShowWrapperComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SlideShowWrapperComponent ]
-    })
-    .compileComponents();
+      declarations: [SlideShowWrapperComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SlideShowWrapperComponent);
     component = fixture.componentInstance;

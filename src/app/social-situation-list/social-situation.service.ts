@@ -8,7 +8,7 @@ import { EventItem } from '../models/event-item';
 @Injectable({
   providedIn: 'root',
 })
-export class MainService {
+export class SocialSituationService {
   constructor(private http: HttpClient) {}
 
   DEFAULT_SOUND_PATH = 'assets/multimedia/default-sound.mp3';

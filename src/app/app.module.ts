@@ -10,8 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
-import { SlideShowWrapperComponent } from './slide-show-wrapper/slide-show-wrapper.component';
+import { SocialSituationsListComponent } from './social-situation-list/social-situation-list.component';
+import { SocialSituationComponent } from './social-situation/social-situation.component';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -28,10 +28,10 @@ import { PracticalLessonsListComponent } from './practical-lessons-list/practica
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
+    SocialSituationsListComponent,
     SlideShowComponent,
     TopbarComponent,
-    SlideShowWrapperComponent,
+    SocialSituationComponent,
     HomePageComponent,
     GamesListComponent,
     GameComponent,

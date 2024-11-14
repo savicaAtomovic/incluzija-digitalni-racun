@@ -34,7 +34,7 @@ export class TopbarComponent implements OnInit {
   goBack() {
     this.backOnPage
       ? this.router.navigate([this.backOnPage])
-      : this.router.navigate(['/board']);
+      : this.router.navigate(['/social-situations']);
   }
 
   setVoice(voiceType: VoiceType) {
