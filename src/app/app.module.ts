@@ -24,6 +24,7 @@ import { LetterPermutationsGameComponent } from './game/letter-permutations-game
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MissingWordComponent } from './game/missing-word/missing-word.component';
 import { PracticalLessonsListComponent } from './practical-lessons-list/practical-lessons-list.component';
+import { PracticalLessonComponent } from './practical-lesson/practical-lesson.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { PracticalLessonsListComponent } from './practical-lessons-list/practica
     LetterPermutationsGameComponent,
     MissingWordComponent,
     PracticalLessonsListComponent,
+    PracticalLessonComponent,
   ],
   imports: [
     BrowserModule,

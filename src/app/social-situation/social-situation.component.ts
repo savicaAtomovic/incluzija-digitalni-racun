@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { SocialSituationService } from '../social-situation-list/social-situation.service';
-import { Image } from '../models/image';
-import { TopbarTitleService } from '../services/title.service';
+
 import { Animation } from '../models/active-slides';
 import { MainEvent } from '../models/event';
-import { SettingsService } from '../services/settings.service';
-import { VoiceType } from '../models/voice-type';
-import { Language } from '../models/language';
 import { EventItem } from '../models/event-item';
+import { Language } from '../models/language';
+import { VoiceType } from '../models/voice-type';
+import { SettingsService } from '../services/settings.service';
+import { TopbarTitleService } from '../services/title.service';
+import { SocialSituationService } from '../social-situation-list/social-situation.service';
 
 @Component({
   selector: 'app-social-situation',
