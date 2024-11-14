@@ -1,5 +1,5 @@
 # Use official node image as the base image
-FROM node:14.17.0 as builder
+FROM node:18 as builder
 
 # Set the working directory
 RUN mkdir /ng-app
