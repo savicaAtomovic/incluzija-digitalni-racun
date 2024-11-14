@@ -10,11 +10,12 @@
 }
 
 .games-wrapper {
-  display: flex; 
+  display: flex;
   justify-content: center;
   overflow: auto;
   width: 100%;
   padding: 50px 20px 0 20px;
+  gap: 15px;
 }
 
 .games-images-container {

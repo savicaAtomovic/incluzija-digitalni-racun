@@ -10,7 +10,8 @@
 }
 
 .social-events-wrapper {
-  display: flex; 
+  display: flex;
+  gap: 15px;
   justify-content: center;
   overflow: auto;
   width: 100%;
@@ -48,7 +49,6 @@
   flex-direction: column;
   justify-content: center;
 }
-
 
 /******************
   Media Queries

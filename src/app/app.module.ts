@@ -1,6 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSliderModule } from '@angular/material/slider';
@@ -44,7 +43,6 @@ import { MissingWordComponent } from './game/missing-word/missing-word.component
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FlexLayoutModule,
     BrowserAnimationsModule,
     MatSliderModule,
     MatIconModule,
