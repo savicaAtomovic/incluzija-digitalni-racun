@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "aac-za-djecu-web:build:production"
+              "buildTarget": "aac-za-djecu-web:build:production"
             },
             "development": {
-              "browserTarget": "aac-za-djecu-web:build:development"
+              "buildTarget": "aac-za-djecu-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "aac-za-djecu-web:build"
+            "buildTarget": "aac-za-djecu-web:build"
           }
         },
         "test": {
