@@ -18,4 +18,8 @@ export class HomePageComponent implements OnInit {
   navigateToGames() {
     this.router.navigate(['/games']);
   }
+
+  navigateToPracticalLessons() {
+    this.router.navigate(['/practical-lessons']);
+  }
 }
