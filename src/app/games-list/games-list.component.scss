@@ -20,7 +20,7 @@
 .games-images-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 770px;
   gap: 1rem;
 }
@@ -49,6 +49,11 @@
   justify-content: center;
 }
 
+.image-wrapper-blanko {
+  border: none;
+  width: var(--games-width);
+  height: var(--games-height);
+}
 /******************
   Media Queries
 *******************/
@@ -59,7 +64,7 @@
   }
 }
 
-@media (max-width: 639px) {
+@media (max-width: 695px) {
   .games-images-container {
     justify-content: space-evenly;
   }

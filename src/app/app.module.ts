@@ -23,6 +23,7 @@ import { LetterValidatorDirective } from './directives/letter-validator.directiv
 import { FormsModule } from '@angular/forms';
 import { LetterPermutationsGameComponent } from './game/letter-permutations-game/letter-permutations-game.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MissingWordComponent } from './game/missing-word/missing-word.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     LetterGameComponent,
     LetterValidatorDirective,
     LetterPermutationsGameComponent,
+    MissingWordComponent,
   ],
   imports: [
     BrowserModule,

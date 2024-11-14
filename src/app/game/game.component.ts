@@ -14,6 +14,7 @@ export class GameComponent implements OnInit {
   topbarTitle: string;
   showLetterGameSettings: boolean = false;
   showLetterPermutationsGameSettings: boolean = false;
+  showMissingWordGameSettings: boolean = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -28,9 +29,15 @@ export class GameComponent implements OnInit {
       if (this.game.type === GameType.LETTERS) {
         this.showLetterGameSettings = true;
         this.showLetterPermutationsGameSettings = false;
+        this.showMissingWordGameSettings = false;
       } else if (this.game.type === GameType.LETTERS_PERMUTATIONS) {
         this.showLetterGameSettings = false;
         this.showLetterPermutationsGameSettings = true;
+        this.showMissingWordGameSettings = false;
+      } else if (this.game.type === GameType.MISSING_WORD) {
+        this.showMissingWordGameSettings = true;
+        this.showLetterGameSettings = false;
+        this.showLetterPermutationsGameSettings = false;
       }
     });
   }

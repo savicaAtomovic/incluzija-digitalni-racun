@@ -23,6 +23,7 @@ export class TopbarComponent implements OnInit {
   @Input() backOnPage: string;
   @Input() showLetterGameSettings: boolean;
   @Input() showLetterPermutationsGameSettings: boolean;
+  @Input() showMissingWordGameSettings: boolean;
 
   VoiceType = VoiceType;
   Language = Language;
@@ -54,5 +55,9 @@ export class TopbarComponent implements OnInit {
 
   newLetterPermutationsGame() {
     this.settingsService.newLetterPermutationsGame.next(true);
+  }
+
+  newMissingWordGame() {
+    this.settingsService.newMissingWordGame.next(true);
   }
 }

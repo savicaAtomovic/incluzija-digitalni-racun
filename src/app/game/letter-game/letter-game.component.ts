@@ -15,8 +15,6 @@ import { SettingsService } from 'src/app/services/settings.service';
 export class LetterGameComponent implements OnInit, OnDestroy {
   @Input() game: Games;
 
-  wordsPerGame = 6;
-
   private destroyed$ = new Subject();
 
   Language = Language;
@@ -40,7 +38,7 @@ export class LetterGameComponent implements OnInit, OnDestroy {
       .pipe(
         takeUntil(this.destroyed$),
         switchMap((configs) => {
-          this.originalConfigArray = configs;
+          this.originalConfigArray = configs as GameConfig[];
           this.newGame(this.originalConfigArray);
           return this.settingsService.letterGameLevel;
         }),
@@ -82,12 +80,12 @@ export class LetterGameComponent implements OnInit, OnDestroy {
   }
 
   newGame(configs: GameConfig[]) {
-    if (this.generatedNumbers.length + this.wordsPerGame > configs.length) {
+    if (this.generatedNumbers.length + this.game.perPage > configs.length) {
       this.generatedNumbers = [];
     }
 
     const randomIndexes = this.gamesService.newGame(
-      this.wordsPerGame,
+      this.game.perPage,
       configs.length,
       this.generatedNumbers
     );

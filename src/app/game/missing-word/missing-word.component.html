@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="sentence-container">
+    <div
+      class="for-sentence"
+      *ngFor="let sentence of configArray; let i = index"
+    >
+      <div
+        (click)="onSentenceClick(sentence)"
+        class="sentence"
+        [ngStyle]="{
+          'background-color':
+            sentence.selected === true
+              ? '#FFA833'
+              : sentence.correct === LetterGameCorrect.CORRECT
+              ? '#38AB32'
+              : '',
+          color: sentence.correct === LetterGameCorrect.CORRECT ? 'white' : '',
+          cursor:
+            sentence.correct === LetterGameCorrect.CORRECT
+              ? 'default'
+              : 'pointer'
+        }"
+      >
+        {{ i + 1 }}.
+        {{
+          (settingsService.language | async) === Language.MONTENEGRO
+            ? sentence.sentenceLat
+            : (settingsService.language | async) === Language.SERBIAN
+            ? sentence.sentenceCyr
+            : sentence.sentenceLat
+        }}
+      </div>
+    </div>
+  </div>
+  <div class="images">
+    <div *ngFor="let image of shuffledImages">
+      <div id="smiley-image-container">
+        <img
+          id="smiley-image"
+          [src]="getSvgPath(image.orderNumber ?? 0)"
+          *ngIf="image.correct === LetterGameCorrect.CORRECT"
+        />
+        <img
+          id="smiley-image"
+          src="assets/icons/error.svg"
+          *ngIf="image.correct === LetterGameCorrect.WRONG"
+        />
+      </div>
+      <div
+        (click)="onImageClick(image)"
+        class="image-wrapper"
+        [ngStyle]="{ cursor: selectedSentence === 0 ? 'default' : 'pointer' }"
+      >
+        <img
+          [src]="image.image"
+          [style.opacity]="image.correct === LetterGameCorrect.NONE ? 1 : 0.5"
+        />
+      </div>
+    </div>
+  </div>
+</div>

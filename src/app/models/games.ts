@@ -7,6 +7,7 @@ export interface Games {
   image: string;
   type: GameType;
   configLocation: string;
+  perPage: number;
 }
 
 export interface GameConfig {
@@ -21,9 +22,20 @@ export interface GameConfig {
   originalWordCyr?: string[];
 }
 
+export interface MissingGameConfig {
+  id: number;
+  sentenceLat: string;
+  sentenceCyr: string;
+  image: string;
+  selected?: boolean;
+  correct?: LetterGameCorrect;
+  orderNumber?: number;
+}
+
 export enum GameType {
   LETTERS = 'LETTERS',
   LETTERS_PERMUTATIONS = 'LETTERS_PERMUTATIONS',
+  MISSING_WORD = 'MISSING_WORD',
 }
 
 export interface UserInput {

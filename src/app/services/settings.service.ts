@@ -16,5 +16,8 @@ export class SettingsService {
   public newLetterGame = new BehaviorSubject<boolean>(false);
 
   public newLetterPermutationsGame = new BehaviorSubject<boolean>(false);
+
+  public newMissingWordGame = new BehaviorSubject<boolean>(false);
+
   constructor() {}
 }

@@ -7,6 +7,7 @@
     [showSettings]="false"
     [showLetterGameSettings]="showLetterGameSettings"
     [showLetterPermutationsGameSettings]="showLetterPermutationsGameSettings"
+    [showMissingWordGameSettings]="showMissingWordGameSettings"
   ></app-topbar>
   <div class="letter-game-content-wrapper">
     <app-letter-game
@@ -23,10 +24,19 @@
       [game]="game"
     ></app-letter-permutations-game>
   </div>
+  <div class="letter-game-content-wrapper">
+    <app-missing-word
+      class="app-letter-game-content-wrapper"
+      *ngIf="game?.type === GameType.MISSING_WORD"
+      [game]="game"
+    ></app-missing-word>
+  </div>
+
   <p
     *ngIf="
       game?.type !== GameType.LETTERS &&
-      game?.type !== GameType.LETTERS_PERMUTATIONS
+      game?.type !== GameType.LETTERS_PERMUTATIONS &&
+      game?.type !== GameType.MISSING_WORD
     "
   >
     game-component-works
