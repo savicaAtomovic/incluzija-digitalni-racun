@@ -51,10 +51,12 @@
         class="image-wrapper"
         [ngStyle]="{ cursor: selectedSentence === 0 ? 'default' : 'pointer' }"
       >
-        <img
+        <app-lazy-image
           [src]="image.image"
+          [clickable]="selectedSentence !== 0"
           [style.opacity]="image.correct === LetterGameCorrect.NONE ? 1 : 0.5"
-        />
+          (clicked)="onImageClick(image)"
+        ></app-lazy-image>
       </div>
     </div>
   </div>
