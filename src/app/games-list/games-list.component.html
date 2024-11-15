@@ -9,7 +9,12 @@
   <div class="games-wrapper">
     <div class="games-images-container">
       <div class="image-wrapper" *ngFor="let game of games">
-        <img class="image" src="{{ game.image }}" (click)="onClick(game)" />
+        <app-lazy-image
+          [src]="game.image"
+          [alt]="game.description"
+          [clickable]="true"
+          (clicked)="onClick(game)"
+        ></app-lazy-image>
         <div class="description">
           <p>
             {{ game.name }}
