@@ -1,0 +1,14 @@
+<div class="image-container">
+  <img
+    class="image"
+    [src]="src"
+    [alt]="alt"
+    loading="lazy"
+    (load)="onImageLoad()"
+    [ngClass]="{ loaded: imageLoaded, clickable: clickable }"
+    (click)="onClick()"
+  />
+  <div class="loading-placeholder" *ngIf="!imageLoaded">
+    <mat-spinner diameter="40"></mat-spinner>
+  </div>
+</div>

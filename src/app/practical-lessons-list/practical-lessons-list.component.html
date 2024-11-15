@@ -17,11 +17,12 @@
         class="image-wrapper"
         *ngFor="let practicalLesson of practicalLessons"
       >
-        <img
-          class="image"
-          src="{{ practicalLesson.image }}"
-          (click)="onClick(practicalLesson)"
-        />
+        <app-lazy-image
+          [src]="practicalLesson.image"
+          [alt]="practicalLesson.description"
+          [clickable]="true"
+          (clicked)="onClick(practicalLesson)"
+        ></app-lazy-image>
         <div class="description">
           <p *ngIf="(settingsService.language | async) === Language.MONTENEGRO">
             {{ practicalLesson.description }}
