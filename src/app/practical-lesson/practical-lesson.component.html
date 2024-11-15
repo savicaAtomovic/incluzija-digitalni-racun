@@ -23,12 +23,17 @@
         height: '100%'
       }"
     >
-      <img class="image" src="{{ slide.image }}" />
+      <app-lazy-image
+        [src]="slide.image"
+        [alt]="slide.description || ''"
+        [clickable]="true"
+        heightVar="--slide-image-height"
+      ></app-lazy-image>
       <div id="play-button-container">
         <img
-          class="play-button"
           *ngIf="paused"
           src="assets/icons/play-button.png"
+          class="play-button"
         />
       </div>
 
