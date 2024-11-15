@@ -14,7 +14,12 @@
   <div class="social-events-wrapper">
     <div class="social-events-container">
       <div class="image-wrapper" *ngFor="let event of events">
-        <img class="image" src="{{ event.image }}" (click)="onClick(event)" />
+        <app-lazy-image
+          [src]="event.image"
+          [alt]="event.description"
+          [clickable]="true"
+          (clicked)="onClick(event)"
+        ></app-lazy-image>
         <div class="description">
           <p *ngIf="(settingsService.language | async) === Language.MONTENEGRO">
             {{ event.description }}
