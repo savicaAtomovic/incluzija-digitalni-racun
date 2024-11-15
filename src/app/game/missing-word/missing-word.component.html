@@ -56,6 +56,7 @@
           [clickable]="selectedSentence !== 0"
           [style.opacity]="image.correct === LetterGameCorrect.NONE ? 1 : 0.5"
           (clicked)="onImageClick(image)"
+          heightVar="--missing-word-image-height"
         ></app-lazy-image>
       </div>
     </div>

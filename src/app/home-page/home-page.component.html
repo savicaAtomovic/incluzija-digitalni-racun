@@ -21,10 +21,11 @@
     <div class="options">
       <div class="option">
         <div class="image-wrapper" (click)="navigateToSocialSituations()">
-          <img
-            class="image"
-            src="assets/multimedia/1/images/without-text/Picture1.jpg"
-          />
+          <app-lazy-image
+            [src]="'assets/multimedia/1/images/without-text/Picture1.jpg'"
+            [clickable]="true"
+            heightVar="--home-page-image-height"
+          ></app-lazy-image>
         </div>
         <div class="image-description">
           <p>
