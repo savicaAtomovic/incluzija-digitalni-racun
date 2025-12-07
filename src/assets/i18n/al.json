@@ -1,0 +1,57 @@
+{
+  "POČETNA": "KRYEFAQJA",
+  "HOME": {
+    "WELCOME": "Mirë se vini në Llogaria Ime Dixhitale!",
+    "DESCRIPTION_1": "Ky aplikacion ju ndihmon të menaxhoni financat tuaja lehtë dhe thjeshtë. Hapni një llogari, paguani faturat ose na kontaktoni për ndihmë. Përshtatur për ju.",
+    "WHAT_TO_DO": "Çfarë dëshironi të bëni?",
+    "OPTION_OPEN_ACCOUNT": "Si të hap një llogari",
+    "OPTION_PAYMENT": "Si të paguaj nga llogaria",
+    "OPTION_COMPLAINT": "Si të shkruaj një ankesë",
+    "OPTION_CHECK_BALANCE": "Si të kontrolloj balancën",
+    "DESCRIPTION_2": "Banka juaj tani është më e qasshme se kurrë. Përdorni simbole dhe imazhe të thjeshta për navigim."
+  },
+  "LOGIN": {
+    "TITLE": "Mirë se vini",
+    "TAB_LOGIN": "Identifikohu",
+    "TAB_REGISTER": "Regjistrohu",
+    "NAME": "Emri",
+    "PHONE": "Numri i telefonit",
+    "PLACEHOLDER_NAME": "Shkruani emrin tuaj",
+    "PLACEHOLDER_PHONE": "Shkruani numrin e telefonit",
+    "WELCOME_BACK": "Mirë se vini përsëri, <strong>{{name}}</strong>!",
+    "ERROR_LOGIN": "Numri i telefonit ose fjalëkalimi i pasaktë.",
+    "ERROR_REGISTER": "Përdoruesi me këtë numër telefoni ekziston tashmë.",
+    "CANCEL": "Anulo",
+    "SUBMIT_LOGIN": "Identifikohu",
+    "SUBMIT_REGISTER": "Regjistrohu"
+  },
+  "PICTO_PASSWORD": {
+    "TITLE": "Zgjidhni fjalëkalimin tuaj (3 simbole):",
+    "CLEAR": "Pastro"
+  },
+  "TOPBAR": {
+    "GREETING": "Përshëndetje <strong>{{name}}</strong>!",
+    "LOGIN": "Identifikohu",
+    "LOGOUT": "Dilni",
+    "SETTINGS": "Cilësimet",
+    "BACK": "Kthehu mbrapa"
+  },
+  "SETTINGS": {
+    "GENDER": "Gjinia",
+    "LANGUAGE": "Gjuhe",
+    "VOICE_FEMALE": "Zëri i një gruaje",
+    "VOICE_MALE": "Zëri mashkullor",
+    "LANG_ME": "Malazeze",
+    "LANG_AL": "Shqiptare",
+    "LANG_SR": "Serbe",
+    "NEW_GAME": "Lojë e re",
+    "LEVEL": "Niveli",
+    "ALPHABET": "Alfabeti",
+    "LEVEL_FIRST": "Shkronja e parë",
+    "LEVEL_1": "1 shkronjë",
+    "LEVEL_2": "2 shkronja",
+    "LEVEL_3": "3 shkronja",
+    "SCRIPT_LATIN": "Latine",
+    "SCRIPT_CYRILLIC": "Cirilik"
+  }
+}

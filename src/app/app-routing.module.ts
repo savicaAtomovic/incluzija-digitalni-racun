@@ -12,12 +12,12 @@ import { PracticalLessonComponent } from './practical-lesson/practical-lesson.co
 const routes: Routes = [
   { path: 'home', component: HomePageComponent, pathMatch: 'full' },
   {
-    path: 'social-situations',
+    path: 'account-info',
     component: SocialSituationsListComponent,
     pathMatch: 'full',
   },
   {
-    path: 'social-situations/:id',
+    path: 'account-info/:id',
     component: SocialSituationComponent,
     pathMatch: 'full',
   },

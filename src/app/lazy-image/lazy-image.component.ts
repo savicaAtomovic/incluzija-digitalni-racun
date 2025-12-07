@@ -13,6 +13,7 @@ export class LazyImageComponent implements OnInit {
   @Output() clicked = new EventEmitter<void>();
 
   imageLoaded = false;
+  imageError = false;
 
   ngOnInit() {
     document.documentElement.style.setProperty(
@@ -23,6 +24,12 @@ export class LazyImageComponent implements OnInit {
 
   onImageLoad() {
     this.imageLoaded = true;
+    this.imageError = false;
+  }
+
+  onImageError() {
+    this.imageLoaded = false;
+    this.imageError = true;
   }
 
   onClick() {

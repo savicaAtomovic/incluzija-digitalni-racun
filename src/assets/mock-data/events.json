@@ -1,1683 +1,287 @@
 [
   {
     "id": 1,
-    "name": "Kada sam uznemiren",
-    "description": "Kada sam uznemiren",
-    "image": "assets/multimedia/1/Picture1.jpg",
-    "descriptionALB": "Kur jam e mërzitur.",
+    "name": "Otvaranje računa u banci",
+    "description": "Otvaranje računa u banci",
+    "image": "assets/multimedia/1/images/without-text/1.jpg",
+    "descriptionALB": "Si të hap një llogari",
     "eventItems": [
       {
         "id": 1,
         "orderNumber": 1,
-        "description": "Ja sam ponekad veoma uznemiren i ljut.",
-        "image": "assets/multimedia/1/images/without-text/Picture1.jpg",
+        "description": "Otvaranje računa u banci.",
+        "image": "assets/multimedia/1/images/without-text/1.jpg",
         "sound": "assets/multimedia/1/sound/female/1.mp3",
-        "soundMale": "assets/multimedia/1/sound/female/2.mp3",
+        "soundMale": "assets/multimedia/1/sound/male/1.mp3",
         "soundAlb": "assets/multimedia/1/sound/albfemale/1.mp3",
-        "descriptionAlb": "Kur jam e mërzitur."
+        "descriptionAlb": "Mirë se vini! Hapja e një llogarie bankare është e thjeshtë. Ky aplikacion do t'ju udhëheqë përmes të gjitha hapave."
       },
       {
         "id": 2,
         "orderNumber": 2,
-        "description": "Tada bacam stvari,",
-        "image": "assets/multimedia/1/images/without-text/Picture2.jpg",
-        "sound": "assets/multimedia/1/sound/female/2.mp3"
+        "description": "Ulazim u banku i prilazim aparatu za brojeve gdje uzimam svoj broj.",
+        "image": "assets/multimedia/1/images/without-text/2.jpg",
+        "sound": "assets/multimedia/1/sound/female/2.mp3",
+        "soundMale": "assets/multimedia/1/sound/male/2.mp3",
+        "soundAlb": "assets/multimedia/1/sound/albfemale/2.mp3",
+        "descriptionAlb": "Hapi 1: Përgatitni dokumentet e nevojshme. Ju nevojitet një kartë identiteti ose pasaportë."
       },
       {
         "id": 3,
         "orderNumber": 3,
-        "description": "udaram ljude,",
-        "image": "assets/multimedia/1/images/without-text/Picture3.jpg",
-        "sound": "assets/multimedia/1/sound/female/3.mp3"
+        "description": "Sjedim i strpljivo čekam svoj red. Na ekranu pratim kada će se pojaviti moj broj.",
+        "image": "assets/multimedia/1/images/without-text/3.jpg",
+        "sound": "assets/multimedia/1/sound/female/3.mp3",
+        "soundMale": "assets/multimedia/1/sound/male/3.mp3",
+        "soundAlb": "assets/multimedia/1/sound/albfemale/3.mp3",
+        "descriptionAlb": "Hapi 2: Vizitoni bankën. Mund të shkoni në çdo bankë që ju përshtatet."
       },
       {
         "id": 4,
         "orderNumber": 4,
-        "description": "vičem",
-        "image": "assets/multimedia/1/images/without-text/Picture4.jpg",
-        "sound": "assets/multimedia/1/sound/female/4.mp3"
+        "description": "Kad dođem na red prilazim šalteru i kažem da želim da otvorim račun.",
+        "image": "assets/multimedia/1/images/without-text/4.jpg",
+        "sound": "assets/multimedia/1/sound/female/4.mp3",
+        "soundMale": "assets/multimedia/1/sound/male/4.mp3",
+        "soundAlb": "assets/multimedia/1/sound/albfemale/4.mp3",
+        "descriptionAlb": "Hapi 3: Flisni me një punonjës bankar. Ai do t'ju ndihmojë të plotësoni formularët e nevojshëm."
       },
       {
         "id": 5,
         "orderNumber": 5,
-        "description": "i plačem.",
-        "image": "assets/multimedia/1/images/without-text/Picture5.jpg",
-        "sound": "assets/multimedia/1/sound/female/5.mp3"
+        "description": "Pripremam i predajem lični dokument službeniku na šalteru.",
+        "image": "assets/multimedia/1/images/without-text/5.jpg",
+        "sound": "assets/multimedia/1/sound/female/5.mp3",
+        "soundMale": "assets/multimedia/1/sound/male/5.mp3",
+        "soundAlb": "assets/multimedia/1/sound/albfemale/5.mp3",
+        "descriptionAlb": "Hapi 4: Nënshkruani kontratën. Lexoni me kujdes të gjitha kushtet para se të nënshkruani."
       },
       {
         "id": 6,
         "orderNumber": 6,
-        "description": "Kada sam uznemiren mogu duboko da udahnem",
-        "image": "assets/multimedia/1/images/without-text/Picture6.jpg",
-        "sound": "assets/multimedia/1/sound/female/6.mp3"
+        "description": "Dobijam formular za zahtjev pa pažljivo popunjavam tražene informacije.",
+        "image": "assets/multimedia/1/images/without-text/6.jpg",
+        "sound": "assets/multimedia/1/sound/female/6.mp3",
+        "soundMale": "assets/multimedia/1/sound/male/6.mp3",
+        "soundAlb": "assets/multimedia/1/sound/albfemale/6.mp3",
+        "descriptionAlb": "Hapi 5: Do të merrni një kartë bankare. Karta do t'ju dorëzohet në adresën tuaj ose mund ta merrni në bankë."
       },
       {
         "id": 7,
         "orderNumber": 7,
-        "description": "da zatražim pauzu, prošetam",
-        "image": "assets/multimedia/1/images/without-text/Picture7.jpg",
-        "sound": "assets/multimedia/1/sound/female/7.mp3"
-      },
-      {
-        "id": 8,
-        "orderNumber": 8,
-        "description": "ili popijem vode.",
-        "image": "assets/multimedia/1/images/without-text/Picture8.jpg",
-        "sound": "assets/multimedia/1/sound/female/8.mp3"
-      },
-      {
-        "id": 9,
-        "orderNumber": 9,
-        "description": "Mogu reći ljudima oko mene 'Ja sam sada uznemiren'",
-        "image": "assets/multimedia/1/images/without-text/Picture9.jpg",
-        "sound": "assets/multimedia/1/sound/female/1.mp3"
-      },
-      {
-        "id": 10,
-        "orderNumber": 10,
-        "description": "Uskoro ću se osjećati bolje.",
-        "image": "assets/multimedia/1/images/without-text/Picture10.jpg",
-        "sound": "assets/multimedia/1/sound/female/2.mp3"
+        "description": "Nakon provjere službenik u banci mi daje ugovor koji potpisujem.",
+        "image": "assets/multimedia/1/images/without-text/7.jpg",
+        "sound": "assets/multimedia/1/sound/female/7.mp3",
+        "soundMale": "assets/multimedia/1/sound/male/7.mp3",
+        "soundAlb": "assets/multimedia/1/sound/albfemale/7.mp3",
+        "descriptionAlb": "Llogaria juaj tani është aktive! Mund të filloni ta përdorni për të marrë dhe dërguar para."
       }
     ]
   },
   {
     "id": 2,
-    "name": "Kada ne uradim zadatak",
-    "description": "Kada ne uradim zadatak",
-    "image": "assets/multimedia/2/Picture1.jpg",
+    "name": "Kako da platim sa računa",
+    "description": "Plaćanje računa - jednostavno objašnjeno",
+    "image": "assets/multimedia/pay.png",
+    "descriptionALB": "Si të paguaj nga llogaria",
     "eventItems": [
       {
         "id": 1,
         "orderNumber": 1,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/1.jpg"
+        "description": "Plaćanje računa je lako! Postoji nekoliko načina kako možete platiti.",
+        "image": "assets/multimedia/2/images/without-text/1.jpg",
+        "sound": "assets/multimedia/2/sound/female/1.mp3",
+        "soundMale": "assets/multimedia/2/sound/male/1.mp3",
+        "soundAlb": "assets/multimedia/2/sound/albfemale/1.mp3",
+        "descriptionAlb": "Pagesa e faturave është e lehtë! Ka disa mënyra se si mund të paguani."
       },
       {
         "id": 2,
         "orderNumber": 2,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/2.jpg"
+        "description": "Način 1: Plaćanje u banci. Donesite račun koji želite da platite i vašu bankovnu karticu.",
+        "image": "assets/multimedia/2/images/without-text/2.jpg",
+        "sound": "assets/multimedia/2/sound/female/2.mp3",
+        "soundMale": "assets/multimedia/2/sound/male/2.mp3",
+        "soundAlb": "assets/multimedia/2/sound/albfemale/2.mp3",
+        "descriptionAlb": "Mënyra 1: Pagesa në bankë. Sillni faturën që dëshironi të paguani dhe kartën tuaj bankare."
       },
       {
         "id": 3,
         "orderNumber": 3,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/3.jpg"
+        "description": "Način 2: Plaćanje na bankomatu. Ubacite karticu, izaberite opciju 'Plaćanje računa' i pratite uputstva.",
+        "image": "assets/multimedia/2/images/without-text/3.jpg",
+        "sound": "assets/multimedia/2/sound/female/3.mp3",
+        "soundMale": "assets/multimedia/2/sound/male/3.mp3",
+        "soundAlb": "assets/multimedia/2/sound/albfemale/3.mp3",
+        "descriptionAlb": "Mënyra 2: Pagesa në ATM. Futni kartën, zgjidhni opsionin 'Pagesa e faturave' dhe ndiqni udhëzimet."
       },
       {
         "id": 4,
         "orderNumber": 4,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/4.jpg"
+        "description": "Način 3: Plaćanje preko interneta. Koristite mobilnu aplikaciju banke ili internet bankarstvo.",
+        "image": "assets/multimedia/2/images/without-text/4.jpg",
+        "sound": "assets/multimedia/2/sound/female/4.mp3",
+        "soundMale": "assets/multimedia/2/sound/male/4.mp3",
+        "soundAlb": "assets/multimedia/2/sound/albfemale/4.mp3",
+        "descriptionAlb": "Mënyra 3: Pagesa përmes internetit. Përdorni aplikacionin celular të bankës ose bankën elektronike."
       },
       {
         "id": 5,
         "orderNumber": 5,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/5.jpg"
+        "description": "Važno: Uvijek provjerite da li ste unijeli tačan broj računa i iznos prije nego što potvrdite plaćanje.",
+        "image": "assets/multimedia/2/images/without-text/5.jpg",
+        "sound": "assets/multimedia/2/sound/female/5.mp3",
+        "soundMale": "assets/multimedia/2/sound/male/5.mp3",
+        "soundAlb": "assets/multimedia/2/sound/albfemale/5.mp3",
+        "descriptionAlb": "E rëndësishme: Gjithmonë kontrolloni nëse keni futur numrin e saktë të llogarisë dhe shumën para se të konfirmoni pagesën."
       },
       {
         "id": 6,
         "orderNumber": 6,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/6.jpg"
-      },
-      {
-        "id": 7,
-        "orderNumber": 7,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/7.jpg"
-      },
-      {
-        "id": 8,
-        "orderNumber": 8,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/8.jpg"
-      },
-      {
-        "id": 9,
-        "orderNumber": 9,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/9.jpg"
-      },
-      {
-        "id": 10,
-        "orderNumber": 10,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/10.jpg"
-      },
-      {
-        "id": 11,
-        "orderNumber": 11,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/11.jpg"
-      },
-      {
-        "id": 12,
-        "orderNumber": 12,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/12.jpg"
-      },
-      {
-        "id": 13,
-        "orderNumber": 13,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/13.jpg"
-      },
-      {
-        "id": 14,
-        "orderNumber": 14,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/14.jpg"
-      },
-      {
-        "id": 15,
-        "orderNumber": 15,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/15.jpg"
-      },
-      {
-        "id": 16,
-        "orderNumber": 16,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/16.jpg"
-      },
-      {
-        "id": 17,
-        "orderNumber": 17,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/17.jpg"
-      },
-      {
-        "id": 18,
-        "orderNumber": 18,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/18.jpg"
-      },
-      {
-        "id": 19,
-        "orderNumber": 19,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/19.jpg"
-      },
-      {
-        "id": 20,
-        "orderNumber": 20,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/20.jpg"
-      },
-      {
-        "id": 21,
-        "orderNumber": 21,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/21.jpg"
-      },
-      {
-        "id": 22,
-        "orderNumber": 22,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/22.jpg"
-      },
-      {
-        "id": 23,
-        "orderNumber": 23,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/23.jpg"
-      },
-      {
-        "id": 24,
-        "orderNumber": 24,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/24.jpg"
-      },
-      {
-        "id": 25,
-        "orderNumber": 25,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/25.jpg"
+        "description": "Nakon plaćanja, sačuvajte potvrdu. To je dokaz da ste platili račun.",
+        "image": "assets/multimedia/2/images/without-text/6.jpg",
+        "sound": "assets/multimedia/2/sound/female/6.mp3",
+        "soundMale": "assets/multimedia/2/sound/male/6.mp3",
+        "soundAlb": "assets/multimedia/2/sound/albfemale/6.mp3",
+        "descriptionAlb": "Pas pagesës, ruani faturën. Kjo është dëshmi që keni paguar faturën."
       }
     ]
   },
   {
     "id": 3,
-    "name": "Kada ne uradim zadatak",
-    "description": "Kada ne uradim zadatak",
-    "image": "assets/multimedia/2/Picture1.jpg",
+    "name": "Kako da napišem prigovor",
+    "description": "Prigovor banci - vaša prava",
+    "image": "assets/multimedia/1/images/without-text/6.jpg",
+    "descriptionALB": "Si të shkruaj një ankesë",
     "eventItems": [
       {
         "id": 1,
         "orderNumber": 1,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture1.jpg"
+        "description": "Imate pravo da podnesete prigovor ako niste zadovoljni uslugom banke.",
+        "image": "assets/multimedia/3/images/without-text/1.jpg",
+        "sound": "assets/multimedia/3/sound/female/1.mp3",
+        "soundMale": "assets/multimedia/3/sound/male/1.mp3",
+        "soundAlb": "assets/multimedia/3/sound/albfemale/1.mp3",
+        "descriptionAlb": "Keni të drejtë të paraqisni një ankesë nëse nuk jeni të kënaqur me shërbimin e bankës."
       },
       {
         "id": 2,
         "orderNumber": 2,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture2.jpg"
+        "description": "Korak 1: Razgovarajte sa bankom. Prvo pokušajte da riješite problem direktno sa bankom.",
+        "image": "assets/multimedia/3/images/without-text/2.jpg",
+        "sound": "assets/multimedia/3/sound/female/2.mp3",
+        "soundMale": "assets/multimedia/3/sound/male/2.mp3",
+        "soundAlb": "assets/multimedia/3/sound/albfemale/2.mp3",
+        "descriptionAlb": "Hapi 1: Flisni me bankën. Fillimisht përpiquni të zgjidhni problemin direkt me bankën."
       },
       {
         "id": 3,
         "orderNumber": 3,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture3.jpg"
+        "description": "Korak 2: Napišite prigovor. Jasno opišite problem i šta želite da banka uradi.",
+        "image": "assets/multimedia/3/images/without-text/3.jpg",
+        "sound": "assets/multimedia/3/sound/female/3.mp3",
+        "soundMale": "assets/multimedia/3/sound/male/3.mp3",
+        "soundAlb": "assets/multimedia/3/sound/albfemale/3.mp3",
+        "descriptionAlb": "Hapi 2: Shkruani ankesën. Përshkruani qartë problemin dhe çfarë dëshironi që banka të bëjë."
       },
       {
         "id": 4,
         "orderNumber": 4,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture4.jpg"
+        "description": "Korak 3: Priložite dokaze. Dodajte kopije računa, potvrda ili druge dokumente koji podržavaju vaš prigovor.",
+        "image": "assets/multimedia/3/images/without-text/4.jpg",
+        "sound": "assets/multimedia/3/sound/female/4.mp3",
+        "soundMale": "assets/multimedia/3/sound/male/4.mp3",
+        "soundAlb": "assets/multimedia/3/sound/albfemale/4.mp3",
+        "descriptionAlb": "Hapi 3: Bashkëngjitni prova. Shtoni kopje të faturave, faturave ose dokumenteve të tjera që mbështesin ankesën tuaj."
       },
       {
         "id": 5,
         "orderNumber": 5,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture5.jpg"
+        "description": "Korak 4: Pošaljite prigovor banci. Možete ga poslati poštom, emailom ili predati lično.",
+        "image": "assets/multimedia/3/images/without-text/5.jpg",
+        "sound": "assets/multimedia/3/sound/female/5.mp3",
+        "soundMale": "assets/multimedia/3/sound/male/5.mp3",
+        "soundAlb": "assets/multimedia/3/sound/albfemale/5.mp3",
+        "descriptionAlb": "Hapi 4: Dërgoni ankesën në bankë. Mund ta dërgoni me postë, email ose ta dorëzoni personalisht."
       },
       {
         "id": 6,
         "orderNumber": 6,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture6.jpg"
-      },
-      {
-        "id": 7,
-        "orderNumber": 7,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture7.jpg"
-      },
-      {
-        "id": 8,
-        "orderNumber": 8,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture8.jpg"
-      },
-      {
-        "id": 9,
-        "orderNumber": 9,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture9.jpg"
-      },
-      {
-        "id": 10,
-        "orderNumber": 10,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture10.jpg"
-      },
-      {
-        "id": 11,
-        "orderNumber": 11,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture11.jpg"
-      },
-      {
-        "id": 12,
-        "orderNumber": 12,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture12.jpg"
-      },
-      {
-        "id": 13,
-        "orderNumber": 13,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture13.jpg"
-      },
-      {
-        "id": 14,
-        "orderNumber": 14,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture14.jpg"
-      },
-      {
-        "id": 15,
-        "orderNumber": 15,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture15.jpg"
-      },
-      {
-        "id": 16,
-        "orderNumber": 16,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture16.jpg"
-      },
-      {
-        "id": 17,
-        "orderNumber": 17,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture17.jpg"
-      },
-      {
-        "id": 18,
-        "orderNumber": 18,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture18.jpg"
-      },
-      {
-        "id": 19,
-        "orderNumber": 19,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture19.jpg"
-      },
-      {
-        "id": 20,
-        "orderNumber": 20,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture20.jpg"
-      },
-      {
-        "id": 21,
-        "orderNumber": 21,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture21.jpg"
-      },
-      {
-        "id": 22,
-        "orderNumber": 22,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture22.jpg"
-      },
-      {
-        "id": 23,
-        "orderNumber": 23,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture23.jpg"
-      },
-      {
-        "id": 24,
-        "orderNumber": 24,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture24.jpg"
-      },
-      {
-        "id": 25,
-        "orderNumber": 25,
-        "description": "",
-        "image": "assets/multimedia/2/images/without-text/Picture25.jpg"
+        "description": "Banka mora odgovoriti u roku od 15 dana. Ako niste zadovoljni odgovorom, možete se obratiti Centralnoj banci.",
+        "image": "assets/multimedia/3/images/without-text/6.jpg",
+        "sound": "assets/multimedia/3/sound/female/6.mp3",
+        "soundMale": "assets/multimedia/3/sound/male/6.mp3",
+        "soundAlb": "assets/multimedia/3/sound/albfemale/6.mp3",
+        "descriptionAlb": "Banka duhet të përgjigjet brenda 15 ditëve. Nëse nuk jeni të kënaqur me përgjigjen, mund t'i drejtoheni Bankës Qendrore."
       }
     ]
   },
   {
     "id": 4,
-    "name": "Pokušaću da ostanem miran",
-    "description": "Pokušaću da ostanem miran",
-    "image": "assets/multimedia/3/Picture1.jpg",
+    "name": "Kako da provjerim stanje",
+    "description": "Provjera stanja na računu",
+    "image": "assets/multimedia/1/images/without-text/5.jpg",
+    "descriptionALB": "Si të kontrolloj balancën",
     "eventItems": [
       {
         "id": 1,
         "orderNumber": 1,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture1.jpg"
+        "description": "Provjera stanja na računu je važna. Tako znate koliko novca imate.",
+        "image": "assets/multimedia/4/images/without-text/1.jpg",
+        "sound": "assets/multimedia/4/sound/female/1.mp3",
+        "soundMale": "assets/multimedia/4/sound/male/1.mp3",
+        "soundAlb": "assets/multimedia/4/sound/albfemale/1.mp3",
+        "descriptionAlb": "Kontrolli i balancës në llogari është i rëndësishëm. Kështu e dini sa para keni."
       },
       {
         "id": 2,
         "orderNumber": 2,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture2.jpg"
+        "description": "Način 1: Provjera na bankomatu. Ubacite karticu, unesite PIN i izaberite 'Provjera stanja'.",
+        "image": "assets/multimedia/4/images/without-text/2.jpg",
+        "sound": "assets/multimedia/4/sound/female/2.mp3",
+        "soundMale": "assets/multimedia/4/sound/male/2.mp3",
+        "soundAlb": "assets/multimedia/4/sound/albfemale/2.mp3",
+        "descriptionAlb": "Mënyra 1: Kontrolli në ATM. Futni kartën, vendosni PIN-in dhe zgjidhni 'Kontrolli i balancës'."
       },
       {
         "id": 3,
         "orderNumber": 3,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture3.jpg"
+        "description": "Način 2: Provjera u banci. Posjetite banku i zatražite izvod sa računa.",
+        "image": "assets/multimedia/4/images/without-text/3.jpg",
+        "sound": "assets/multimedia/4/sound/female/3.mp3",
+        "soundMale": "assets/multimedia/4/sound/male/3.mp3",
+        "soundAlb": "assets/multimedia/4/sound/albfemale/3.mp3",
+        "descriptionAlb": "Mënyra 2: Kontrolli në bankë. Vizitoni bankën dhe kërkoni një ekstrakt llogarie."
       },
       {
         "id": 4,
         "orderNumber": 4,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture4.jpg"
+        "description": "Način 3: Provjera preko telefona. Pozovite broj banke i pratite glasovna uputstva.",
+        "image": "assets/multimedia/4/images/without-text/4.jpg",
+        "sound": "assets/multimedia/4/sound/female/4.mp3",
+        "soundMale": "assets/multimedia/4/sound/male/4.mp3",
+        "soundAlb": "assets/multimedia/4/sound/albfemale/4.mp3",
+        "descriptionAlb": "Mënyra 3: Kontrolli përmes telefonit. Telefononi numrin e bankës dhe ndiqni udhëzimet zanore."
       },
       {
         "id": 5,
         "orderNumber": 5,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture5.jpg"
+        "description": "Način 4: Provjera preko interneta. Koristite mobilnu aplikaciju ili internet bankarstvo.",
+        "image": "assets/multimedia/4/images/without-text/5.jpg",
+        "sound": "assets/multimedia/4/sound/female/5.mp3",
+        "soundMale": "assets/multimedia/4/sound/male/5.mp3",
+        "soundAlb": "assets/multimedia/4/sound/albfemale/5.mp3",
+        "descriptionAlb": "Mënyra 4: Kontrolli përmes internetit. Përdorni aplikacionin celular ose bankën elektronike."
       },
       {
         "id": 6,
         "orderNumber": 6,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture6.jpg"
-      },
-      {
-        "id": 7,
-        "orderNumber": 7,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture7.jpg"
-      },
-      {
-        "id": 8,
-        "orderNumber": 8,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture8.jpg"
-      },
-      {
-        "id": 9,
-        "orderNumber": 9,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture9.jpg"
-      },
-      {
-        "id": 10,
-        "orderNumber": 10,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture10.jpg"
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Kada ne uradim zadatak",
-    "description": "Kada ne uradim zadatak",
-    "image": "assets/multimedia/2/Picture1.jpg",
-    "eventItems": [
-      {
-        "id": 1,
-        "orderNumber": 1,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/1.jpg"
-      },
-      {
-        "id": 2,
-        "orderNumber": 2,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/2.jpg"
-      },
-      {
-        "id": 3,
-        "orderNumber": 3,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/3.jpg"
-      },
-      {
-        "id": 4,
-        "orderNumber": 4,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/4.jpg"
-      },
-      {
-        "id": 5,
-        "orderNumber": 5,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/5.jpg"
-      },
-      {
-        "id": 6,
-        "orderNumber": 6,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/6.jpg"
-      },
-      {
-        "id": 7,
-        "orderNumber": 7,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/7.jpg"
-      },
-      {
-        "id": 8,
-        "orderNumber": 8,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/8.jpg"
-      },
-      {
-        "id": 9,
-        "orderNumber": 9,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/9.jpg"
-      },
-      {
-        "id": 10,
-        "orderNumber": 10,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/10.jpg"
-      },
-      {
-        "id": 11,
-        "orderNumber": 11,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/11.jpg"
-      },
-      {
-        "id": 12,
-        "orderNumber": 12,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/12.jpg"
-      },
-      {
-        "id": 13,
-        "orderNumber": 13,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/13.jpg"
-      },
-      {
-        "id": 14,
-        "orderNumber": 14,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/14.jpg"
-      },
-      {
-        "id": 15,
-        "orderNumber": 15,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/15.jpg"
-      },
-      {
-        "id": 16,
-        "orderNumber": 16,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/16.jpg"
-      },
-      {
-        "id": 17,
-        "orderNumber": 17,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/17.jpg"
-      },
-      {
-        "id": 18,
-        "orderNumber": 18,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/18.jpg"
-      },
-      {
-        "id": 19,
-        "orderNumber": 19,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/19.jpg"
-      },
-      {
-        "id": 20,
-        "orderNumber": 20,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/20.jpg"
-      },
-      {
-        "id": 21,
-        "orderNumber": 21,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/21.jpg"
-      },
-      {
-        "id": 22,
-        "orderNumber": 22,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/22.jpg"
-      },
-      {
-        "id": 23,
-        "orderNumber": 23,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/23.jpg"
-      },
-      {
-        "id": 24,
-        "orderNumber": 24,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/24.jpg"
-      },
-      {
-        "id": 25,
-        "orderNumber": 25,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/25.jpg"
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "name": "Pokušaću da ostanem miran",
-    "description": "Pokušaću da ostanem miran",
-    "image": "assets/multimedia/3/Picture1.jpg",
-    "eventItems": [
-      {
-        "id": 1,
-        "orderNumber": 1,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture1.jpg"
-      },
-      {
-        "id": 2,
-        "orderNumber": 2,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture2.jpg"
-      },
-      {
-        "id": 3,
-        "orderNumber": 3,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture3.jpg"
-      },
-      {
-        "id": 4,
-        "orderNumber": 4,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture4.jpg"
-      },
-      {
-        "id": 5,
-        "orderNumber": 5,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture5.jpg"
-      },
-      {
-        "id": 6,
-        "orderNumber": 6,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture6.jpg"
-      },
-      {
-        "id": 7,
-        "orderNumber": 7,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture7.jpg"
-      },
-      {
-        "id": 8,
-        "orderNumber": 8,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture8.jpg"
-      },
-      {
-        "id": 9,
-        "orderNumber": 9,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture9.jpg"
-      },
-      {
-        "id": 10,
-        "orderNumber": 10,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture10.jpg"
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "name": "Pokušaću da ostanem miran",
-    "description": "Pokušaću da ostanem miran",
-    "image": "assets/multimedia/3/Picture1.jpg",
-    "eventItems": [
-      {
-        "id": 1,
-        "orderNumber": 1,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture1.jpg"
-      },
-      {
-        "id": 2,
-        "orderNumber": 2,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture2.jpg"
-      },
-      {
-        "id": 3,
-        "orderNumber": 3,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture3.jpg"
-      },
-      {
-        "id": 4,
-        "orderNumber": 4,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture4.jpg"
-      },
-      {
-        "id": 5,
-        "orderNumber": 5,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture5.jpg"
-      },
-      {
-        "id": 6,
-        "orderNumber": 6,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture6.jpg"
-      },
-      {
-        "id": 7,
-        "orderNumber": 7,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture7.jpg"
-      },
-      {
-        "id": 8,
-        "orderNumber": 8,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture8.jpg"
-      },
-      {
-        "id": 9,
-        "orderNumber": 9,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture9.jpg"
-      },
-      {
-        "id": 10,
-        "orderNumber": 10,
-        "description": "",
-        "image": "assets/multimedia/3/images/without-text/Picture10.jpg"
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Kada ne uradim zadatak",
-    "description": "Kada ne uradim zadatak",
-    "image": "assets/multimedia/2/Picture1.jpg",
-    "eventItems": [
-      {
-        "id": 1,
-        "orderNumber": 1,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/1.jpg"
-      },
-      {
-        "id": 2,
-        "orderNumber": 2,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/2.jpg"
-      },
-      {
-        "id": 3,
-        "orderNumber": 3,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/3.jpg"
-      },
-      {
-        "id": 4,
-        "orderNumber": 4,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/4.jpg"
-      },
-      {
-        "id": 5,
-        "orderNumber": 5,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/5.jpg"
-      },
-      {
-        "id": 6,
-        "orderNumber": 6,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/6.jpg"
-      },
-      {
-        "id": 7,
-        "orderNumber": 7,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/7.jpg"
-      },
-      {
-        "id": 8,
-        "orderNumber": 8,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/8.jpg"
-      },
-      {
-        "id": 9,
-        "orderNumber": 9,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/9.jpg"
-      },
-      {
-        "id": 10,
-        "orderNumber": 10,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/10.jpg"
-      },
-      {
-        "id": 11,
-        "orderNumber": 11,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/11.jpg"
-      },
-      {
-        "id": 12,
-        "orderNumber": 12,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/12.jpg"
-      },
-      {
-        "id": 13,
-        "orderNumber": 13,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/13.jpg"
-      },
-      {
-        "id": 14,
-        "orderNumber": 14,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/14.jpg"
-      },
-      {
-        "id": 15,
-        "orderNumber": 15,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/15.jpg"
-      },
-      {
-        "id": 16,
-        "orderNumber": 16,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/16.jpg"
-      },
-      {
-        "id": 17,
-        "orderNumber": 17,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/17.jpg"
-      },
-      {
-        "id": 18,
-        "orderNumber": 18,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/18.jpg"
-      },
-      {
-        "id": 19,
-        "orderNumber": 19,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/19.jpg"
-      },
-      {
-        "id": 20,
-        "orderNumber": 20,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/20.jpg"
-      },
-      {
-        "id": 21,
-        "orderNumber": 21,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/21.jpg"
-      },
-      {
-        "id": 22,
-        "orderNumber": 22,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/22.jpg"
-      },
-      {
-        "id": 23,
-        "orderNumber": 23,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/23.jpg"
-      },
-      {
-        "id": 24,
-        "orderNumber": 24,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/24.jpg"
-      },
-      {
-        "id": 25,
-        "orderNumber": 25,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/25.jpg"
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "name": "Test",
-    "description": "Test",
-    "image": "assets/multimedia/5/Picture1.jpg",
-    "eventItems": [
-      {
-        "id": 1,
-        "orderNumber": 1,
-        "description": "Volim da provodim vrijeme sa prijateljima",
-        "image": "assets/multimedia/5/images/without-text/Picture1.jpg"
-      },
-      {
-        "id": 2,
-        "orderNumber": 2,
-        "description": "",
-        "image": "assets/multimedia/5/images/without-text/Picture2.jpg"
-      },
-      {
-        "id": 3,
-        "orderNumber": 3,
-        "description": "",
-        "image": "assets/multimedia/5/images/without-text/Picture3.jpg"
-      },
-      {
-        "id": 4,
-        "orderNumber": 4,
-        "description": "",
-        "image": "assets/multimedia/5/images/without-text/Picture4.jpg"
-      },
-      {
-        "id": 5,
-        "orderNumber": 5,
-        "description": "",
-        "image": "assets/multimedia/5/images/without-text/Picture5.jpg"
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Kada ne uradim zadatak",
-    "description": "Kada ne uradim zadatak",
-    "image": "assets/multimedia/2/Picture1.jpg",
-    "eventItems": [
-      {
-        "id": 1,
-        "orderNumber": 1,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/1.jpg"
-      },
-      {
-        "id": 2,
-        "orderNumber": 2,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/2.jpg"
-      },
-      {
-        "id": 3,
-        "orderNumber": 3,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/3.jpg"
-      },
-      {
-        "id": 4,
-        "orderNumber": 4,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/4.jpg"
-      },
-      {
-        "id": 5,
-        "orderNumber": 5,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/5.jpg"
-      },
-      {
-        "id": 6,
-        "orderNumber": 6,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/6.jpg"
-      },
-      {
-        "id": 7,
-        "orderNumber": 7,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/7.jpg"
-      },
-      {
-        "id": 8,
-        "orderNumber": 8,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/8.jpg"
-      },
-      {
-        "id": 9,
-        "orderNumber": 9,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/9.jpg"
-      },
-      {
-        "id": 10,
-        "orderNumber": 10,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/10.jpg"
-      },
-      {
-        "id": 11,
-        "orderNumber": 11,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/11.jpg"
-      },
-      {
-        "id": 12,
-        "orderNumber": 12,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/12.jpg"
-      },
-      {
-        "id": 13,
-        "orderNumber": 13,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/13.jpg"
-      },
-      {
-        "id": 14,
-        "orderNumber": 14,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/14.jpg"
-      },
-      {
-        "id": 15,
-        "orderNumber": 15,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/15.jpg"
-      },
-      {
-        "id": 16,
-        "orderNumber": 16,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/16.jpg"
-      },
-      {
-        "id": 17,
-        "orderNumber": 17,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/17.jpg"
-      },
-      {
-        "id": 18,
-        "orderNumber": 18,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/18.jpg"
-      },
-      {
-        "id": 19,
-        "orderNumber": 19,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/19.jpg"
-      },
-      {
-        "id": 20,
-        "orderNumber": 20,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/20.jpg"
-      },
-      {
-        "id": 21,
-        "orderNumber": 21,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/21.jpg"
-      },
-      {
-        "id": 22,
-        "orderNumber": 22,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/22.jpg"
-      },
-      {
-        "id": 23,
-        "orderNumber": 23,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/23.jpg"
-      },
-      {
-        "id": 24,
-        "orderNumber": 24,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/24.jpg"
-      },
-      {
-        "id": 25,
-        "orderNumber": 25,
-        "description": "",
-        "image": "assets/multimedia/2/images/with-text/25.jpg"
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "name": "Test",
-    "description": "Test",
-    "image": "assets/multimedia/5/Picture1.jpg",
-    "eventItems": [
-      {
-        "id": 1,
-        "orderNumber": 1,
-        "description": "Volim da provodim vrijeme sa prijateljima",
-        "image": "assets/multimedia/5/images/without-text/Picture1.jpg"
-      },
-      {
-        "id": 2,
-        "orderNumber": 2,
-        "description": "",
-        "image": "assets/multimedia/5/images/without-text/Picture2.jpg"
-      },
-      {
-        "id": 3,
-        "orderNumber": 3,
-        "description": "",
-        "image": "assets/multimedia/5/images/without-text/Picture3.jpg"
-      },
-      {
-        "id": 4,
-        "orderNumber": 4,
-        "description": "",
-        "image": "assets/multimedia/5/images/without-text/Picture4.jpg"
-      },
-      {
-        "id": 5,
-        "orderNumber": 5,
-        "description": "",
-        "image": "assets/multimedia/5/images/without-text/Picture5.jpg"
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "name": "Test",
-    "description": "Test",
-    "image": "assets/multimedia/5/Picture1.jpg",
-    "eventItems": [
-      {
-        "id": 1,
-        "orderNumber": 1,
-        "description": "Volim da provodim vrijeme sa prijateljima",
-        "image": "assets/multimedia/5/images/without-text/Picture1.jpg"
-      },
-      {
-        "id": 2,
-        "orderNumber": 2,
-        "description": "",
-        "image": "assets/multimedia/5/images/without-text/Picture2.jpg"
-      },
-      {
-        "id": 3,
-        "orderNumber": 3,
-        "description": "",
-        "image": "assets/multimedia/5/images/without-text/Picture3.jpg"
-      },
-      {
-        "id": 4,
-        "orderNumber": 4,
-        "description": "",
-        "image": "assets/multimedia/5/images/without-text/Picture4.jpg"
-      },
-      {
-        "id": 5,
-        "orderNumber": 5,
-        "description": "",
-        "image": "assets/multimedia/5/images/without-text/Picture5.jpg"
-      }
-    ]
-  },
-  {
-    "id": 1,
-    "name": "Kada sam uznemiren",
-    "description": "Kada sam uznemiren",
-    "image": "assets/multimedia/1/Picture1.jpg",
-    "descriptionALB": "Kur jam e mërzitur.",
-    "eventItems": [
-      {
-        "id": 1,
-        "orderNumber": 1,
-        "description": "Ja sam ponekad veoma uznemiren i ljut.",
-        "image": "assets/multimedia/1/images/without-text/Picture1.jpg",
-        "sound": "assets/multimedia/1/sound/female/1.mp3",
-        "soundMale": "assets/multimedia/1/sound/female/2.mp3",
-        "soundAlb": "assets/multimedia/1/sound/albfemale/1.mp3",
-        "descriptionAlb": "Kur jam e mërzitur."
-      },
-      {
-        "id": 2,
-        "orderNumber": 2,
-        "description": "Tada bacam stvari,",
-        "image": "assets/multimedia/1/images/without-text/Picture2.jpg",
-        "sound": "assets/multimedia/1/sound/female/2.mp3"
-      },
-      {
-        "id": 3,
-        "orderNumber": 3,
-        "description": "udaram ljude,",
-        "image": "assets/multimedia/1/images/without-text/Picture3.jpg",
-        "sound": "assets/multimedia/1/sound/female/3.mp3"
-      },
-      {
-        "id": 4,
-        "orderNumber": 4,
-        "description": "vičem",
-        "image": "assets/multimedia/1/images/without-text/Picture4.jpg",
-        "sound": "assets/multimedia/1/sound/female/4.mp3"
-      },
-      {
-        "id": 5,
-        "orderNumber": 5,
-        "description": "i plačem.",
-        "image": "assets/multimedia/1/images/without-text/Picture5.jpg",
-        "sound": "assets/multimedia/1/sound/female/5.mp3"
-      },
-      {
-        "id": 6,
-        "orderNumber": 6,
-        "description": "Kada sam uznemiren mogu duboko da udahnem",
-        "image": "assets/multimedia/1/images/without-text/Picture6.jpg",
-        "sound": "assets/multimedia/1/sound/female/6.mp3"
-      },
-      {
-        "id": 7,
-        "orderNumber": 7,
-        "description": "da zatražim pauzu, prošetam",
-        "image": "assets/multimedia/1/images/without-text/Picture7.jpg",
-        "sound": "assets/multimedia/1/sound/female/7.mp3"
-      },
-      {
-        "id": 8,
-        "orderNumber": 8,
-        "description": "ili popijem vode.",
-        "image": "assets/multimedia/1/images/without-text/Picture8.jpg",
-        "sound": "assets/multimedia/1/sound/female/8.mp3"
-      },
-      {
-        "id": 9,
-        "orderNumber": 9,
-        "description": "Mogu reći ljudima oko mene 'Ja sam sada uznemiren'",
-        "image": "assets/multimedia/1/images/without-text/Picture9.jpg",
-        "sound": "assets/multimedia/1/sound/female/1.mp3"
-      },
-      {
-        "id": 10,
-        "orderNumber": 10,
-        "description": "Uskoro ću se osjećati bolje.",
-        "image": "assets/multimedia/1/images/without-text/Picture10.jpg",
-        "sound": "assets/multimedia/1/sound/female/2.mp3"
-      }
-    ]
-  },
-  {
-    "id": 1,
-    "name": "Kada sam uznemiren",
-    "description": "Kada sam uznemiren",
-    "image": "assets/multimedia/1/Picture1.jpg",
-    "descriptionALB": "Kur jam e mërzitur.",
-    "eventItems": [
-      {
-        "id": 1,
-        "orderNumber": 1,
-        "description": "Ja sam ponekad veoma uznemiren i ljut.",
-        "image": "assets/multimedia/1/images/without-text/Picture1.jpg",
-        "sound": "assets/multimedia/1/sound/female/1.mp3",
-        "soundMale": "assets/multimedia/1/sound/female/2.mp3",
-        "soundAlb": "assets/multimedia/1/sound/albfemale/1.mp3",
-        "descriptionAlb": "Kur jam e mërzitur."
-      },
-      {
-        "id": 2,
-        "orderNumber": 2,
-        "description": "Tada bacam stvari,",
-        "image": "assets/multimedia/1/images/without-text/Picture2.jpg",
-        "sound": "assets/multimedia/1/sound/female/2.mp3"
-      },
-      {
-        "id": 3,
-        "orderNumber": 3,
-        "description": "udaram ljude,",
-        "image": "assets/multimedia/1/images/without-text/Picture3.jpg",
-        "sound": "assets/multimedia/1/sound/female/3.mp3"
-      },
-      {
-        "id": 4,
-        "orderNumber": 4,
-        "description": "vičem",
-        "image": "assets/multimedia/1/images/without-text/Picture4.jpg",
-        "sound": "assets/multimedia/1/sound/female/4.mp3"
-      },
-      {
-        "id": 5,
-        "orderNumber": 5,
-        "description": "i plačem.",
-        "image": "assets/multimedia/1/images/without-text/Picture5.jpg",
-        "sound": "assets/multimedia/1/sound/female/5.mp3"
-      },
-      {
-        "id": 6,
-        "orderNumber": 6,
-        "description": "Kada sam uznemiren mogu duboko da udahnem",
-        "image": "assets/multimedia/1/images/without-text/Picture6.jpg",
-        "sound": "assets/multimedia/1/sound/female/6.mp3"
-      },
-      {
-        "id": 7,
-        "orderNumber": 7,
-        "description": "da zatražim pauzu, prošetam",
-        "image": "assets/multimedia/1/images/without-text/Picture7.jpg",
-        "sound": "assets/multimedia/1/sound/female/7.mp3"
-      },
-      {
-        "id": 8,
-        "orderNumber": 8,
-        "description": "ili popijem vode.",
-        "image": "assets/multimedia/1/images/without-text/Picture8.jpg",
-        "sound": "assets/multimedia/1/sound/female/8.mp3"
-      },
-      {
-        "id": 9,
-        "orderNumber": 9,
-        "description": "Mogu reći ljudima oko mene 'Ja sam sada uznemiren'",
-        "image": "assets/multimedia/1/images/without-text/Picture9.jpg",
-        "sound": "assets/multimedia/1/sound/female/1.mp3"
-      },
-      {
-        "id": 10,
-        "orderNumber": 10,
-        "description": "Uskoro ću se osjećati bolje.",
-        "image": "assets/multimedia/1/images/without-text/Picture10.jpg",
-        "sound": "assets/multimedia/1/sound/female/2.mp3"
-      }
-    ]
-  },
-  {
-    "id": 1,
-    "name": "Kada sam uznemiren",
-    "description": "Kada sam uznemiren",
-    "image": "assets/multimedia/1/Picture1.jpg",
-    "descriptionALB": "Kur jam e mërzitur.",
-    "eventItems": [
-      {
-        "id": 1,
-        "orderNumber": 1,
-        "description": "Ja sam ponekad veoma uznemiren i ljut.",
-        "image": "assets/multimedia/1/images/without-text/Picture1.jpg",
-        "sound": "assets/multimedia/1/sound/female/1.mp3",
-        "soundMale": "assets/multimedia/1/sound/female/2.mp3",
-        "soundAlb": "assets/multimedia/1/sound/albfemale/1.mp3",
-        "descriptionAlb": "Kur jam e mërzitur."
-      },
-      {
-        "id": 2,
-        "orderNumber": 2,
-        "description": "Tada bacam stvari,",
-        "image": "assets/multimedia/1/images/without-text/Picture2.jpg",
-        "sound": "assets/multimedia/1/sound/female/2.mp3"
-      },
-      {
-        "id": 3,
-        "orderNumber": 3,
-        "description": "udaram ljude,",
-        "image": "assets/multimedia/1/images/without-text/Picture3.jpg",
-        "sound": "assets/multimedia/1/sound/female/3.mp3"
-      },
-      {
-        "id": 4,
-        "orderNumber": 4,
-        "description": "vičem",
-        "image": "assets/multimedia/1/images/without-text/Picture4.jpg",
-        "sound": "assets/multimedia/1/sound/female/4.mp3"
-      },
-      {
-        "id": 5,
-        "orderNumber": 5,
-        "description": "i plačem.",
-        "image": "assets/multimedia/1/images/without-text/Picture5.jpg",
-        "sound": "assets/multimedia/1/sound/female/5.mp3"
-      },
-      {
-        "id": 6,
-        "orderNumber": 6,
-        "description": "Kada sam uznemiren mogu duboko da udahnem",
-        "image": "assets/multimedia/1/images/without-text/Picture6.jpg",
-        "sound": "assets/multimedia/1/sound/female/6.mp3"
-      },
-      {
-        "id": 7,
-        "orderNumber": 7,
-        "description": "da zatražim pauzu, prošetam",
-        "image": "assets/multimedia/1/images/without-text/Picture7.jpg",
-        "sound": "assets/multimedia/1/sound/female/7.mp3"
-      },
-      {
-        "id": 8,
-        "orderNumber": 8,
-        "description": "ili popijem vode.",
-        "image": "assets/multimedia/1/images/without-text/Picture8.jpg",
-        "sound": "assets/multimedia/1/sound/female/8.mp3"
-      },
-      {
-        "id": 9,
-        "orderNumber": 9,
-        "description": "Mogu reći ljudima oko mene 'Ja sam sada uznemiren'",
-        "image": "assets/multimedia/1/images/without-text/Picture9.jpg",
-        "sound": "assets/multimedia/1/sound/female/1.mp3"
-      },
-      {
-        "id": 10,
-        "orderNumber": 10,
-        "description": "Uskoro ću se osjećati bolje.",
-        "image": "assets/multimedia/1/images/without-text/Picture10.jpg",
-        "sound": "assets/multimedia/1/sound/female/2.mp3"
-      }
-    ]
-  },
-  {
-    "id": 1,
-    "name": "Kada sam uznemiren",
-    "description": "Kada sam uznemiren",
-    "image": "assets/multimedia/1/Picture1.jpg",
-    "descriptionALB": "Kur jam e mërzitur.",
-    "eventItems": [
-      {
-        "id": 1,
-        "orderNumber": 1,
-        "description": "Ja sam ponekad veoma uznemiren i ljut.",
-        "image": "assets/multimedia/1/images/without-text/Picture1.jpg",
-        "sound": "assets/multimedia/1/sound/female/1.mp3",
-        "soundMale": "assets/multimedia/1/sound/female/2.mp3",
-        "soundAlb": "assets/multimedia/1/sound/albfemale/1.mp3",
-        "descriptionAlb": "Kur jam e mërzitur."
-      },
-      {
-        "id": 2,
-        "orderNumber": 2,
-        "description": "Tada bacam stvari,",
-        "image": "assets/multimedia/1/images/without-text/Picture2.jpg",
-        "sound": "assets/multimedia/1/sound/female/2.mp3"
-      },
-      {
-        "id": 3,
-        "orderNumber": 3,
-        "description": "udaram ljude,",
-        "image": "assets/multimedia/1/images/without-text/Picture3.jpg",
-        "sound": "assets/multimedia/1/sound/female/3.mp3"
-      },
-      {
-        "id": 4,
-        "orderNumber": 4,
-        "description": "vičem",
-        "image": "assets/multimedia/1/images/without-text/Picture4.jpg",
-        "sound": "assets/multimedia/1/sound/female/4.mp3"
-      },
-      {
-        "id": 5,
-        "orderNumber": 5,
-        "description": "i plačem.",
-        "image": "assets/multimedia/1/images/without-text/Picture5.jpg",
-        "sound": "assets/multimedia/1/sound/female/5.mp3"
-      },
-      {
-        "id": 6,
-        "orderNumber": 6,
-        "description": "Kada sam uznemiren mogu duboko da udahnem",
-        "image": "assets/multimedia/1/images/without-text/Picture6.jpg",
-        "sound": "assets/multimedia/1/sound/female/6.mp3"
-      },
-      {
-        "id": 7,
-        "orderNumber": 7,
-        "description": "da zatražim pauzu, prošetam",
-        "image": "assets/multimedia/1/images/without-text/Picture7.jpg",
-        "sound": "assets/multimedia/1/sound/female/7.mp3"
-      },
-      {
-        "id": 8,
-        "orderNumber": 8,
-        "description": "ili popijem vode.",
-        "image": "assets/multimedia/1/images/without-text/Picture8.jpg",
-        "sound": "assets/multimedia/1/sound/female/8.mp3"
-      },
-      {
-        "id": 9,
-        "orderNumber": 9,
-        "description": "Mogu reći ljudima oko mene 'Ja sam sada uznemiren'",
-        "image": "assets/multimedia/1/images/without-text/Picture9.jpg",
-        "sound": "assets/multimedia/1/sound/female/1.mp3"
-      },
-      {
-        "id": 10,
-        "orderNumber": 10,
-        "description": "Uskoro ću se osjećati bolje.",
-        "image": "assets/multimedia/1/images/without-text/Picture10.jpg",
-        "sound": "assets/multimedia/1/sound/female/2.mp3"
-      }
-    ]
-  },
-  {
-    "id": 1,
-    "name": "Kada sam uznemiren",
-    "description": "Kada sam uznemiren",
-    "image": "assets/multimedia/1/Picture1.jpg",
-    "descriptionALB": "Kur jam e mërzitur.",
-    "eventItems": [
-      {
-        "id": 1,
-        "orderNumber": 1,
-        "description": "Ja sam ponekad veoma uznemiren i ljut.",
-        "image": "assets/multimedia/1/images/without-text/Picture1.jpg",
-        "sound": "assets/multimedia/1/sound/female/1.mp3",
-        "soundMale": "assets/multimedia/1/sound/female/2.mp3",
-        "soundAlb": "assets/multimedia/1/sound/albfemale/1.mp3",
-        "descriptionAlb": "Kur jam e mërzitur."
-      },
-      {
-        "id": 2,
-        "orderNumber": 2,
-        "description": "Tada bacam stvari,",
-        "image": "assets/multimedia/1/images/without-text/Picture2.jpg",
-        "sound": "assets/multimedia/1/sound/female/2.mp3"
-      },
-      {
-        "id": 3,
-        "orderNumber": 3,
-        "description": "udaram ljude,",
-        "image": "assets/multimedia/1/images/without-text/Picture3.jpg",
-        "sound": "assets/multimedia/1/sound/female/3.mp3"
-      },
-      {
-        "id": 4,
-        "orderNumber": 4,
-        "description": "vičem",
-        "image": "assets/multimedia/1/images/without-text/Picture4.jpg",
-        "sound": "assets/multimedia/1/sound/female/4.mp3"
-      },
-      {
-        "id": 5,
-        "orderNumber": 5,
-        "description": "i plačem.",
-        "image": "assets/multimedia/1/images/without-text/Picture5.jpg",
-        "sound": "assets/multimedia/1/sound/female/5.mp3"
-      },
-      {
-        "id": 6,
-        "orderNumber": 6,
-        "description": "Kada sam uznemiren mogu duboko da udahnem",
-        "image": "assets/multimedia/1/images/without-text/Picture6.jpg",
-        "sound": "assets/multimedia/1/sound/female/6.mp3"
-      },
-      {
-        "id": 7,
-        "orderNumber": 7,
-        "description": "da zatražim pauzu, prošetam",
-        "image": "assets/multimedia/1/images/without-text/Picture7.jpg",
-        "sound": "assets/multimedia/1/sound/female/7.mp3"
-      },
-      {
-        "id": 8,
-        "orderNumber": 8,
-        "description": "ili popijem vode.",
-        "image": "assets/multimedia/1/images/without-text/Picture8.jpg",
-        "sound": "assets/multimedia/1/sound/female/8.mp3"
-      },
-      {
-        "id": 9,
-        "orderNumber": 9,
-        "description": "Mogu reći ljudima oko mene 'Ja sam sada uznemiren'",
-        "image": "assets/multimedia/1/images/without-text/Picture9.jpg",
-        "sound": "assets/multimedia/1/sound/female/1.mp3"
-      },
-      {
-        "id": 10,
-        "orderNumber": 10,
-        "description": "Uskoro ću se osjećati bolje.",
-        "image": "assets/multimedia/1/images/without-text/Picture10.jpg",
-        "sound": "assets/multimedia/1/sound/female/2.mp3"
-      }
-    ]
-  },
-  {
-    "id": 1,
-    "name": "Kada sam uznemiren",
-    "description": "Kada sam uznemiren",
-    "image": "assets/multimedia/1/Picture1.jpg",
-    "descriptionALB": "Kur jam e mërzitur.",
-    "eventItems": [
-      {
-        "id": 1,
-        "orderNumber": 1,
-        "description": "Ja sam ponekad veoma uznemiren i ljut.",
-        "image": "assets/multimedia/1/images/without-text/Picture1.jpg",
-        "sound": "assets/multimedia/1/sound/female/1.mp3",
-        "soundMale": "assets/multimedia/1/sound/female/2.mp3",
-        "soundAlb": "assets/multimedia/1/sound/albfemale/1.mp3",
-        "descriptionAlb": "Kur jam e mërzitur."
-      },
-      {
-        "id": 2,
-        "orderNumber": 2,
-        "description": "Tada bacam stvari,",
-        "image": "assets/multimedia/1/images/without-text/Picture2.jpg",
-        "sound": "assets/multimedia/1/sound/female/2.mp3"
-      },
-      {
-        "id": 3,
-        "orderNumber": 3,
-        "description": "udaram ljude,",
-        "image": "assets/multimedia/1/images/without-text/Picture3.jpg",
-        "sound": "assets/multimedia/1/sound/female/3.mp3"
-      },
-      {
-        "id": 4,
-        "orderNumber": 4,
-        "description": "vičem",
-        "image": "assets/multimedia/1/images/without-text/Picture4.jpg",
-        "sound": "assets/multimedia/1/sound/female/4.mp3"
-      },
-      {
-        "id": 5,
-        "orderNumber": 5,
-        "description": "i plačem.",
-        "image": "assets/multimedia/1/images/without-text/Picture5.jpg",
-        "sound": "assets/multimedia/1/sound/female/5.mp3"
-      },
-      {
-        "id": 6,
-        "orderNumber": 6,
-        "description": "Kada sam uznemiren mogu duboko da udahnem",
-        "image": "assets/multimedia/1/images/without-text/Picture6.jpg",
-        "sound": "assets/multimedia/1/sound/female/6.mp3"
-      },
-      {
-        "id": 7,
-        "orderNumber": 7,
-        "description": "da zatražim pauzu, prošetam",
-        "image": "assets/multimedia/1/images/without-text/Picture7.jpg",
-        "sound": "assets/multimedia/1/sound/female/7.mp3"
-      },
-      {
-        "id": 8,
-        "orderNumber": 8,
-        "description": "ili popijem vode.",
-        "image": "assets/multimedia/1/images/without-text/Picture8.jpg",
-        "sound": "assets/multimedia/1/sound/female/8.mp3"
-      },
-      {
-        "id": 9,
-        "orderNumber": 9,
-        "description": "Mogu reći ljudima oko mene 'Ja sam sada uznemiren'",
-        "image": "assets/multimedia/1/images/without-text/Picture9.jpg",
-        "sound": "assets/multimedia/1/sound/female/1.mp3"
-      },
-      {
-        "id": 10,
-        "orderNumber": 10,
-        "description": "Uskoro ću se osjećati bolje.",
-        "image": "assets/multimedia/1/images/without-text/Picture10.jpg",
-        "sound": "assets/multimedia/1/sound/female/2.mp3"
+        "description": "Savjet: Redovno provjeravajte stanje kako biste bili sigurni da nema grešaka ili neovlašćenih transakcija.",
+        "image": "assets/multimedia/4/images/without-text/6.jpg",
+        "sound": "assets/multimedia/4/sound/female/6.mp3",
+        "soundMale": "assets/multimedia/4/sound/male/6.mp3",
+        "soundAlb": "assets/multimedia/4/sound/albfemale/6.mp3",
+        "descriptionAlb": "Këshillë: Kontrolloni rregullisht balancën për t'u siguruar që nuk ka gabime ose transaksione të paautorizuara."
       }
     ]
   }

@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
     private topbarTitleService: TopbarTitleService,
     private titleService: Title
   ) {
-    this.titleService.setTitle('Vladam situacijom');
+    this.titleService.setTitle('Moj Digitalni Racun');
     this.topbarTitleService.topbarTitle.subscribe((title) => {
       this.topbarTitle = title;
       console.log('topbarTitle', title);

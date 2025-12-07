@@ -5,10 +5,15 @@
     [alt]="alt"
     loading="lazy"
     (load)="onImageLoad()"
-    [ngClass]="{ loaded: imageLoaded, clickable: clickable }"
+    (error)="onImageError()"
+    [ngClass]="{ loaded: imageLoaded, clickable: clickable, error: imageError }"
     (click)="onClick()"
   />
-  <div class="loading-placeholder" *ngIf="!imageLoaded">
+  <div class="loading-placeholder" *ngIf="!imageLoaded && !imageError">
     <mat-spinner diameter="40"></mat-spinner>
+  </div>
+  <div class="error-placeholder" *ngIf="imageError">
+    <mat-icon>broken_image</mat-icon>
+    <p>{{ alt || 'Slika nije dostupna' }}</p>
   </div>
 </div>

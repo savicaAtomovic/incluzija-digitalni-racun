@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>{{ 'LOGIN.TITLE' | translate }}</h2>
+<mat-dialog-content>
+  <mat-tab-group (selectedIndexChange)="onTabChange($event)" [selectedIndex]="selectedTabIndex" animationDuration="0ms">
+    <mat-tab [label]="'LOGIN.TAB_LOGIN' | translate"></mat-tab>
+    <mat-tab [label]="'LOGIN.TAB_REGISTER' | translate"></mat-tab>
+  </mat-tab-group>
+
+  <div class="form-container">
+    <mat-form-field appearance="fill" class="full-width" *ngIf="selectedTabIndex === 1">
+      <mat-label>{{ 'LOGIN.NAME' | translate }}</mat-label>
+      <input matInput [(ngModel)]="name" [placeholder]="'LOGIN.PLACEHOLDER_NAME' | translate">
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>{{ 'LOGIN.PHONE' | translate }}</mat-label>
+      <input matInput [(ngModel)]="phone" [placeholder]="'LOGIN.PLACEHOLDER_PHONE' | translate">
+    </mat-form-field>
+
+    <app-pictographic-password [password]="password" (passwordChange)="onPasswordChange($event)"></app-pictographic-password>
+    
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage | translate }}
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="close()"><span>{{ 'LOGIN.CANCEL' | translate }}</span></button>
+  <button mat-raised-button color="accent" (click)="submit()" [disabled]="!isValid()">
+    {{ (selectedTabIndex === 0 ? 'LOGIN.SUBMIT_LOGIN' : 'LOGIN.SUBMIT_REGISTER') | translate }}
+  </button>
+</mat-dialog-actions>

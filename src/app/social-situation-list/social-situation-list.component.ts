@@ -35,7 +35,7 @@ export class SocialSituationsListComponent implements OnInit {
 
   onClick(event: MainEvent) {
     console.log('image onClick', event);
-    this.router.navigate(['/social-situations', event.id]);
+    this.router.navigate(['/account-info', event.id]);
   }
 
   goBack() {

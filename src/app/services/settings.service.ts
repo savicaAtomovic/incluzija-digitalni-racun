@@ -4,6 +4,8 @@ import { Language } from '../models/language';
 import { VoiceType } from '../models/voice-type';
 import { LetterGameLevel } from '../models/letter-game-level';
 
+import { TranslateService } from '@ngx-translate/core';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -19,5 +21,20 @@ export class SettingsService {
 
   public newMissingWordGame = new BehaviorSubject<boolean>(false);
 
-  constructor() {}
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('me');
+    this.language.subscribe((lang) => {
+      switch (lang) {
+        case Language.MONTENEGRO:
+          this.translate.use('me');
+          break;
+        case Language.ALBANIA:
+          this.translate.use('al');
+          break;
+        case Language.SERBIAN:
+          this.translate.use('sr');
+          break;
+      }
+    });
+  }
 }
