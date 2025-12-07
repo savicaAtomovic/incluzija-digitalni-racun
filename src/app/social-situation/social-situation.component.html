@@ -1,5 +1,5 @@
 <div class="container">
-  <app-topbar [title]="topbarTitle" [showBackButton]="true"></app-topbar>
+  <app-topbar [title]="topbarTitle" [showBackButton]="true" [showSettings]="true"></app-topbar>
   <app-slide-show
     *ngIf="slides"
     [autoPlayDuration]="3000"
@@ -19,27 +19,37 @@
         height: '100%'
       }"
     >
-      <img class="image" src="{{ slide.image }}" />
+      <app-lazy-image
+        [src]="slide.image"
+        [alt]="slide.description || 'Slika za korak ' + (slides.indexOf(slide) + 1)"
+        [clickable]="true"
+        heightVar="--slide-image-height"
+      ></app-lazy-image>
       <div id="play-button-container">
-        <img class="play-button" *ngIf="paused" src="assets/icons/play-button.png"/>
+        <img
+          *ngIf="paused"
+          src="assets/icons/play-button.png"
+          class="play-button"
+        />
       </div>
-      
+
       <div *ngIf="slide.description" class="description">
         <p>{{ slide.description }}</p>
       </div>
     </div>
   </ng-template>
-  <ng-template #thumbnail let-slide>
-    <div
-      [ngStyle]="{
-        'background-size': 'cover',
-        'background-image': 'url(' + slide.image + ')',
-        'background-repeat': 'no-repeat',
-        'background-position': 'center center',
-        width: '100%',
-        height: '100%'
-      }"
-    ></div>
+  <ng-template #thumbnail let-slide let-i="index">
+    <div class="thumbnail-container">
+      <img 
+        *ngIf="!thumbnailErrors[i]"
+        [src]="slide.image" 
+        [alt]="'Thumbnail: ' + (slide.description || '')"
+        class="thumbnail-image"
+        (error)="onThumbnailError(i)"
+      />
+      <div *ngIf="thumbnailErrors[i]" class="thumbnail-error">
+        <mat-icon>broken_image</mat-icon>
+      </div>
+    </div>
   </ng-template>
-  
 </div>

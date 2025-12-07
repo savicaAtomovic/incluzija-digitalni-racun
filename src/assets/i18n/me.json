@@ -1,0 +1,57 @@
+{
+  "POČETNA": "POČETNA",
+  "HOME": {
+    "WELCOME": "Dobrodošli u Moj Digitalni Račun!",
+    "DESCRIPTION_1": "Ova aplikacija vam pomaže da lako i jednostavno upravljate svojim finansijama. Otvorite račun, platite račune ili nam se obratite za pomoć. Prilagođeno za vas.",
+    "WHAT_TO_DO": "Šta želite da uradite?",
+    "OPTION_OPEN_ACCOUNT": "Kako da otvorim račun",
+    "OPTION_PAYMENT": "Kako da platim sa računa",
+    "OPTION_COMPLAINT": "Kako da napišem prigovor",
+    "OPTION_CHECK_BALANCE": "Kako da provjerim stanje",
+    "DESCRIPTION_2": "Vaša banka je sada dostupnija nego ikada. Koristite jednostavne simbole i slike za navigaciju."
+  },
+  "LOGIN": {
+    "TITLE": "Dobrodošli",
+    "TAB_LOGIN": "Prijava",
+    "TAB_REGISTER": "Registracija",
+    "NAME": "Ime",
+    "PHONE": "Broj telefona",
+    "PLACEHOLDER_NAME": "Unesite vaše ime",
+    "PLACEHOLDER_PHONE": "Unesite broj telefona",
+    "WELCOME_BACK": "Dobrodošli nazad, <strong>{{name}}</strong>!",
+    "ERROR_LOGIN": "Pogrešan broj telefona ili lozinka.",
+    "ERROR_REGISTER": "Korisnik sa ovim brojem telefona već postoji.",
+    "CANCEL": "Otkaži",
+    "SUBMIT_LOGIN": "Prijavi se",
+    "SUBMIT_REGISTER": "Registruj se"
+  },
+  "PICTO_PASSWORD": {
+    "TITLE": "Izaberite svoju lozinku (3 simbola):",
+    "CLEAR": "Obriši"
+  },
+  "TOPBAR": {
+    "GREETING": "Zdravo <strong>{{name}}</strong>!",
+    "LOGIN": "Prijavi se",
+    "LOGOUT": "Odjavi se",
+    "SETTINGS": "Podešavanja",
+    "BACK": "Vrati se nazad"
+  },
+  "SETTINGS": {
+    "GENDER": "Pol",
+    "LANGUAGE": "Jezik",
+    "VOICE_FEMALE": "Ženski glas",
+    "VOICE_MALE": "Muški glas",
+    "LANG_ME": "Crnogorski",
+    "LANG_AL": "Albanski",
+    "LANG_SR": "Srpski",
+    "NEW_GAME": "Nova igra",
+    "LEVEL": "Nivo",
+    "ALPHABET": "Pismo",
+    "LEVEL_FIRST": "Prvo slovo",
+    "LEVEL_1": "1 slovo",
+    "LEVEL_2": "2 slova",
+    "LEVEL_3": "3 slova",
+    "SCRIPT_LATIN": "Latinica",
+    "SCRIPT_CYRILLIC": "Ćirilica"
+  }
+}

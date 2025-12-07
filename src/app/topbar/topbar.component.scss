@@ -6,6 +6,7 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  position: relative;
 }
 
 .header-text {
@@ -17,6 +18,10 @@
   white-space: break-spaces;
   text-align: center;
   line-height: normal;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 
 .back-icon {
@@ -47,3 +52,59 @@
   margin-left: 2px;
   margin-right: 16px;
 }
+
+.auth-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.greeting {
+  color: white;
+  letter-spacing: .0178571429em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logout-button {
+  color: white;
+  
+  mat-icon {
+    color: white;
+  }
+}
+
+.login {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: .0178571429em;
+}
+
+.login-icon {
+  display: none;
+  color: white;
+  
+  mat-icon {
+    color: white;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-text {
+    display: none;
+  }
+  
+  .login-icon {
+    display: block;
+  }
+  
+  .greeting {
+    display: none;
+  }
+}
+

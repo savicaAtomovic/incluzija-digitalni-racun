@@ -1,67 +1,42 @@
 <div class="home-container">
-  <app-topbar [title]="'POČETNA'"></app-topbar>
+  <app-topbar [title]="'POČETNA'" [showSettings]="true"></app-topbar>
   <div class="home-page-content-wrapper">
     <div class="description">
       <div class="home-heading-1">
-        <h1>Dobrodošli!</h1>
+        <h1>{{ 'HOME.WELCOME' | translate }}</h1>
       </div>
       <div class="home-about">
         <p>
-          Ova aplikacija je posebno osmišljena za djecu sa posebnim potrebama,
-          pružajući im interaktivno iskustvo koje će ih podržati i inspirisati.
-          Naša aplikacija kombinuje edukaciju i zabavu kako bi olakšala
-          razumijevanje društvenih situacija i razvijala vještine pismenosti.
+          {{ 'HOME.DESCRIPTION_1' | translate }}
         </p>
       </div>
       <div class="home-what">
-        <p>Šta ćete pronaći ovdje?</p>
+        <p>{{ 'HOME.WHAT_TO_DO' | translate }}</p>
       </div>
     </div>
     <div class="break"></div>
     <div class="options">
-      <div class="option">
-        <div class="image-wrapper" (click)="navigateToSocialSituations()">
-          <img
-            class="image"
-            src="assets/multimedia/1/images/without-text/Picture1.jpg"
-          />
+      <div class="option" *ngFor="let option of homeOptions">
+        <div class="image-wrapper" (click)="navigateToEvent(option.id)">
+          <app-lazy-image
+            [src]="option.image"
+            [alt]="option.name"
+            [clickable]="true"
+            heightVar="--home-page-image-height"
+          ></app-lazy-image>
         </div>
         <div class="image-description">
           <p>
-            <b>Društvene situacije</b>
+            <b>{{ getEventName(option) }}</b>
           </p>
         </div>
       </div>
-      <div class="option">
-        <div class="image-wrapper" (click)="navigateToGames()">
-          <img class="image" src="assets/multimedia/letterE.jpeg" />
-        </div>
-        <div class="image-description">
-          <p>
-            <b>Igre sa slovima</b>
-          </p>
-        </div>
-      </div>
-      <div class="option">
-        <div class="image-wrapper" (click)="navigateToPracticalLessons()">
-          <img class="image" src="assets/multimedia/practical_lessons.jpeg" />
-        </div>
-        <div class="image-description">
-          <p>
-            <b>Praktična nastava</b>
-          </p>
-        </div>
-      </div>
-      <div class="option empty-option"></div>
     </div>
     <div class="break"></div>
     <div class="description">
       <div class="home-about">
         <p>
-          Nastojimo stvoriti siguran i podržavajući prostor za svako dijete,
-          pružajući im resurse i alate za uspešan razvoj. Ovo je mjesto gdje
-          učenje postaje avantura, a svako dijete ima priliku da zabavno i
-          efikasno razvija svoje vještine.
+          {{ 'HOME.DESCRIPTION_2' | translate }}
         </p>
       </div>
     </div>

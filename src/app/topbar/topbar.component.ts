@@ -1,10 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 
 import { Language } from '../models/language';
 import { VoiceType } from '../models/voice-type';
 import { SettingsService } from '../services/settings.service';
 import { LetterGameLevel } from '../models/letter-game-level';
+import { AuthService } from '../services/auth.service';
+import { LoginModalComponent } from '../auth/login-modal/login-modal.component';
 
 @Component({
   selector: 'app-topbar',
@@ -14,10 +17,12 @@ import { LetterGameLevel } from '../models/letter-game-level';
 export class TopbarComponent implements OnInit {
   constructor(
     private router: Router,
-    public settingsService: SettingsService
+    public settingsService: SettingsService,
+    public authService: AuthService,
+    private dialog: MatDialog
   ) {}
 
-  @Input() title: String = '';
+  @Input() title: string = '';
   @Input() showBackButton: boolean;
   @Input() showSettings: boolean;
   @Input() backOnPage: string;
@@ -34,7 +39,7 @@ export class TopbarComponent implements OnInit {
   goBack() {
     this.backOnPage
       ? this.router.navigate([this.backOnPage])
-      : this.router.navigate(['/social-situations']);
+      : this.router.navigate(['/home']);
   }
 
   setVoice(voiceType: VoiceType) {
@@ -59,5 +64,15 @@ export class TopbarComponent implements OnInit {
 
   newMissingWordGame() {
     this.settingsService.newMissingWordGame.next(true);
+  }
+
+  openLoginModal() {
+    this.dialog.open(LoginModalComponent, {
+      width: '400px'
+    });
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }
